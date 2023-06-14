@@ -1,0 +1,9 @@
+configVersion: 1.0.0
+generation:
+  sdkClassName: SDK
+  singleTagPerOp: false
+php:
+  version: 0.0.1
+  maxMethodParams: 0
+  namespace: formance\formance
+  packageName: formance/formance
