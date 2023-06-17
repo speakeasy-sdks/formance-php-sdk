@@ -1,9 +1,14 @@
 configVersion: 1.0.0
+management:
+  docChecksum: 2f1ad9a515a2f02418a6e63ef5afbcf5
+  docVersion: v1.0.20230614
+  speakeasyVersion: 1.48.0
+  generationVersion: 2.41.1
 generation:
   sdkClassName: SDK
   singleTagPerOp: false
 php:
-  version: 0.0.1
+  version: 1.0.0
   maxMethodParams: 0
   namespace: formance\formance
   packageName: formance/formance
