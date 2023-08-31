@@ -805,3 +805,4 @@ docs/models/shared/Attempt.md
 docs/models/shared/GetVersionsResponse.md
 docs/models/shared/Version.md
 docs/models/shared/Security.md
+.gitattributes
