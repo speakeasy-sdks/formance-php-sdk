@@ -28,7 +28,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\AddMetadataOnTransactionResponse
      */
 	public function addMetadataOnTransaction(
-        \formance\formance\Models\Operations\AddMetadataOnTransactionRequest $request,
+        ?\formance\formance\Models\Operations\AddMetadataOnTransactionRequest $request,
     ): \formance\formance\Models\Operations\AddMetadataOnTransactionResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -36,7 +36,9 @@ class Ledger
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\formance\formance\Models\Operations\AddMetadataOnTransactionRequest::class, $request, null));
         $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
         if (!array_key_exists('headers', $options)) {
@@ -121,7 +123,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\CountAccountsResponse
      */
 	public function countAccounts(
-        \formance\formance\Models\Operations\CountAccountsRequest $request,
+        ?\formance\formance\Models\Operations\CountAccountsRequest $request,
     ): \formance\formance\Models\Operations\CountAccountsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -162,7 +164,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\CountTransactionsResponse
      */
 	public function countTransactions(
-        \formance\formance\Models\Operations\CountTransactionsRequest $request,
+        ?\formance\formance\Models\Operations\CountTransactionsRequest $request,
     ): \formance\formance\Models\Operations\CountTransactionsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -255,7 +257,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\GetAccountResponse
      */
 	public function getAccount(
-        \formance\formance\Models\Operations\GetAccountRequest $request,
+        ?\formance\formance\Models\Operations\GetAccountRequest $request,
     ): \formance\formance\Models\Operations\GetAccountResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -297,7 +299,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\GetBalancesResponse
      */
 	public function getBalances(
-        \formance\formance\Models\Operations\GetBalancesRequest $request,
+        ?\formance\formance\Models\Operations\GetBalancesRequest $request,
     ): \formance\formance\Models\Operations\GetBalancesResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -340,7 +342,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\GetBalancesAggregatedResponse
      */
 	public function getBalancesAggregated(
-        \formance\formance\Models\Operations\GetBalancesAggregatedRequest $request,
+        ?\formance\formance\Models\Operations\GetBalancesAggregatedRequest $request,
     ): \formance\formance\Models\Operations\GetBalancesAggregatedResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -423,7 +425,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\GetLedgerInfoResponse
      */
 	public function getLedgerInfo(
-        \formance\formance\Models\Operations\GetLedgerInfoRequest $request,
+        ?\formance\formance\Models\Operations\GetLedgerInfoRequest $request,
     ): \formance\formance\Models\Operations\GetLedgerInfoResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -465,7 +467,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\GetTransactionResponse
      */
 	public function getTransaction(
-        \formance\formance\Models\Operations\GetTransactionRequest $request,
+        ?\formance\formance\Models\Operations\GetTransactionRequest $request,
     ): \formance\formance\Models\Operations\GetTransactionResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -509,7 +511,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\ListAccountsResponse
      */
 	public function listAccounts(
-        \formance\formance\Models\Operations\ListAccountsRequest $request,
+        ?\formance\formance\Models\Operations\ListAccountsRequest $request,
     ): \formance\formance\Models\Operations\ListAccountsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -554,7 +556,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\ListLogsResponse
      */
 	public function listLogs(
-        \formance\formance\Models\Operations\ListLogsRequest $request,
+        ?\formance\formance\Models\Operations\ListLogsRequest $request,
     ): \formance\formance\Models\Operations\ListLogsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -599,7 +601,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\ListTransactionsResponse
      */
 	public function listTransactions(
-        \formance\formance\Models\Operations\ListTransactionsRequest $request,
+        ?\formance\formance\Models\Operations\ListTransactionsRequest $request,
     ): \formance\formance\Models\Operations\ListTransactionsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -645,7 +647,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\ReadStatsResponse
      */
 	public function readStats(
-        \formance\formance\Models\Operations\ReadStatsRequest $request,
+        ?\formance\formance\Models\Operations\ReadStatsRequest $request,
     ): \formance\formance\Models\Operations\ReadStatsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -687,7 +689,7 @@ class Ledger
      * @return \formance\formance\Models\Operations\RevertTransactionResponse
      */
 	public function revertTransaction(
-        \formance\formance\Models\Operations\RevertTransactionRequest $request,
+        ?\formance\formance\Models\Operations\RevertTransactionRequest $request,
     ): \formance\formance\Models\Operations\RevertTransactionResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());

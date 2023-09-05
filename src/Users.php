@@ -66,7 +66,7 @@ class Users
      * @return \formance\formance\Models\Operations\ReadUserResponse
      */
 	public function readUser(
-        \formance\formance\Models\Operations\ReadUserRequest $request,
+        ?\formance\formance\Models\Operations\ReadUserRequest $request,
     ): \formance\formance\Models\Operations\ReadUserResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());

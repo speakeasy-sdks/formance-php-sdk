@@ -31,7 +31,7 @@ class Stats
      * @return \formance\formance\Models\Operations\ReadStatsResponse
      */
 	public function readStats(
-        \formance\formance\Models\Operations\ReadStatsRequest $request,
+        ?\formance\formance\Models\Operations\ReadStatsRequest $request,
     ): \formance\formance\Models\Operations\ReadStatsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());

@@ -30,7 +30,7 @@ class Logs
      * @return \formance\formance\Models\Operations\ListLogsResponse
      */
 	public function listLogs(
-        \formance\formance\Models\Operations\ListLogsRequest $request,
+        ?\formance\formance\Models\Operations\ListLogsRequest $request,
     ): \formance\formance\Models\Operations\ListLogsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());

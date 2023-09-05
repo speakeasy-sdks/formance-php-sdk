@@ -116,7 +116,7 @@ class Payments
      * @return \formance\formance\Models\Operations\GetConnectorTaskResponse
      */
 	public function getConnectorTask(
-        \formance\formance\Models\Operations\GetConnectorTaskRequest $request,
+        ?\formance\formance\Models\Operations\GetConnectorTaskRequest $request,
     ): \formance\formance\Models\Operations\GetConnectorTaskResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -152,7 +152,7 @@ class Payments
      * @return \formance\formance\Models\Operations\GetPaymentResponse
      */
 	public function getPayment(
-        \formance\formance\Models\Operations\GetPaymentRequest $request,
+        ?\formance\formance\Models\Operations\GetPaymentRequest $request,
     ): \formance\formance\Models\Operations\GetPaymentResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -301,7 +301,7 @@ class Payments
      * @return \formance\formance\Models\Operations\ListConnectorTasksResponse
      */
 	public function listConnectorTasks(
-        \formance\formance\Models\Operations\ListConnectorTasksRequest $request,
+        ?\formance\formance\Models\Operations\ListConnectorTasksRequest $request,
     ): \formance\formance\Models\Operations\ListConnectorTasksResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -340,7 +340,7 @@ class Payments
      * @return \formance\formance\Models\Operations\ListConnectorsTransfersResponse
      */
 	public function listConnectorsTransfers(
-        \formance\formance\Models\Operations\ListConnectorsTransfersRequest $request,
+        ?\formance\formance\Models\Operations\ListConnectorsTransfersRequest $request,
     ): \formance\formance\Models\Operations\ListConnectorsTransfersResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -376,7 +376,7 @@ class Payments
      * @return \formance\formance\Models\Operations\ListPaymentsResponse
      */
 	public function listPayments(
-        \formance\formance\Models\Operations\ListPaymentsRequest $request,
+        ?\formance\formance\Models\Operations\ListPaymentsRequest $request,
     ): \formance\formance\Models\Operations\ListPaymentsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -447,7 +447,7 @@ class Payments
      * @return \formance\formance\Models\Operations\PaymentslistAccountsResponse
      */
 	public function paymentslistAccounts(
-        \formance\formance\Models\Operations\PaymentslistAccountsRequest $request,
+        ?\formance\formance\Models\Operations\PaymentslistAccountsRequest $request,
     ): \formance\formance\Models\Operations\PaymentslistAccountsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -486,7 +486,7 @@ class Payments
      * @return \formance\formance\Models\Operations\ReadConnectorConfigResponse
      */
 	public function readConnectorConfig(
-        \formance\formance\Models\Operations\ReadConnectorConfigRequest $request,
+        ?\formance\formance\Models\Operations\ReadConnectorConfigRequest $request,
     ): \formance\formance\Models\Operations\ReadConnectorConfigResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -526,7 +526,7 @@ class Payments
      * @return \formance\formance\Models\Operations\ResetConnectorResponse
      */
 	public function resetConnector(
-        \formance\formance\Models\Operations\ResetConnectorRequest $request,
+        ?\formance\formance\Models\Operations\ResetConnectorRequest $request,
     ): \formance\formance\Models\Operations\ResetConnectorResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -560,7 +560,7 @@ class Payments
      * @return \formance\formance\Models\Operations\UninstallConnectorResponse
      */
 	public function uninstallConnector(
-        \formance\formance\Models\Operations\UninstallConnectorRequest $request,
+        ?\formance\formance\Models\Operations\UninstallConnectorRequest $request,
     ): \formance\formance\Models\Operations\UninstallConnectorResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());

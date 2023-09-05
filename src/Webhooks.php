@@ -30,7 +30,7 @@ class Webhooks
      * @return \formance\formance\Models\Operations\ActivateConfigResponse
      */
 	public function activateConfig(
-        \formance\formance\Models\Operations\ActivateConfigRequest $request,
+        ?\formance\formance\Models\Operations\ActivateConfigRequest $request,
     ): \formance\formance\Models\Operations\ActivateConfigResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -78,7 +78,7 @@ class Webhooks
      * @return \formance\formance\Models\Operations\ChangeConfigSecretResponse
      */
 	public function changeConfigSecret(
-        \formance\formance\Models\Operations\ChangeConfigSecretRequest $request,
+        ?\formance\formance\Models\Operations\ChangeConfigSecretRequest $request,
     ): \formance\formance\Models\Operations\ChangeConfigSecretResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -86,7 +86,9 @@ class Webhooks
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "configChangeSecret", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -124,7 +126,7 @@ class Webhooks
      * @return \formance\formance\Models\Operations\DeactivateConfigResponse
      */
 	public function deactivateConfig(
-        \formance\formance\Models\Operations\DeactivateConfigRequest $request,
+        ?\formance\formance\Models\Operations\DeactivateConfigRequest $request,
     ): \formance\formance\Models\Operations\DeactivateConfigResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -168,7 +170,7 @@ class Webhooks
      * @return \formance\formance\Models\Operations\DeleteConfigResponse
      */
 	public function deleteConfig(
-        \formance\formance\Models\Operations\DeleteConfigRequest $request,
+        ?\formance\formance\Models\Operations\DeleteConfigRequest $request,
     ): \formance\formance\Models\Operations\DeleteConfigResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -208,7 +210,7 @@ class Webhooks
      * @return \formance\formance\Models\Operations\GetManyConfigsResponse
      */
 	public function getManyConfigs(
-        \formance\formance\Models\Operations\GetManyConfigsRequest $request,
+        ?\formance\formance\Models\Operations\GetManyConfigsRequest $request,
     ): \formance\formance\Models\Operations\GetManyConfigsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -311,7 +313,7 @@ class Webhooks
      * @return \formance\formance\Models\Operations\TestConfigResponse
      */
 	public function testConfig(
-        \formance\formance\Models\Operations\TestConfigRequest $request,
+        ?\formance\formance\Models\Operations\TestConfigRequest $request,
     ): \formance\formance\Models\Operations\TestConfigResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());

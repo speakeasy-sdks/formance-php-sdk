@@ -28,7 +28,7 @@ class Balances
      * @return \formance\formance\Models\Operations\GetBalancesResponse
      */
 	public function getBalances(
-        \formance\formance\Models\Operations\GetBalancesRequest $request,
+        ?\formance\formance\Models\Operations\GetBalancesRequest $request,
     ): \formance\formance\Models\Operations\GetBalancesResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -71,7 +71,7 @@ class Balances
      * @return \formance\formance\Models\Operations\GetBalancesAggregatedResponse
      */
 	public function getBalancesAggregated(
-        \formance\formance\Models\Operations\GetBalancesAggregatedRequest $request,
+        ?\formance\formance\Models\Operations\GetBalancesAggregatedRequest $request,
     ): \formance\formance\Models\Operations\GetBalancesAggregatedResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());

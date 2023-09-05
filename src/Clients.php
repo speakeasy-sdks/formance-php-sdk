@@ -28,7 +28,7 @@ class Clients
      * @return \formance\formance\Models\Operations\AddScopeToClientResponse
      */
 	public function addScopeToClient(
-        \formance\formance\Models\Operations\AddScopeToClientRequest $request,
+        ?\formance\formance\Models\Operations\AddScopeToClientRequest $request,
     ): \formance\formance\Models\Operations\AddScopeToClientResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -60,7 +60,7 @@ class Clients
      * @return \formance\formance\Models\Operations\CreateClientResponse
      */
 	public function createClient(
-        \formance\formance\Models\Shared\CreateClientRequest $request,
+        ?\formance\formance\Models\Shared\CreateClientRequest $request,
     ): \formance\formance\Models\Operations\CreateClientResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -68,7 +68,9 @@ class Clients
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -98,7 +100,7 @@ class Clients
      * @return \formance\formance\Models\Operations\CreateSecretResponse
      */
 	public function createSecret(
-        \formance\formance\Models\Operations\CreateSecretRequest $request,
+        ?\formance\formance\Models\Operations\CreateSecretRequest $request,
     ): \formance\formance\Models\Operations\CreateSecretResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -106,7 +108,9 @@ class Clients
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "createSecretRequest", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -136,7 +140,7 @@ class Clients
      * @return \formance\formance\Models\Operations\DeleteClientResponse
      */
 	public function deleteClient(
-        \formance\formance\Models\Operations\DeleteClientRequest $request,
+        ?\formance\formance\Models\Operations\DeleteClientRequest $request,
     ): \formance\formance\Models\Operations\DeleteClientResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -168,7 +172,7 @@ class Clients
      * @return \formance\formance\Models\Operations\DeleteScopeFromClientResponse
      */
 	public function deleteScopeFromClient(
-        \formance\formance\Models\Operations\DeleteScopeFromClientRequest $request,
+        ?\formance\formance\Models\Operations\DeleteScopeFromClientRequest $request,
     ): \formance\formance\Models\Operations\DeleteScopeFromClientResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -200,7 +204,7 @@ class Clients
      * @return \formance\formance\Models\Operations\DeleteSecretResponse
      */
 	public function deleteSecret(
-        \formance\formance\Models\Operations\DeleteSecretRequest $request,
+        ?\formance\formance\Models\Operations\DeleteSecretRequest $request,
     ): \formance\formance\Models\Operations\DeleteSecretResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -266,7 +270,7 @@ class Clients
      * @return \formance\formance\Models\Operations\ReadClientResponse
      */
 	public function readClient(
-        \formance\formance\Models\Operations\ReadClientRequest $request,
+        ?\formance\formance\Models\Operations\ReadClientRequest $request,
     ): \formance\formance\Models\Operations\ReadClientResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -302,7 +306,7 @@ class Clients
      * @return \formance\formance\Models\Operations\UpdateClientResponse
      */
 	public function updateClient(
-        \formance\formance\Models\Operations\UpdateClientRequest $request,
+        ?\formance\formance\Models\Operations\UpdateClientRequest $request,
     ): \formance\formance\Models\Operations\UpdateClientResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -310,7 +314,9 @@ class Clients
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "updateClientRequest", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         

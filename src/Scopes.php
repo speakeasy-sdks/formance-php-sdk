@@ -30,7 +30,7 @@ class Scopes
      * @return \formance\formance\Models\Operations\AddTransientScopeResponse
      */
 	public function addTransientScope(
-        \formance\formance\Models\Operations\AddTransientScopeRequest $request,
+        ?\formance\formance\Models\Operations\AddTransientScopeRequest $request,
     ): \formance\formance\Models\Operations\AddTransientScopeResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -64,7 +64,7 @@ class Scopes
      * @return \formance\formance\Models\Operations\CreateScopeResponse
      */
 	public function createScope(
-        \formance\formance\Models\Shared\CreateScopeRequest $request,
+        ?\formance\formance\Models\Shared\CreateScopeRequest $request,
     ): \formance\formance\Models\Operations\CreateScopeResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -72,7 +72,9 @@ class Scopes
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -104,7 +106,7 @@ class Scopes
      * @return \formance\formance\Models\Operations\DeleteScopeResponse
      */
 	public function deleteScope(
-        \formance\formance\Models\Operations\DeleteScopeRequest $request,
+        ?\formance\formance\Models\Operations\DeleteScopeRequest $request,
     ): \formance\formance\Models\Operations\DeleteScopeResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -138,7 +140,7 @@ class Scopes
      * @return \formance\formance\Models\Operations\DeleteTransientScopeResponse
      */
 	public function deleteTransientScope(
-        \formance\formance\Models\Operations\DeleteTransientScopeRequest $request,
+        ?\formance\formance\Models\Operations\DeleteTransientScopeRequest $request,
     ): \formance\formance\Models\Operations\DeleteTransientScopeResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -208,7 +210,7 @@ class Scopes
      * @return \formance\formance\Models\Operations\ReadScopeResponse
      */
 	public function readScope(
-        \formance\formance\Models\Operations\ReadScopeRequest $request,
+        ?\formance\formance\Models\Operations\ReadScopeRequest $request,
     ): \formance\formance\Models\Operations\ReadScopeResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -246,7 +248,7 @@ class Scopes
      * @return \formance\formance\Models\Operations\UpdateScopeResponse
      */
 	public function updateScope(
-        \formance\formance\Models\Operations\UpdateScopeRequest $request,
+        ?\formance\formance\Models\Operations\UpdateScopeRequest $request,
     ): \formance\formance\Models\Operations\UpdateScopeResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -254,7 +256,9 @@ class Scopes
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "updateScopeRequest", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         

@@ -28,7 +28,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\ConfirmHoldResponse
      */
 	public function confirmHold(
-        \formance\formance\Models\Operations\ConfirmHoldRequest $request,
+        ?\formance\formance\Models\Operations\ConfirmHoldRequest $request,
     ): \formance\formance\Models\Operations\ConfirmHoldResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -36,7 +36,9 @@ class Wallets
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "confirmHoldRequest", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -68,7 +70,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\CreateBalanceResponse
      */
 	public function createBalance(
-        \formance\formance\Models\Operations\CreateBalanceRequest $request,
+        ?\formance\formance\Models\Operations\CreateBalanceRequest $request,
     ): \formance\formance\Models\Operations\CreateBalanceResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -76,7 +78,9 @@ class Wallets
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "createBalanceRequest", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -112,7 +116,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\CreateWalletResponse
      */
 	public function createWallet(
-        \formance\formance\Models\Shared\CreateWalletRequest $request,
+        ?\formance\formance\Models\Shared\CreateWalletRequest $request,
     ): \formance\formance\Models\Operations\CreateWalletResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -120,7 +124,9 @@ class Wallets
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -156,7 +162,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\CreditWalletResponse
      */
 	public function creditWallet(
-        \formance\formance\Models\Operations\CreditWalletRequest $request,
+        ?\formance\formance\Models\Operations\CreditWalletRequest $request,
     ): \formance\formance\Models\Operations\CreditWalletResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -164,7 +170,9 @@ class Wallets
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "creditWalletRequest", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -196,7 +204,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\DebitWalletResponse
      */
 	public function debitWallet(
-        \formance\formance\Models\Operations\DebitWalletRequest $request,
+        ?\formance\formance\Models\Operations\DebitWalletRequest $request,
     ): \formance\formance\Models\Operations\DebitWalletResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -204,7 +212,9 @@ class Wallets
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "debitWalletRequest", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -242,7 +252,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\GetBalanceResponse
      */
 	public function getBalance(
-        \formance\formance\Models\Operations\GetBalanceRequest $request,
+        ?\formance\formance\Models\Operations\GetBalanceRequest $request,
     ): \formance\formance\Models\Operations\GetBalanceResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -284,7 +294,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\GetHoldResponse
      */
 	public function getHold(
-        \formance\formance\Models\Operations\GetHoldRequest $request,
+        ?\formance\formance\Models\Operations\GetHoldRequest $request,
     ): \formance\formance\Models\Operations\GetHoldResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -326,7 +336,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\GetHoldsResponse
      */
 	public function getHolds(
-        \formance\formance\Models\Operations\GetHoldsRequest $request,
+        ?\formance\formance\Models\Operations\GetHoldsRequest $request,
     ): \formance\formance\Models\Operations\GetHoldsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -369,7 +379,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\GetTransactionsResponse
      */
 	public function getTransactions(
-        \formance\formance\Models\Operations\GetTransactionsRequest $request,
+        ?\formance\formance\Models\Operations\GetTransactionsRequest $request,
     ): \formance\formance\Models\Operations\GetTransactionsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -412,7 +422,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\GetWalletResponse
      */
 	public function getWallet(
-        \formance\formance\Models\Operations\GetWalletRequest $request,
+        ?\formance\formance\Models\Operations\GetWalletRequest $request,
     ): \formance\formance\Models\Operations\GetWalletResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -456,7 +466,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\GetWalletSummaryResponse
      */
 	public function getWalletSummary(
-        \formance\formance\Models\Operations\GetWalletSummaryRequest $request,
+        ?\formance\formance\Models\Operations\GetWalletSummaryRequest $request,
     ): \formance\formance\Models\Operations\GetWalletSummaryResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -500,7 +510,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\ListBalancesResponse
      */
 	public function listBalances(
-        \formance\formance\Models\Operations\ListBalancesRequest $request,
+        ?\formance\formance\Models\Operations\ListBalancesRequest $request,
     ): \formance\formance\Models\Operations\ListBalancesResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -536,7 +546,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\ListWalletsResponse
      */
 	public function listWallets(
-        \formance\formance\Models\Operations\ListWalletsRequest $request,
+        ?\formance\formance\Models\Operations\ListWalletsRequest $request,
     ): \formance\formance\Models\Operations\ListWalletsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -573,7 +583,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\UpdateWalletResponse
      */
 	public function updateWallet(
-        \formance\formance\Models\Operations\UpdateWalletRequest $request,
+        ?\formance\formance\Models\Operations\UpdateWalletRequest $request,
     ): \formance\formance\Models\Operations\UpdateWalletResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -581,7 +591,9 @@ class Wallets
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -613,7 +625,7 @@ class Wallets
      * @return \formance\formance\Models\Operations\VoidHoldResponse
      */
 	public function voidHold(
-        \formance\formance\Models\Operations\VoidHoldRequest $request,
+        ?\formance\formance\Models\Operations\VoidHoldRequest $request,
     ): \formance\formance\Models\Operations\VoidHoldResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());

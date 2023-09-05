@@ -76,7 +76,7 @@ class Accounts
      * @return \formance\formance\Models\Operations\CountAccountsResponse
      */
 	public function countAccounts(
-        \formance\formance\Models\Operations\CountAccountsRequest $request,
+        ?\formance\formance\Models\Operations\CountAccountsRequest $request,
     ): \formance\formance\Models\Operations\CountAccountsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -117,7 +117,7 @@ class Accounts
      * @return \formance\formance\Models\Operations\GetAccountResponse
      */
 	public function getAccount(
-        \formance\formance\Models\Operations\GetAccountRequest $request,
+        ?\formance\formance\Models\Operations\GetAccountRequest $request,
     ): \formance\formance\Models\Operations\GetAccountResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -161,7 +161,7 @@ class Accounts
      * @return \formance\formance\Models\Operations\ListAccountsResponse
      */
 	public function listAccounts(
-        \formance\formance\Models\Operations\ListAccountsRequest $request,
+        ?\formance\formance\Models\Operations\ListAccountsRequest $request,
     ): \formance\formance\Models\Operations\ListAccountsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());

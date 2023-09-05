@@ -28,7 +28,7 @@ class Transactions
      * @return \formance\formance\Models\Operations\AddMetadataOnTransactionResponse
      */
 	public function addMetadataOnTransaction(
-        \formance\formance\Models\Operations\AddMetadataOnTransactionRequest $request,
+        ?\formance\formance\Models\Operations\AddMetadataOnTransactionRequest $request,
     ): \formance\formance\Models\Operations\AddMetadataOnTransactionResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -36,7 +36,9 @@ class Transactions
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\formance\formance\Models\Operations\AddMetadataOnTransactionRequest::class, $request, null));
         $options = array_merge_recursive($options, Utils\Utils::getHeaders($request));
         if (!array_key_exists('headers', $options)) {
@@ -73,7 +75,7 @@ class Transactions
      * @return \formance\formance\Models\Operations\CountTransactionsResponse
      */
 	public function countTransactions(
-        \formance\formance\Models\Operations\CountTransactionsRequest $request,
+        ?\formance\formance\Models\Operations\CountTransactionsRequest $request,
     ): \formance\formance\Models\Operations\CountTransactionsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -166,7 +168,7 @@ class Transactions
      * @return \formance\formance\Models\Operations\GetTransactionResponse
      */
 	public function getTransaction(
-        \formance\formance\Models\Operations\GetTransactionRequest $request,
+        ?\formance\formance\Models\Operations\GetTransactionRequest $request,
     ): \formance\formance\Models\Operations\GetTransactionResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -210,7 +212,7 @@ class Transactions
      * @return \formance\formance\Models\Operations\ListTransactionsResponse
      */
 	public function listTransactions(
-        \formance\formance\Models\Operations\ListTransactionsRequest $request,
+        ?\formance\formance\Models\Operations\ListTransactionsRequest $request,
     ): \formance\formance\Models\Operations\ListTransactionsResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -253,7 +255,7 @@ class Transactions
      * @return \formance\formance\Models\Operations\RevertTransactionResponse
      */
 	public function revertTransaction(
-        \formance\formance\Models\Operations\RevertTransactionRequest $request,
+        ?\formance\formance\Models\Operations\RevertTransactionRequest $request,
     ): \formance\formance\Models\Operations\RevertTransactionResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());

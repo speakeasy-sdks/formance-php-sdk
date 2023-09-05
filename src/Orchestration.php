@@ -30,7 +30,7 @@ class Orchestration
      * @return \formance\formance\Models\Operations\CancelEventResponse
      */
 	public function cancelEvent(
-        \formance\formance\Models\Operations\CancelEventRequest $request,
+        ?\formance\formance\Models\Operations\CancelEventRequest $request,
     ): \formance\formance\Models\Operations\CancelEventResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -70,7 +70,7 @@ class Orchestration
      * @return \formance\formance\Models\Operations\CreateWorkflowResponse
      */
 	public function createWorkflow(
-        \formance\formance\Models\Shared\CreateWorkflowRequest $request,
+        ?\formance\formance\Models\Shared\CreateWorkflowRequest $request,
     ): \formance\formance\Models\Operations\CreateWorkflowResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -78,7 +78,9 @@ class Orchestration
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
@@ -116,7 +118,7 @@ class Orchestration
      * @return \formance\formance\Models\Operations\GetInstanceResponse
      */
 	public function getInstance(
-        \formance\formance\Models\Operations\GetInstanceRequest $request,
+        ?\formance\formance\Models\Operations\GetInstanceRequest $request,
     ): \formance\formance\Models\Operations\GetInstanceResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -160,7 +162,7 @@ class Orchestration
      * @return \formance\formance\Models\Operations\GetInstanceHistoryResponse
      */
 	public function getInstanceHistory(
-        \formance\formance\Models\Operations\GetInstanceHistoryRequest $request,
+        ?\formance\formance\Models\Operations\GetInstanceHistoryRequest $request,
     ): \formance\formance\Models\Operations\GetInstanceHistoryResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -204,7 +206,7 @@ class Orchestration
      * @return \formance\formance\Models\Operations\GetInstanceStageHistoryResponse
      */
 	public function getInstanceStageHistory(
-        \formance\formance\Models\Operations\GetInstanceStageHistoryRequest $request,
+        ?\formance\formance\Models\Operations\GetInstanceStageHistoryRequest $request,
     ): \formance\formance\Models\Operations\GetInstanceStageHistoryResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -248,7 +250,7 @@ class Orchestration
      * @return \formance\formance\Models\Operations\GetWorkflowResponse
      */
 	public function getWorkflow(
-        \formance\formance\Models\Operations\GetWorkflowRequest $request,
+        ?\formance\formance\Models\Operations\GetWorkflowRequest $request,
     ): \formance\formance\Models\Operations\GetWorkflowResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -292,7 +294,7 @@ class Orchestration
      * @return \formance\formance\Models\Operations\ListInstancesResponse
      */
 	public function listInstances(
-        \formance\formance\Models\Operations\ListInstancesRequest $request,
+        ?\formance\formance\Models\Operations\ListInstancesRequest $request,
     ): \formance\formance\Models\Operations\ListInstancesResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -419,7 +421,7 @@ class Orchestration
      * @return \formance\formance\Models\Operations\RunWorkflowResponse
      */
 	public function runWorkflow(
-        \formance\formance\Models\Operations\RunWorkflowRequest $request,
+        ?\formance\formance\Models\Operations\RunWorkflowRequest $request,
     ): \formance\formance\Models\Operations\RunWorkflowResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -427,7 +429,9 @@ class Orchestration
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\formance\formance\Models\Operations\RunWorkflowRequest::class, $request, null));
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
@@ -466,7 +470,7 @@ class Orchestration
      * @return \formance\formance\Models\Operations\SendEventResponse
      */
 	public function sendEvent(
-        \formance\formance\Models\Operations\SendEventRequest $request,
+        ?\formance\formance\Models\Operations\SendEventRequest $request,
     ): \formance\formance\Models\Operations\SendEventResponse
     {
         $baseUrl = Utils\Utils::templateUrl($this->sdkConfiguration->getServerUrl(), $this->sdkConfiguration->getServerDefaults());
@@ -474,7 +478,9 @@ class Orchestration
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
