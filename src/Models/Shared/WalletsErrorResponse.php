@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * WalletsErrorResponse - Error
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class WalletsErrorResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('errorCode')]

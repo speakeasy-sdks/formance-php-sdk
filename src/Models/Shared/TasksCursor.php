@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * TasksCursor - OK
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class TasksCursor
 {
 	#[\JMS\Serializer\Annotation\SerializedName('cursor')]

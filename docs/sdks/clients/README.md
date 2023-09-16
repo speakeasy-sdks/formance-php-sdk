@@ -1,4 +1,4 @@
-# clients
+# Clients
 
 ### Available Operations
 
@@ -33,8 +33,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new AddScopeToClientRequest();
-    $request->clientId = 'corporis';
-    $request->scopeId = 'explicabo';
+    $request->clientId = 'modi';
+    $request->scopeId = 'qui';
 
     $response = $sdk->clients->addScopeToClient($request);
 
@@ -79,18 +79,17 @@ $sdk = SDK::builder()
 
 try {
     $request = new CreateClientRequest();
-    $request->description = 'nobis';
+    $request->description = 'impedit';
     $request->metadata = [
-        'omnis' => 'nemo',
-        'minima' => 'excepturi',
+        'cum' => 'esse',
     ];
-    $request->name = 'Charlene Nicolas';
+    $request->name = 'Mrs. Miriam Collier';
     $request->postLogoutRedirectUris = [
-        'mollitia',
+        'sed',
     ];
     $request->public = false;
     $request->redirectUris = [
-        'culpa',
+        'iste',
     ];
     $request->trusted = false;
 
@@ -140,10 +139,10 @@ try {
     $request = new CreateSecretRequest();
     $request->createSecretRequest = new CreateSecretRequest();
     $request->createSecretRequest->metadata = [
-        'repellat' => 'mollitia',
+        'dolor' => 'natus',
     ];
-    $request->createSecretRequest->name = 'Francis Jerde';
-    $request->clientId = 'velit';
+    $request->createSecretRequest->name = 'May Turcotte';
+    $request->clientId = 'corporis';
 
     $response = $sdk->clients->createSecret($request);
 
@@ -188,7 +187,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteClientRequest();
-    $request->clientId = 'error';
+    $request->clientId = 'iste';
 
     $response = $sdk->clients->deleteClient($request);
 
@@ -233,8 +232,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteScopeFromClientRequest();
-    $request->clientId = 'quia';
-    $request->scopeId = 'quis';
+    $request->clientId = 'iure';
+    $request->scopeId = 'saepe';
 
     $response = $sdk->clients->deleteScopeFromClient($request);
 
@@ -279,8 +278,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteSecretRequest();
-    $request->clientId = 'vitae';
-    $request->secretId = 'laborum';
+    $request->clientId = 'quidem';
+    $request->secretId = 'architecto';
 
     $response = $sdk->clients->deleteSecret($request);
 
@@ -360,7 +359,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new ReadClientRequest();
-    $request->clientId = 'animi';
+    $request->clientId = 'ipsa';
 
     $response = $sdk->clients->readClient($request);
 
@@ -407,25 +406,20 @@ $sdk = SDK::builder()
 try {
     $request = new UpdateClientRequest();
     $request->updateClientRequest = new UpdateClientRequest();
-    $request->updateClientRequest->description = 'enim';
+    $request->updateClientRequest->description = 'reiciendis';
     $request->updateClientRequest->metadata = [
-        'quo' => 'sequi',
+        'est' => 'mollitia',
     ];
-    $request->updateClientRequest->name = 'Vernon Ondricka Sr.';
+    $request->updateClientRequest->name = 'Ernest Ebert';
     $request->updateClientRequest->postLogoutRedirectUris = [
-        'temporibus',
-        'laborum',
-        'quasi',
+        'nobis',
     ];
     $request->updateClientRequest->public = false;
     $request->updateClientRequest->redirectUris = [
-        'voluptatibus',
-        'vero',
-        'nihil',
-        'praesentium',
+        'enim',
     ];
     $request->updateClientRequest->trusted = false;
-    $request->clientId = 'voluptatibus';
+    $request->clientId = 'omnis';
 
     $response = $sdk->clients->updateClient($request);
 

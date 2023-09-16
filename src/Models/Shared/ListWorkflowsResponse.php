@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * ListWorkflowsResponse - List of workflows
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class ListWorkflowsResponse
 {
     /**

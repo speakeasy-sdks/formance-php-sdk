@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * ListClientsResponse - List of clients
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class ListClientsResponse
 {
     /**

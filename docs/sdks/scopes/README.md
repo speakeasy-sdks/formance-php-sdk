@@ -1,4 +1,4 @@
-# scopes
+# Scopes
 
 ### Available Operations
 
@@ -31,8 +31,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new AddTransientScopeRequest();
-    $request->scopeId = 'provident';
-    $request->transientScopeId = 'quos';
+    $request->scopeId = 'veritatis';
+    $request->transientScopeId = 'itaque';
 
     $response = $sdk->scopes->addTransientScope($request);
 
@@ -77,9 +77,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new CreateScopeRequest();
-    $request->label = 'sint';
+    $request->label = 'incidunt';
     $request->metadata = [
-        'mollitia' => 'reiciendis',
+        'enim' => 'consequatur',
     ];
 
     $response = $sdk->scopes->createScope($request);
@@ -125,7 +125,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteScopeRequest();
-    $request->scopeId = 'mollitia';
+    $request->scopeId = 'est';
 
     $response = $sdk->scopes->deleteScope($request);
 
@@ -170,8 +170,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteTransientScopeRequest();
-    $request->scopeId = 'ad';
-    $request->transientScopeId = 'eum';
+    $request->scopeId = 'quibusdam';
+    $request->transientScopeId = 'explicabo';
 
     $response = $sdk->scopes->deleteTransientScope($request);
 
@@ -251,7 +251,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new ReadScopeRequest();
-    $request->scopeId = 'dolor';
+    $request->scopeId = 'deserunt';
 
     $response = $sdk->scopes->readScope($request);
 
@@ -298,11 +298,11 @@ $sdk = SDK::builder()
 try {
     $request = new UpdateScopeRequest();
     $request->updateScopeRequest = new UpdateScopeRequest();
-    $request->updateScopeRequest->label = 'necessitatibus';
+    $request->updateScopeRequest->label = 'distinctio';
     $request->updateScopeRequest->metadata = [
-        'nemo' => 'quasi',
+        'quibusdam' => 'labore',
     ];
-    $request->scopeId = 'iure';
+    $request->scopeId = 'modi';
 
     $response = $sdk->scopes->updateScope($request);
 

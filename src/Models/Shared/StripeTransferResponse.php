@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * StripeTransferResponse - OK
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class StripeTransferResponse
 {
 	public function __construct()

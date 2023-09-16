@@ -1,4 +1,4 @@
-# auth
+# Auth
 
 ### Available Operations
 
@@ -43,8 +43,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new AddScopeToClientRequest();
-    $request->clientId = 'debitis';
-    $request->scopeId = 'ipsa';
+    $request->clientId = 'corrupti';
+    $request->scopeId = 'illum';
 
     $response = $sdk->auth->addScopeToClient($request);
 
@@ -89,8 +89,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new AddTransientScopeRequest();
-    $request->scopeId = 'delectus';
-    $request->transientScopeId = 'tempora';
+    $request->scopeId = 'vel';
+    $request->transientScopeId = 'error';
 
     $response = $sdk->auth->addTransientScope($request);
 
@@ -135,18 +135,17 @@ $sdk = SDK::builder()
 
 try {
     $request = new CreateClientRequest();
-    $request->description = 'suscipit';
+    $request->description = 'deserunt';
     $request->metadata = [
-        'minus' => 'placeat',
-        'voluptatum' => 'iusto',
+        'suscipit' => 'iure',
     ];
-    $request->name = 'Charlie Walsh II';
+    $request->name = 'Raquel Bednar';
     $request->postLogoutRedirectUris = [
-        'deserunt',
+        'suscipit',
     ];
     $request->public = false;
     $request->redirectUris = [
-        'ipsam',
+        'molestiae',
     ];
     $request->trusted = false;
 
@@ -193,12 +192,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new CreateScopeRequest();
-    $request->label = 'repellendus';
+    $request->label = 'minus';
     $request->metadata = [
-        'quo' => 'odit',
-        'at' => 'at',
-        'maiores' => 'molestiae',
-        'quod' => 'quod',
+        'placeat' => 'voluptatum',
     ];
 
     $response = $sdk->auth->createScope($request);
@@ -247,11 +243,10 @@ try {
     $request = new CreateSecretRequest();
     $request->createSecretRequest = new CreateSecretRequest();
     $request->createSecretRequest->metadata = [
-        'totam' => 'porro',
-        'dolorum' => 'dicta',
+        'iusto' => 'excepturi',
     ];
-    $request->createSecretRequest->name = 'Luke McCullough';
-    $request->clientId = 'hic';
+    $request->createSecretRequest->name = 'Mrs. Sophie Smith MD';
+    $request->clientId = 'perferendis';
 
     $response = $sdk->auth->createSecret($request);
 
@@ -296,7 +291,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteClientRequest();
-    $request->clientId = 'optio';
+    $request->clientId = 'ipsam';
 
     $response = $sdk->auth->deleteClient($request);
 
@@ -341,7 +336,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteScopeRequest();
-    $request->scopeId = 'totam';
+    $request->scopeId = 'repellendus';
 
     $response = $sdk->auth->deleteScope($request);
 
@@ -386,8 +381,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteScopeFromClientRequest();
-    $request->clientId = 'beatae';
-    $request->scopeId = 'commodi';
+    $request->clientId = 'sapiente';
+    $request->scopeId = 'quo';
 
     $response = $sdk->auth->deleteScopeFromClient($request);
 
@@ -432,8 +427,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteSecretRequest();
-    $request->clientId = 'molestiae';
-    $request->secretId = 'modi';
+    $request->clientId = 'odit';
+    $request->secretId = 'at';
 
     $response = $sdk->auth->deleteSecret($request);
 
@@ -478,8 +473,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteTransientScopeRequest();
-    $request->scopeId = 'qui';
-    $request->transientScopeId = 'impedit';
+    $request->scopeId = 'at';
+    $request->transientScopeId = 'maiores';
 
     $response = $sdk->auth->deleteTransientScope($request);
 
@@ -664,7 +659,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new ReadClientRequest();
-    $request->clientId = 'cum';
+    $request->clientId = 'molestiae';
 
     $response = $sdk->auth->readClient($request);
 
@@ -709,7 +704,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new ReadScopeRequest();
-    $request->scopeId = 'esse';
+    $request->scopeId = 'quod';
 
     $response = $sdk->auth->readScope($request);
 
@@ -754,7 +749,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new ReadUserRequest();
-    $request->userId = 'ipsum';
+    $request->userId = 'quod';
 
     $response = $sdk->auth->readUser($request);
 
@@ -801,23 +796,20 @@ $sdk = SDK::builder()
 try {
     $request = new UpdateClientRequest();
     $request->updateClientRequest = new UpdateClientRequest();
-    $request->updateClientRequest->description = 'excepturi';
+    $request->updateClientRequest->description = 'esse';
     $request->updateClientRequest->metadata = [
-        'perferendis' => 'ad',
+        'totam' => 'porro',
     ];
-    $request->updateClientRequest->name = 'Louis Moore';
+    $request->updateClientRequest->name = 'Samuel Reichel';
     $request->updateClientRequest->postLogoutRedirectUris = [
-        'hic',
-        'saepe',
+        'fugit',
     ];
     $request->updateClientRequest->public = false;
     $request->updateClientRequest->redirectUris = [
-        'in',
-        'corporis',
-        'iste',
+        'deleniti',
     ];
     $request->updateClientRequest->trusted = false;
-    $request->clientId = 'iure';
+    $request->clientId = 'hic';
 
     $response = $sdk->auth->updateClient($request);
 
@@ -864,13 +856,11 @@ $sdk = SDK::builder()
 try {
     $request = new UpdateScopeRequest();
     $request->updateScopeRequest = new UpdateScopeRequest();
-    $request->updateScopeRequest->label = 'saepe';
+    $request->updateScopeRequest->label = 'optio';
     $request->updateScopeRequest->metadata = [
-        'architecto' => 'ipsa',
-        'reiciendis' => 'est',
-        'mollitia' => 'laborum',
+        'totam' => 'beatae',
     ];
-    $request->scopeId = 'dolores';
+    $request->scopeId = 'commodi';
 
     $response = $sdk->auth->updateScope($request);
 

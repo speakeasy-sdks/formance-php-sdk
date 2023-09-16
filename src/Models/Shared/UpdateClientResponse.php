@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * UpdateClientResponse - Updated client
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class UpdateClientResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('data')]

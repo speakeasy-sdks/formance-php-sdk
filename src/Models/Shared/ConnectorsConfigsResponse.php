@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * ConnectorsConfigsResponse - OK
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class ConnectorsConfigsResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('data')]

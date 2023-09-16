@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * Error - General error
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class Error
 {
 	#[\JMS\Serializer\Annotation\SerializedName('errorCode')]

@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * GetHoldResponse - Holds
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class GetHoldResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('data')]

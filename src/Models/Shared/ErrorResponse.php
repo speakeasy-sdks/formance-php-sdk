@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * ErrorResponse - Error
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class ErrorResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('details')]

@@ -1,4 +1,4 @@
-# search
+# Search
 
 ### Available Operations
 
@@ -29,25 +29,17 @@ try {
     $request = new Query();
     $request->after = [
         'users:002',
-        'users:002',
-        'users:002',
-        'users:002',
     ];
     $request->cursor = 'YXVsdCBhbmQgYSBtYXhpbXVtIG1heF9yZXN1bHRzLol=';
     $request->ledgers = [
         'quickstart',
-        'quickstart',
-        'quickstart',
-        'quickstart',
     ];
-    $request->pageSize = 260341;
+    $request->pageSize = 183191;
     $request->policy = 'OR';
     $request->raw = new QueryRaw();
     $request->sort = 'txid:asc';
-    $request->target = 'maxime';
+    $request->target = 'aliquid';
     $request->terms = [
-        'destination=central_bank1',
-        'destination=central_bank1',
         'destination=central_bank1',
     ];
 

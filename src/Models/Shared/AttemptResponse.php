@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * AttemptResponse - OK
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class AttemptResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('data')]

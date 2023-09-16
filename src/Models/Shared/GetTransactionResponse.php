@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * GetTransactionResponse - OK
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class GetTransactionResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('data')]

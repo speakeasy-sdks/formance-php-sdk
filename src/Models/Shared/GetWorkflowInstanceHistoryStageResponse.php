@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * GetWorkflowInstanceHistoryStageResponse - The workflow instance stage history
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class GetWorkflowInstanceHistoryStageResponse
 {
     /**

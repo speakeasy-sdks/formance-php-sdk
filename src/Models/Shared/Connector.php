@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/** The name of the connector. */
 enum Connector: string
 {
     case Stripe = 'STRIPE';

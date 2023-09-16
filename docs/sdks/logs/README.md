@@ -1,4 +1,4 @@
-# logs
+# Logs
 
 ### Available Operations
 
@@ -26,10 +26,10 @@ $sdk = SDK::builder()
 try {
     $request = new ListLogsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
-    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-01-14T19:13:42.009Z');
+    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-05-11T16:11:54.761Z');
     $request->ledger = 'ledger001';
-    $request->pageSize = 433288;
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-31T00:30:19.135Z');
+    $request->pageSize = 13571;
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-18T15:52:05.226Z');
 
     $response = $sdk->logs->listLogs($request);
 

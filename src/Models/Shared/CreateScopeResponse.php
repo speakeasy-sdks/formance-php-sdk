@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * CreateScopeResponse - Created scope
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class CreateScopeResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('data')]

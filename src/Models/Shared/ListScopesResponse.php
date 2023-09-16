@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * ListScopesResponse - List of scopes
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class ListScopesResponse
 {
     /**

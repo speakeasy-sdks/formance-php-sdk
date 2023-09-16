@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * DebitWalletResponse - Wallet successfully debited as a pending hold
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class DebitWalletResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('data')]

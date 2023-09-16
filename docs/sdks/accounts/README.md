@@ -1,4 +1,4 @@
-# accounts
+# Accounts
 
 ### Available Operations
 
@@ -30,9 +30,7 @@ try {
     $request = new AddMetadataToAccountRequest();
     $request->idempotencyKey = 'corrupti';
     $request->requestBody = [
-        'distinctio' => 'quibusdam',
-        'unde' => 'nulla',
-        'corrupti' => 'illum',
+        'provident' => 'distinctio',
     ];
     $request->address = 'users:001';
     $request->async = true;
@@ -183,10 +181,9 @@ try {
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'error' => 'deserunt',
-        'suscipit' => 'iure',
+        'quibusdam' => 'unde',
     ];
-    $request->pageSize = 297534;
+    $request->pageSize = 857946;
 
     $response = $sdk->accounts->listAccounts($request);
 

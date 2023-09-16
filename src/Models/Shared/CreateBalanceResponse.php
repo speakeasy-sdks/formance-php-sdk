@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace formance\formance\Models\Shared;
 
 
-/**
- * CreateBalanceResponse - Created balance
- * 
- * @package formance\formance\Models\Shared
- * @access public
- */
 class CreateBalanceResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('data')]

@@ -1,4 +1,4 @@
-# ledger
+# Ledger
 
 ### Available Operations
 
@@ -40,11 +40,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new AddMetadataOnTransactionRequest();
-    $request->idempotencyKey = 'ipsa';
+    $request->idempotencyKey = 'nemo';
     $request->requestBody = [
-        'voluptate' => 'cum',
-        'perferendis' => 'doloremque',
-        'reprehenderit' => 'ut',
+        'minima' => 'excepturi',
     ];
     $request->async = true;
     $request->dryRun = true;
@@ -94,9 +92,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new AddMetadataToAccountRequest();
-    $request->idempotencyKey = 'maiores';
+    $request->idempotencyKey = 'accusantium';
     $request->requestBody = [
-        'corporis' => 'dolore',
+        'iure' => 'culpa',
     ];
     $request->address = 'users:001';
     $request->async = true;
@@ -196,16 +194,14 @@ try {
     $request = new CountTransactionsRequest();
     $request->account = 'users:001';
     $request->destination = 'users:001';
-    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-11-18T15:56:41.921Z');
+    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-02-15T22:48:47.492Z');
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'enim' => 'accusamus',
-        'commodi' => 'repudiandae',
-        'quae' => 'ipsum',
+        'architecto' => 'mollitia',
     ];
     $request->reference = 'ref:001';
     $request->source = 'users:001';
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-14T09:53:27.431Z');
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-14T04:53:02.888Z');
 
     $response = $sdk->ledger->countTransactions($request);
 
@@ -254,18 +250,12 @@ $sdk = SDK::builder()
 
 try {
     $request = new CreateTransactionRequest();
-    $request->idempotencyKey = 'excepturi';
+    $request->idempotencyKey = 'consequuntur';
     $request->postTransaction = new PostTransaction();
     $request->postTransaction->metadata = [
-        'modi' => 'praesentium',
-        'rem' => 'voluptates',
-        'quasi' => 'repudiandae',
-        'sint' => 'veritatis',
+        'repellat' => 'mollitia',
     ];
     $request->postTransaction->postings = [
-        new Posting(),
-        new Posting(),
-        new Posting(),
         new Posting(),
     ];
     $request->postTransaction->reference = 'ref:001';
@@ -279,7 +269,7 @@ try {
     )
     ';
     $request->postTransaction->script->vars = new PostTransactionScriptVars();
-    $request->postTransaction->timestamp = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-06T17:20:08.756Z');
+    $request->postTransaction->timestamp = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-30T02:19:51.375Z');
     $request->async = true;
     $request->dryRun = true;
     $request->ledger = 'ledger001';
@@ -376,7 +366,7 @@ try {
     $request->address = 'users:001';
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
-    $request->pageSize = 9356;
+    $request->pageSize = 414369;
 
     $response = $sdk->ledger->getBalances($request);
 
@@ -600,11 +590,9 @@ try {
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'quibusdam' => 'explicabo',
-        'deserunt' => 'distinctio',
-        'quibusdam' => 'labore',
+        'quam' => 'molestiae',
     ];
-    $request->pageSize = 264730;
+    $request->pageSize = 244425;
 
     $response = $sdk->ledger->listAccounts($request);
 
@@ -650,10 +638,10 @@ $sdk = SDK::builder()
 try {
     $request = new ListLogsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
-    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-08-08T19:05:24.174Z');
+    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-06T22:51:09.401Z');
     $request->ledger = 'ledger001';
-    $request->pageSize = 586513;
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-12-17T07:42:55.593Z');
+    $request->pageSize = 338007;
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-29T17:10:10.440Z');
 
     $response = $sdk->ledger->listLogs($request);
 
@@ -701,16 +689,15 @@ try {
     $request->account = 'users:001';
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->destination = 'users:001';
-    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-03-04T10:29:07.095Z');
+    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-14T10:37:30.872Z');
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'alias' => 'fugit',
-        'dolorum' => 'excepturi',
+        'odit' => 'quo',
     ];
-    $request->pageSize = 270008;
+    $request->pageSize = 196582;
     $request->reference = 'ref:001';
     $request->source = 'users:001';
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-07-13T07:24:02.478Z');
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-23T05:54:08.890Z');
 
     $response = $sdk->ledger->listTransactions($request);
 
