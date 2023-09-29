@@ -61,14 +61,14 @@ try {
 
 * [getVersions](docs/sdks/sdk/README.md#getversions) - Show stack version information
 
-### [Accounts](docs/sdks/accounts/README.md)
+### [accounts](docs/sdks/accounts/README.md)
 
 * [addMetadataToAccount](docs/sdks/accounts/README.md#addmetadatatoaccount) - Add metadata to an account
 * [countAccounts](docs/sdks/accounts/README.md#countaccounts) - Count the accounts from a ledger
 * [getAccount](docs/sdks/accounts/README.md#getaccount) - Get account by its address
 * [listAccounts](docs/sdks/accounts/README.md#listaccounts) - List accounts from a ledger
 
-### [Auth](docs/sdks/auth/README.md)
+### [auth](docs/sdks/auth/README.md)
 
 * [addScopeToClient](docs/sdks/auth/README.md#addscopetoclient) - Add scope to client
 * [addTransientScope](docs/sdks/auth/README.md#addtransientscope) - Add a transient scope to a scope
@@ -90,12 +90,12 @@ try {
 * [updateClient](docs/sdks/auth/README.md#updateclient) - Update client
 * [updateScope](docs/sdks/auth/README.md#updatescope) - Update scope
 
-### [Balances](docs/sdks/balances/README.md)
+### [balances](docs/sdks/balances/README.md)
 
 * [getBalances](docs/sdks/balances/README.md#getbalances) - Get the balances from a ledger's account
 * [getBalancesAggregated](docs/sdks/balances/README.md#getbalancesaggregated) - Get the aggregated balances from selected accounts
 
-### [Clients](docs/sdks/clients/README.md)
+### [clients](docs/sdks/clients/README.md)
 
 * [addScopeToClient](docs/sdks/clients/README.md#addscopetoclient) - Add scope to client
 * [createClient](docs/sdks/clients/README.md#createclient) - Create client
@@ -107,7 +107,7 @@ try {
 * [readClient](docs/sdks/clients/README.md#readclient) - Read client
 * [updateClient](docs/sdks/clients/README.md#updateclient) - Update client
 
-### [Ledger](docs/sdks/ledger/README.md)
+### [ledger](docs/sdks/ledger/README.md)
 
 * [addMetadataOnTransaction](docs/sdks/ledger/README.md#addmetadataontransaction) - Set the metadata of a transaction by its ID
 * [addMetadataToAccount](docs/sdks/ledger/README.md#addmetadatatoaccount) - Add metadata to an account
@@ -126,11 +126,11 @@ try {
 * [readStats](docs/sdks/ledger/README.md#readstats) - Get statistics from a ledger
 * [revertTransaction](docs/sdks/ledger/README.md#reverttransaction) - Revert a ledger transaction by its ID
 
-### [Logs](docs/sdks/logs/README.md)
+### [logs](docs/sdks/logs/README.md)
 
 * [listLogs](docs/sdks/logs/README.md#listlogs) - List the logs from a ledger
 
-### [Orchestration](docs/sdks/orchestration/README.md)
+### [orchestration](docs/sdks/orchestration/README.md)
 
 * [cancelEvent](docs/sdks/orchestration/README.md#cancelevent) - Cancel a running workflow
 * [createWorkflow](docs/sdks/orchestration/README.md#createworkflow) - Create workflow
@@ -144,7 +144,7 @@ try {
 * [runWorkflow](docs/sdks/orchestration/README.md#runworkflow) - Run workflow
 * [sendEvent](docs/sdks/orchestration/README.md#sendevent) - Send an event to a running workflow
 
-### [Payments](docs/sdks/payments/README.md)
+### [payments](docs/sdks/payments/README.md)
 
 * [connectorsStripeTransfer](docs/sdks/payments/README.md#connectorsstripetransfer) - Transfer funds between Stripe accounts
 * [connectorsTransfer](docs/sdks/payments/README.md#connectorstransfer) - Transfer funds between Connector accounts
@@ -163,7 +163,7 @@ try {
 * [uninstallConnector](docs/sdks/payments/README.md#uninstallconnector) - Uninstall a connector
 * [updateMetadata](docs/sdks/payments/README.md#updatemetadata) - Update metadata
 
-### [Scopes](docs/sdks/scopes/README.md)
+### [scopes](docs/sdks/scopes/README.md)
 
 * [addTransientScope](docs/sdks/scopes/README.md#addtransientscope) - Add a transient scope to a scope
 * [createScope](docs/sdks/scopes/README.md#createscope) - Create scope
@@ -173,20 +173,20 @@ try {
 * [readScope](docs/sdks/scopes/README.md#readscope) - Read scope
 * [updateScope](docs/sdks/scopes/README.md#updatescope) - Update scope
 
-### [Search](docs/sdks/search/README.md)
+### [search](docs/sdks/search/README.md)
 
 * [search](docs/sdks/search/README.md#search) - Search
 * [searchgetServerInfo](docs/sdks/search/README.md#searchgetserverinfo) - Get server info
 
-### [Server](docs/sdks/server/README.md)
+### [server](docs/sdks/server/README.md)
 
 * [getInfo](docs/sdks/server/README.md#getinfo) - Show server information
 
-### [Stats](docs/sdks/stats/README.md)
+### [stats](docs/sdks/stats/README.md)
 
 * [readStats](docs/sdks/stats/README.md#readstats) - Get statistics from a ledger
 
-### [Transactions](docs/sdks/transactions/README.md)
+### [transactions](docs/sdks/transactions/README.md)
 
 * [addMetadataOnTransaction](docs/sdks/transactions/README.md#addmetadataontransaction) - Set the metadata of a transaction by its ID
 * [countTransactions](docs/sdks/transactions/README.md#counttransactions) - Count the transactions from a ledger
@@ -195,12 +195,12 @@ try {
 * [listTransactions](docs/sdks/transactions/README.md#listtransactions) - List transactions from a ledger
 * [revertTransaction](docs/sdks/transactions/README.md#reverttransaction) - Revert a ledger transaction by its ID
 
-### [Users](docs/sdks/users/README.md)
+### [users](docs/sdks/users/README.md)
 
 * [listUsers](docs/sdks/users/README.md#listusers) - List users
 * [readUser](docs/sdks/users/README.md#readuser) - Read user
 
-### [Wallets](docs/sdks/wallets/README.md)
+### [wallets](docs/sdks/wallets/README.md)
 
 * [confirmHold](docs/sdks/wallets/README.md#confirmhold) - Confirm a hold
 * [createBalance](docs/sdks/wallets/README.md#createbalance) - Create a balance
@@ -219,7 +219,7 @@ try {
 * [voidHold](docs/sdks/wallets/README.md#voidhold) - Cancel a hold
 * [walletsgetServerInfo](docs/sdks/wallets/README.md#walletsgetserverinfo) - Get server info
 
-### [Webhooks](docs/sdks/webhooks/README.md)
+### [webhooks](docs/sdks/webhooks/README.md)
 
 * [activateConfig](docs/sdks/webhooks/README.md#activateconfig) - Activate one config
 * [changeConfigSecret](docs/sdks/webhooks/README.md#changeconfigsecret) - Change the signing secret of a config
@@ -233,8 +233,6 @@ try {
 
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 

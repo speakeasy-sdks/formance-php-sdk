@@ -1,4 +1,5 @@
 # Ledger
+(*ledger*)
 
 ### Available Operations
 
@@ -40,9 +41,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new AddMetadataOnTransactionRequest();
-    $request->idempotencyKey = 'nemo';
+    $request->idempotencyKey = 'Fresh Diesel';
     $request->requestBody = [
-        'minima' => 'excepturi',
+        'facere' => 'Tricycle',
     ];
     $request->async = true;
     $request->dryRun = true;
@@ -92,9 +93,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new AddMetadataToAccountRequest();
-    $request->idempotencyKey = 'accusantium';
+    $request->idempotencyKey = 'silver';
     $request->requestBody = [
-        'iure' => 'culpa',
+        'laborum' => 'Rubber',
     ];
     $request->address = 'users:001';
     $request->async = true;
@@ -194,14 +195,14 @@ try {
     $request = new CountTransactionsRequest();
     $request->account = 'users:001';
     $request->destination = 'users:001';
-    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2020-02-15T22:48:47.492Z');
+    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-20T09:59:27.603Z');
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'architecto' => 'mollitia',
+        'voluptates' => 'Executive',
     ];
     $request->reference = 'ref:001';
     $request->source = 'users:001';
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-14T04:53:02.888Z');
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-01T08:17:00.866Z');
 
     $response = $sdk->ledger->countTransactions($request);
 
@@ -250,10 +251,10 @@ $sdk = SDK::builder()
 
 try {
     $request = new CreateTransactionRequest();
-    $request->idempotencyKey = 'consequuntur';
+    $request->idempotencyKey = 'Ball brr what';
     $request->postTransaction = new PostTransaction();
     $request->postTransaction->metadata = [
-        'repellat' => 'mollitia',
+        'quasi' => 'strategic',
     ];
     $request->postTransaction->postings = [
         new Posting(),
@@ -269,7 +270,7 @@ try {
     )
     ';
     $request->postTransaction->script->vars = new PostTransactionScriptVars();
-    $request->postTransaction->timestamp = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-06-30T02:19:51.375Z');
+    $request->postTransaction->timestamp = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-04-27T14:31:29.129Z');
     $request->async = true;
     $request->dryRun = true;
     $request->ledger = 'ledger001';
@@ -366,7 +367,7 @@ try {
     $request->address = 'users:001';
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
-    $request->pageSize = 414369;
+    $request->pageSize = 755286;
 
     $response = $sdk->ledger->getBalances($request);
 
@@ -590,9 +591,9 @@ try {
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'quam' => 'molestiae',
+        'vero' => 'technologies',
     ];
-    $request->pageSize = 244425;
+    $request->pageSize = 530853;
 
     $response = $sdk->ledger->listAccounts($request);
 
@@ -638,10 +639,10 @@ $sdk = SDK::builder()
 try {
     $request = new ListLogsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
-    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-09-06T22:51:09.401Z');
+    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-04T05:10:40.788Z');
     $request->ledger = 'ledger001';
-    $request->pageSize = 338007;
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-04-29T17:10:10.440Z');
+    $request->pageSize = 657242;
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-03T02:36:34.808Z');
 
     $response = $sdk->ledger->listLogs($request);
 
@@ -689,15 +690,15 @@ try {
     $request->account = 'users:001';
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->destination = 'users:001';
-    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2022-05-14T10:37:30.872Z');
+    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-08T16:09:19.098Z');
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'odit' => 'quo',
+        'alias' => 'District',
     ];
-    $request->pageSize = 196582;
+    $request->pageSize = 71007;
     $request->reference = 'ref:001';
     $request->source = 'users:001';
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:sP', '2021-11-23T05:54:08.890Z');
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-12T07:36:38.262Z');
 
     $response = $sdk->ledger->listTransactions($request);
 

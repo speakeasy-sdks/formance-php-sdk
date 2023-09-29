@@ -1,4 +1,5 @@
 # Scopes
+(*scopes*)
 
 ### Available Operations
 
@@ -31,8 +32,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new AddTransientScopeRequest();
-    $request->scopeId = 'veritatis';
-    $request->transientScopeId = 'itaque';
+    $request->scopeId = 'executive Soul';
+    $request->transientScopeId = 'Keyboard neural tan';
 
     $response = $sdk->scopes->addTransientScope($request);
 
@@ -77,9 +78,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new CreateScopeRequest();
-    $request->label = 'incidunt';
+    $request->label = 'neural Sunrise';
     $request->metadata = [
-        'enim' => 'consequatur',
+        'vero' => 'deposit',
     ];
 
     $response = $sdk->scopes->createScope($request);
@@ -125,7 +126,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteScopeRequest();
-    $request->scopeId = 'est';
+    $request->scopeId = 'impedit Bronze';
 
     $response = $sdk->scopes->deleteScope($request);
 
@@ -170,8 +171,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteTransientScopeRequest();
-    $request->scopeId = 'quibusdam';
-    $request->transientScopeId = 'explicabo';
+    $request->scopeId = 'billion Chips';
+    $request->transientScopeId = 'Account untidy haptic';
 
     $response = $sdk->scopes->deleteTransientScope($request);
 
@@ -251,7 +252,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new ReadScopeRequest();
-    $request->scopeId = 'deserunt';
+    $request->scopeId = 'Internal Credit Hermaphrodite';
 
     $response = $sdk->scopes->readScope($request);
 
@@ -298,11 +299,11 @@ $sdk = SDK::builder()
 try {
     $request = new UpdateScopeRequest();
     $request->updateScopeRequest = new UpdateScopeRequest();
-    $request->updateScopeRequest->label = 'distinctio';
+    $request->updateScopeRequest->label = 'East South Luxurious';
     $request->updateScopeRequest->metadata = [
-        'quibusdam' => 'labore',
+        'temporibus' => 'meh',
     ];
-    $request->scopeId = 'modi';
+    $request->scopeId = 'handcuff Xenon Timmy';
 
     $response = $sdk->scopes->updateScope($request);
 

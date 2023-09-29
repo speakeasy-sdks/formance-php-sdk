@@ -1,4 +1,5 @@
 # Accounts
+(*accounts*)
 
 ### Available Operations
 
@@ -28,9 +29,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new AddMetadataToAccountRequest();
-    $request->idempotencyKey = 'corrupti';
+    $request->idempotencyKey = 'silver';
     $request->requestBody = [
-        'provident' => 'distinctio',
+        'laborum' => 'Rubber',
     ];
     $request->address = 'users:001';
     $request->async = true;
@@ -181,9 +182,9 @@ try {
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'quibusdam' => 'unde',
+        'vero' => 'technologies',
     ];
-    $request->pageSize = 857946;
+    $request->pageSize = 530853;
 
     $response = $sdk->accounts->listAccounts($request);
 

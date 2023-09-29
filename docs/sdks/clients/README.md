@@ -1,4 +1,5 @@
 # Clients
+(*clients*)
 
 ### Available Operations
 
@@ -33,8 +34,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new AddScopeToClientRequest();
-    $request->clientId = 'modi';
-    $request->scopeId = 'qui';
+    $request->clientId = 'East laudantium HTTP';
+    $request->scopeId = 'boo Senior';
 
     $response = $sdk->clients->addScopeToClient($request);
 
@@ -79,17 +80,17 @@ $sdk = SDK::builder()
 
 try {
     $request = new CreateClientRequest();
-    $request->description = 'impedit';
+    $request->description = 'Managed optimizing help-desk';
     $request->metadata = [
-        'cum' => 'esse',
+        'vero' => 'Division',
     ];
-    $request->name = 'Mrs. Miriam Collier';
+    $request->name = 'Station East Functionality';
     $request->postLogoutRedirectUris = [
-        'sed',
+        '24',
     ];
     $request->public = false;
     $request->redirectUris = [
-        'iste',
+        'fuchsia',
     ];
     $request->trusted = false;
 
@@ -139,10 +140,10 @@ try {
     $request = new CreateSecretRequest();
     $request->createSecretRequest = new CreateSecretRequest();
     $request->createSecretRequest->metadata = [
-        'dolor' => 'natus',
+        'aliquid' => 'Southwest',
     ];
-    $request->createSecretRequest->name = 'May Turcotte';
-    $request->clientId = 'corporis';
+    $request->createSecretRequest->name = 'olive executive Taka';
+    $request->clientId = 'South';
 
     $response = $sdk->clients->createSecret($request);
 
@@ -187,7 +188,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteClientRequest();
-    $request->clientId = 'iste';
+    $request->clientId = 'salmon synergize';
 
     $response = $sdk->clients->deleteClient($request);
 
@@ -232,8 +233,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteScopeFromClientRequest();
-    $request->clientId = 'iure';
-    $request->scopeId = 'saepe';
+    $request->clientId = 'Northeast synergy zowie';
+    $request->scopeId = 'befriend coherent';
 
     $response = $sdk->clients->deleteScopeFromClient($request);
 
@@ -278,8 +279,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new DeleteSecretRequest();
-    $request->clientId = 'quidem';
-    $request->secretId = 'architecto';
+    $request->clientId = 'ashamed transform past';
+    $request->secretId = 'Afghani rosemary South';
 
     $response = $sdk->clients->deleteSecret($request);
 
@@ -359,7 +360,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new ReadClientRequest();
-    $request->clientId = 'ipsa';
+    $request->clientId = 'COM Wagon';
 
     $response = $sdk->clients->readClient($request);
 
@@ -406,20 +407,20 @@ $sdk = SDK::builder()
 try {
     $request = new UpdateClientRequest();
     $request->updateClientRequest = new UpdateClientRequest();
-    $request->updateClientRequest->description = 'reiciendis';
+    $request->updateClientRequest->description = 'Secured static model';
     $request->updateClientRequest->metadata = [
-        'est' => 'mollitia',
+        'temporibus' => 'Northwest',
     ];
-    $request->updateClientRequest->name = 'Ernest Ebert';
+    $request->updateClientRequest->name = 'BMW XML';
     $request->updateClientRequest->postLogoutRedirectUris = [
-        'nobis',
+        'magenta',
     ];
     $request->updateClientRequest->public = false;
     $request->updateClientRequest->redirectUris = [
-        'enim',
+        'collaborative',
     ];
     $request->updateClientRequest->trusted = false;
-    $request->clientId = 'omnis';
+    $request->clientId = 'male gold';
 
     $response = $sdk->clients->updateClient($request);
 

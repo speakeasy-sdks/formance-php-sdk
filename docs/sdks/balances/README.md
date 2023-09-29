@@ -1,4 +1,5 @@
 # Balances
+(*balances*)
 
 ### Available Operations
 
@@ -29,7 +30,7 @@ try {
     $request->address = 'users:001';
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
-    $request->pageSize = 473600;
+    $request->pageSize = 755286;
 
     $response = $sdk->balances->getBalances($request);
 

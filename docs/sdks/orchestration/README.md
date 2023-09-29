@@ -1,4 +1,5 @@
 # Orchestration
+(*orchestration*)
 
 ### Available Operations
 
@@ -35,7 +36,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new CancelEventRequest();
-    $request->instanceID = 'temporibus';
+    $request->instanceID = 'revolutionary';
 
     $response = $sdk->orchestration->cancelEvent($request);
 
@@ -80,10 +81,10 @@ $sdk = SDK::builder()
 
 try {
     $request = new CreateWorkflowRequest();
-    $request->name = 'Ryan Witting';
+    $request->name = 'amidst leverage kelvin';
     $request->stages = [
         [
-            'nihil' => 'praesentium',
+            'tempore' => 'vivaciously',
         ],
     ];
 
@@ -130,7 +131,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new GetInstanceRequest();
-    $request->instanceID = 'voluptatibus';
+    $request->instanceID = 'digital North Borders';
 
     $response = $sdk->orchestration->getInstance($request);
 
@@ -175,7 +176,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new GetInstanceHistoryRequest();
-    $request->instanceID = 'ipsa';
+    $request->instanceID = 'Bedfordshire';
 
     $response = $sdk->orchestration->getInstanceHistory($request);
 
@@ -220,8 +221,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new GetInstanceStageHistoryRequest();
-    $request->instanceID = 'omnis';
-    $request->number = 451159;
+    $request->instanceID = 'UAE Beauty';
+    $request->number = 789895;
 
     $response = $sdk->orchestration->getInstanceStageHistory($request);
 
@@ -266,7 +267,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new GetWorkflowRequest();
-    $request->flowId = 'cum';
+    $request->flowId = 'Security restrain';
 
     $response = $sdk->orchestration->getWorkflow($request);
 
@@ -312,7 +313,7 @@ $sdk = SDK::builder()
 try {
     $request = new ListInstancesRequest();
     $request->running = false;
-    $request->workflowID = 'perferendis';
+    $request->workflowID = 'Hybrid Azerbaijanian';
 
     $response = $sdk->orchestration->listInstances($request);
 
@@ -428,10 +429,10 @@ $sdk = SDK::builder()
 try {
     $request = new RunWorkflowRequest();
     $request->requestBody = [
-        'doloremque' => 'reprehenderit',
+        'delectus' => 'Accountability',
     ];
     $request->wait = false;
-    $request->workflowID = 'ut';
+    $request->workflowID = 'newton aggregate Metal';
 
     $response = $sdk->orchestration->runWorkflow($request);
 
@@ -478,8 +479,8 @@ $sdk = SDK::builder()
 try {
     $request = new SendEventRequest();
     $request->requestBody = new SendEventRequestBody();
-    $request->requestBody->name = 'Willie Hessel';
-    $request->instanceID = 'dicta';
+    $request->requestBody->name = 'Male lavender Fritsch';
+    $request->instanceID = 'Regional once East';
 
     $response = $sdk->orchestration->sendEvent($request);
 

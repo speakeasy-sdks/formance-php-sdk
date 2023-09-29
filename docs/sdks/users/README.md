@@ -1,4 +1,5 @@
 # Users
+(*users*)
 
 ### Available Operations
 
@@ -61,7 +62,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new ReadUserRequest();
-    $request->userId = 'necessitatibus';
+    $request->userId = 'Goodwin Folding always';
 
     $response = $sdk->users->readUser($request);
 

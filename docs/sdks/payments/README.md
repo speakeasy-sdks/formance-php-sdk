@@ -1,4 +1,5 @@
 # Payments
+(*payments*)
 
 ### Available Operations
 
@@ -96,7 +97,7 @@ try {
     $request->transferRequest->asset = 'USD';
     $request->transferRequest->destination = 'acct_1Gqj58KZcSIg2N2q';
     $request->transferRequest->source = 'acct_1Gqj58KZcSIg2N2q';
-    $request->connector = Connector::CurrencyCloud;
+    $request->connector = Connector::Wise;
 
     $response = $sdk->payments->connectorsTransfer($request);
 
@@ -142,8 +143,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new GetConnectorTaskRequest();
-    $request->connector = Connector::DummyPay;
-    $request->taskId = 'accusamus';
+    $request->connector = Connector::BankingCircle;
+    $request->taskId = 'Recycled male';
 
     $response = $sdk->payments->getConnectorTask($request);
 
@@ -188,7 +189,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new GetPaymentRequest();
-    $request->paymentId = 'commodi';
+    $request->paymentId = 'West';
 
     $response = $sdk->payments->getPayment($request);
 
@@ -234,12 +235,11 @@ $sdk = SDK::builder()
 
 try {
     $request = new InstallConnectorRequest();
-    $request->requestBody = new BankingCircleConfig();
-    $request->requestBody->authorizationEndpoint = 'XXX';
-    $request->requestBody->endpoint = 'XXX';
-    $request->requestBody->password = 'XXX';
-    $request->requestBody->username = 'XXX';
-    $request->connector = Connector::Stripe;
+    $request->requestBody = new DummyPayConfig();
+    $request->requestBody->directory = '/tmp/dummypay';
+    $request->requestBody->fileGenerationPeriod = '60s';
+    $request->requestBody->filePollingPeriod = '60s';
+    $request->connector = Connector::BankingCircle;
 
     $response = $sdk->payments->installConnector($request);
 
@@ -357,7 +357,7 @@ try {
     $request = new ListConnectorTasksRequest();
     $request->connector = Connector::DummyPay;
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
-    $request->pageSize = 692472;
+    $request->pageSize = 501686;
 
     $response = $sdk->payments->listConnectorTasks($request);
 
@@ -449,9 +449,9 @@ $sdk = SDK::builder()
 try {
     $request = new ListPaymentsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
-    $request->pageSize = 566602;
+    $request->pageSize = 13778;
     $request->sort = [
-        'pariatur',
+        'harness',
     ];
 
     $response = $sdk->payments->listPayments($request);
@@ -533,9 +533,9 @@ $sdk = SDK::builder()
 try {
     $request = new PaymentslistAccountsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
-    $request->pageSize = 265389;
+    $request->pageSize = 227071;
     $request->sort = [
-        'praesentium',
+        'Virginia',
     ];
 
     $response = $sdk->payments->paymentslistAccounts($request);
@@ -582,7 +582,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new ReadConnectorConfigRequest();
-    $request->connector = Connector::Modulr;
+    $request->connector = Connector::BankingCircle;
 
     $response = $sdk->payments->readConnectorConfig($request);
 
@@ -630,7 +630,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new ResetConnectorRequest();
-    $request->connector = Connector::BankingCircle;
+    $request->connector = Connector::CurrencyCloud;
 
     $response = $sdk->payments->resetConnector($request);
 
@@ -676,7 +676,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new UninstallConnectorRequest();
-    $request->connector = Connector::Stripe;
+    $request->connector = Connector::DummyPay;
 
     $response = $sdk->payments->uninstallConnector($request);
 
@@ -723,8 +723,8 @@ $sdk = SDK::builder()
 try {
     $request = new UpdateMetadataRequest();
     $request->paymentMetadata = new PaymentMetadata();
-    $request->paymentMetadata->key = 'repudiandae';
-    $request->paymentId = 'sint';
+    $request->paymentMetadata->key = '<key>';
+    $request->paymentId = 'Gasoline BMX';
 
     $response = $sdk->payments->updateMetadata($request);
 

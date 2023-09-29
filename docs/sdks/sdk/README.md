@@ -1,5 +1,6 @@
 # SDK
 
+
 ## Overview
 
 Formance Stack API: Open, modular foundation for unique payments flows
