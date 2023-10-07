@@ -84,7 +84,7 @@ try {
     $request->name = 'amidst leverage kelvin';
     $request->stages = [
         [
-            'tempore' => 'vivaciously',
+            'Dubnium' => 'hm',
         ],
     ];
 
@@ -429,10 +429,10 @@ $sdk = SDK::builder()
 try {
     $request = new RunWorkflowRequest();
     $request->requestBody = [
-        'delectus' => 'Accountability',
+        'off' => 'quick',
     ];
     $request->wait = false;
-    $request->workflowID = 'newton aggregate Metal';
+    $request->workflowID = 'Ball female loyally';
 
     $response = $sdk->orchestration->runWorkflow($request);
 

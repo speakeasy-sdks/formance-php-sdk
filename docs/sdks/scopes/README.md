@@ -80,7 +80,7 @@ try {
     $request = new CreateScopeRequest();
     $request->label = 'neural Sunrise';
     $request->metadata = [
-        'vero' => 'deposit',
+        'internal' => 'Northwest',
     ];
 
     $response = $sdk->scopes->createScope($request);
@@ -301,7 +301,7 @@ try {
     $request->updateScopeRequest = new UpdateScopeRequest();
     $request->updateScopeRequest->label = 'East South Luxurious';
     $request->updateScopeRequest->metadata = [
-        'temporibus' => 'meh',
+        'Martin' => 'meh',
     ];
     $request->scopeId = 'handcuff Xenon Timmy';
 

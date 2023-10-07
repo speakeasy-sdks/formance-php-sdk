@@ -235,11 +235,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new InstallConnectorRequest();
-    $request->requestBody = new DummyPayConfig();
-    $request->requestBody->directory = '/tmp/dummypay';
-    $request->requestBody->fileGenerationPeriod = '60s';
-    $request->requestBody->filePollingPeriod = '60s';
-    $request->connector = Connector::BankingCircle;
+    $request->requestBody = 'Salad';
+    $request->connector = Connector::CurrencyCloud;
 
     $response = $sdk->payments->installConnector($request);
 

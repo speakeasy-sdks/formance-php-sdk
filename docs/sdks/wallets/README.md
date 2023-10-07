@@ -141,9 +141,9 @@ $sdk = SDK::builder()
 try {
     $request = new CreateWalletRequest();
     $request->metadata = [
-        'deleniti' => 'Hybrid',
+        'array' => 'Islands',
     ];
-    $request->name = 'fleck unto Calcium';
+    $request->name = 'Versatile what orchid';
 
     $response = $sdk->wallets->createWallet($request);
 
@@ -196,11 +196,11 @@ try {
     $request->creditWalletRequest->amount->asset = 'second';
     $request->creditWalletRequest->balance = 'Bike';
     $request->creditWalletRequest->metadata = [
-        'quidem' => 'Clifton',
+        'Supervisor' => 'Clothing',
     ];
-    $request->creditWalletRequest->reference = 'purple Shoreline keenly';
+    $request->creditWalletRequest->reference = 'Remington';
     $request->creditWalletRequest->sources = [
-        new LedgerAccountSubject(),
+        'intranet',
     ];
     $request->id = '<ID>';
 
@@ -257,11 +257,9 @@ try {
         'Tasty',
     ];
     $request->debitWalletRequest->description = 'Total 6th generation conglomeration';
-    $request->debitWalletRequest->destination = new LedgerAccountSubject();
-    $request->debitWalletRequest->destination->identifier = 'impactful';
-    $request->debitWalletRequest->destination->type = 'Trigender SCSI';
+    $request->debitWalletRequest->destination = 'Steel';
     $request->debitWalletRequest->metadata = [
-        'commodi' => 'fluid',
+        'impactful' => 'Hop',
     ];
     $request->debitWalletRequest->pending = false;
     $request->id = '<ID>';
@@ -402,10 +400,10 @@ try {
     $request = new GetHoldsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->metadata = [
-        'quidem' => 'Cotton',
+        'Engineer' => 'Folding',
     ];
-    $request->pageSize = 502179;
-    $request->walletID = 'quickly deposit plus';
+    $request->pageSize = 350274;
+    $request->walletID = 'male Division';
 
     $response = $sdk->wallets->getHolds($request);
 
@@ -632,10 +630,10 @@ try {
     $request = new ListWalletsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->metadata = [
-        'commodi' => 'green',
+        'Auto' => 'Mobility',
     ];
-    $request->name = 'Mobility Electric huzzah';
-    $request->pageSize = 194059;
+    $request->name = 'teal South Aston';
+    $request->pageSize = 826763;
 
     $response = $sdk->wallets->listWallets($request);
 
@@ -683,7 +681,7 @@ try {
     $request = new UpdateWalletRequest();
     $request->requestBody = new UpdateWalletRequestBody();
     $request->requestBody->metadata = [
-        'quas' => 'Books',
+        'override' => 'South',
     ];
     $request->id = '<ID>';
 

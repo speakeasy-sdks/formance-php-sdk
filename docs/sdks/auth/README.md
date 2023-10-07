@@ -138,15 +138,15 @@ try {
     $request = new CreateClientRequest();
     $request->description = 'Managed optimizing help-desk';
     $request->metadata = [
-        'vero' => 'Division',
+        'pessimistic' => 'Dong',
     ];
-    $request->name = 'Station East Functionality';
+    $request->name = 'microchip';
     $request->postLogoutRedirectUris = [
-        '24',
+        'Polestar',
     ];
     $request->public = false;
     $request->redirectUris = [
-        'fuchsia',
+        'East',
     ];
     $request->trusted = false;
 
@@ -195,7 +195,7 @@ try {
     $request = new CreateScopeRequest();
     $request->label = 'neural Sunrise';
     $request->metadata = [
-        'vero' => 'deposit',
+        'internal' => 'Northwest',
     ];
 
     $response = $sdk->auth->createScope($request);
@@ -244,10 +244,10 @@ try {
     $request = new CreateSecretRequest();
     $request->createSecretRequest = new CreateSecretRequest();
     $request->createSecretRequest->metadata = [
-        'aliquid' => 'Southwest',
+        'architecture' => 'hmph',
     ];
-    $request->createSecretRequest->name = 'olive executive Taka';
-    $request->clientId = 'South';
+    $request->createSecretRequest->name = 'National';
+    $request->clientId = 'Taka Alabama';
 
     $response = $sdk->auth->createSecret($request);
 
@@ -799,18 +799,18 @@ try {
     $request->updateClientRequest = new UpdateClientRequest();
     $request->updateClientRequest->description = 'Secured static model';
     $request->updateClientRequest->metadata = [
-        'temporibus' => 'Northwest',
+        'Bentley' => 'Creative',
     ];
-    $request->updateClientRequest->name = 'BMW XML';
+    $request->updateClientRequest->name = 'magenta collaborative payment';
     $request->updateClientRequest->postLogoutRedirectUris = [
-        'magenta',
+        'finally',
     ];
     $request->updateClientRequest->public = false;
     $request->updateClientRequest->redirectUris = [
-        'collaborative',
+        'Chevrolet',
     ];
     $request->updateClientRequest->trusted = false;
-    $request->clientId = 'male gold';
+    $request->clientId = 'Mouse';
 
     $response = $sdk->auth->updateClient($request);
 
@@ -859,7 +859,7 @@ try {
     $request->updateScopeRequest = new UpdateScopeRequest();
     $request->updateScopeRequest->label = 'East South Luxurious';
     $request->updateScopeRequest->metadata = [
-        'temporibus' => 'meh',
+        'Martin' => 'meh',
     ];
     $request->scopeId = 'handcuff Xenon Timmy';
 

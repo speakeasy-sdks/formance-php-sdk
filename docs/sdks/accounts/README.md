@@ -31,7 +31,7 @@ try {
     $request = new AddMetadataToAccountRequest();
     $request->idempotencyKey = 'silver';
     $request->requestBody = [
-        'laborum' => 'Rubber',
+        'Administrator' => 'revolutionize',
     ];
     $request->address = 'users:001';
     $request->async = true;
@@ -182,9 +182,9 @@ try {
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'vero' => 'technologies',
+        'glistening' => 'Loan',
     ];
-    $request->pageSize = 530853;
+    $request->pageSize = 692329;
 
     $response = $sdk->accounts->listAccounts($request);
 
