@@ -37,7 +37,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Shared\StripeTransferRequest;
 use \formance\formance\Models\Shared\StripeTransferRequestMetadata;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -87,7 +91,11 @@ use \formance\formance\Models\Operations\ConnectorsTransferRequest;
 use \formance\formance\Models\Shared\TransferRequest;
 use \formance\formance\Models\Shared\Connector;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -138,13 +146,17 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetConnectorTaskRequest;
 use \formance\formance\Models\Shared\Connector;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetConnectorTaskRequest();
     $request->connector = Connector::BankingCircle;
-    $request->taskId = 'Recycled male';
+    $request->taskId = 'string';
 
     $response = $sdk->payments->getConnectorTask($request);
 
@@ -184,12 +196,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetPaymentRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetPaymentRequest();
-    $request->paymentId = 'West';
+    $request->paymentId = 'string';
 
     $response = $sdk->payments->getPayment($request);
 
@@ -230,13 +246,17 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\InstallConnectorRequest;
 use \formance\formance\Models\Shared\Connector;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new InstallConnectorRequest();
-    $request->requestBody = 'Salad';
-    $request->connector = Connector::CurrencyCloud;
+    $request->requestBody = 'string';
+    $request->connector = Connector::DummyPay;
 
     $response = $sdk->payments->installConnector($request);
 
@@ -275,7 +295,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -310,7 +334,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -347,7 +375,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ListConnectorTasksRequest;
 use \formance\formance\Models\Shared\Connector;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -395,7 +427,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ListConnectorsTransfersRequest;
 use \formance\formance\Models\Shared\Connector;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -440,7 +476,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ListPaymentsRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -448,7 +488,7 @@ try {
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->pageSize = 13778;
     $request->sort = [
-        'harness',
+        'string',
     ];
 
     $response = $sdk->payments->listPayments($request);
@@ -488,7 +528,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -524,7 +568,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\PaymentslistAccountsRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -532,7 +580,7 @@ try {
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->pageSize = 227071;
     $request->sort = [
-        'Virginia',
+        'string',
     ];
 
     $response = $sdk->payments->paymentslistAccounts($request);
@@ -574,7 +622,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ReadConnectorConfigRequest;
 use \formance\formance\Models\Shared\Connector;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -622,7 +674,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ResetConnectorRequest;
 use \formance\formance\Models\Shared\Connector;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -668,7 +724,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\UninstallConnectorRequest;
 use \formance\formance\Models\Shared\Connector;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -714,14 +774,18 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\UpdateMetadataRequest;
 use \formance\formance\Models\Shared\PaymentMetadata;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new UpdateMetadataRequest();
     $request->paymentMetadata = new PaymentMetadata();
     $request->paymentMetadata->key = '<key>';
-    $request->paymentId = 'Gasoline BMX';
+    $request->paymentId = 'string';
 
     $response = $sdk->payments->updateMetadata($request);
 

@@ -27,7 +27,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ActivateConfigRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -77,7 +81,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ChangeConfigSecretRequest;
 use \formance\formance\Models\Shared\ConfigChangeSecret;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -124,7 +132,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\DeactivateConfigRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -169,7 +181,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\DeleteConfigRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -214,7 +230,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetManyConfigsRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -269,7 +289,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Shared\ConfigUser;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -318,7 +342,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\TestConfigRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

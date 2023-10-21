@@ -20,7 +20,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

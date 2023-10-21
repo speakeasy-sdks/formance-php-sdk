@@ -39,13 +39,17 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\AddScopeToClientRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AddScopeToClientRequest();
-    $request->clientId = 'East laudantium HTTP';
-    $request->scopeId = 'boo Senior';
+    $request->clientId = 'string';
+    $request->scopeId = 'string';
 
     $response = $sdk->auth->addScopeToClient($request);
 
@@ -85,13 +89,17 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\AddTransientScopeRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AddTransientScopeRequest();
-    $request->scopeId = 'executive Soul';
-    $request->transientScopeId = 'Keyboard neural tan';
+    $request->scopeId = 'string';
+    $request->transientScopeId = 'string';
 
     $response = $sdk->auth->addTransientScope($request);
 
@@ -131,22 +139,26 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Shared\CreateClientRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateClientRequest();
     $request->description = 'Managed optimizing help-desk';
     $request->metadata = [
-        'pessimistic' => 'Dong',
+        'pessimistic' => 'string',
     ];
-    $request->name = 'microchip';
+    $request->name = 'string';
     $request->postLogoutRedirectUris = [
-        'Polestar',
+        'string',
     ];
     $request->public = false;
     $request->redirectUris = [
-        'East',
+        'string',
     ];
     $request->trusted = false;
 
@@ -188,14 +200,18 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Shared\CreateScopeRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateScopeRequest();
-    $request->label = 'neural Sunrise';
+    $request->label = 'string';
     $request->metadata = [
-        'internal' => 'Northwest',
+        'sensor' => 'string',
     ];
 
     $response = $sdk->auth->createScope($request);
@@ -237,17 +253,21 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\CreateSecretRequest;
 use \formance\formance\Models\Shared\CreateSecretRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateSecretRequest();
     $request->createSecretRequest = new CreateSecretRequest();
     $request->createSecretRequest->metadata = [
-        'architecture' => 'hmph',
+        'architecture' => 'string',
     ];
-    $request->createSecretRequest->name = 'National';
-    $request->clientId = 'Taka Alabama';
+    $request->createSecretRequest->name = 'string';
+    $request->clientId = 'string';
 
     $response = $sdk->auth->createSecret($request);
 
@@ -287,12 +307,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\DeleteClientRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteClientRequest();
-    $request->clientId = 'salmon synergize';
+    $request->clientId = 'string';
 
     $response = $sdk->auth->deleteClient($request);
 
@@ -332,12 +356,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\DeleteScopeRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteScopeRequest();
-    $request->scopeId = 'impedit Bronze';
+    $request->scopeId = 'string';
 
     $response = $sdk->auth->deleteScope($request);
 
@@ -377,13 +405,17 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\DeleteScopeFromClientRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteScopeFromClientRequest();
-    $request->clientId = 'Northeast synergy zowie';
-    $request->scopeId = 'befriend coherent';
+    $request->clientId = 'string';
+    $request->scopeId = 'string';
 
     $response = $sdk->auth->deleteScopeFromClient($request);
 
@@ -423,13 +455,17 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\DeleteSecretRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteSecretRequest();
-    $request->clientId = 'ashamed transform past';
-    $request->secretId = 'Afghani rosemary South';
+    $request->clientId = 'string';
+    $request->secretId = 'string';
 
     $response = $sdk->auth->deleteSecret($request);
 
@@ -469,13 +505,17 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\DeleteTransientScopeRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteTransientScopeRequest();
-    $request->scopeId = 'billion Chips';
-    $request->transientScopeId = 'Account untidy haptic';
+    $request->scopeId = 'string';
+    $request->transientScopeId = 'string';
 
     $response = $sdk->auth->deleteTransientScope($request);
 
@@ -514,7 +554,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -549,7 +593,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -584,7 +632,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -619,7 +671,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -655,12 +711,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ReadClientRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ReadClientRequest();
-    $request->clientId = 'COM Wagon';
+    $request->clientId = 'string';
 
     $response = $sdk->auth->readClient($request);
 
@@ -700,12 +760,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ReadScopeRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ReadScopeRequest();
-    $request->scopeId = 'Internal Credit Hermaphrodite';
+    $request->scopeId = 'string';
 
     $response = $sdk->auth->readScope($request);
 
@@ -745,12 +809,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ReadUserRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ReadUserRequest();
-    $request->userId = 'Goodwin Folding always';
+    $request->userId = 'string';
 
     $response = $sdk->auth->readUser($request);
 
@@ -791,7 +859,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\UpdateClientRequest;
 use \formance\formance\Models\Shared\UpdateClientRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -799,18 +871,18 @@ try {
     $request->updateClientRequest = new UpdateClientRequest();
     $request->updateClientRequest->description = 'Secured static model';
     $request->updateClientRequest->metadata = [
-        'Bentley' => 'Creative',
+        'Bentley' => 'string',
     ];
-    $request->updateClientRequest->name = 'magenta collaborative payment';
+    $request->updateClientRequest->name = 'string';
     $request->updateClientRequest->postLogoutRedirectUris = [
-        'finally',
+        'string',
     ];
     $request->updateClientRequest->public = false;
     $request->updateClientRequest->redirectUris = [
-        'Chevrolet',
+        'string',
     ];
     $request->updateClientRequest->trusted = false;
-    $request->clientId = 'Mouse';
+    $request->clientId = 'string';
 
     $response = $sdk->auth->updateClient($request);
 
@@ -851,17 +923,21 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\UpdateScopeRequest;
 use \formance\formance\Models\Shared\UpdateScopeRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new UpdateScopeRequest();
     $request->updateScopeRequest = new UpdateScopeRequest();
-    $request->updateScopeRequest->label = 'East South Luxurious';
+    $request->updateScopeRequest->label = 'string';
     $request->updateScopeRequest->metadata = [
-        'Martin' => 'meh',
+        'Paradigm' => 'string',
     ];
-    $request->scopeId = 'handcuff Xenon Timmy';
+    $request->scopeId = 'string';
 
     $response = $sdk->auth->updateScope($request);
 

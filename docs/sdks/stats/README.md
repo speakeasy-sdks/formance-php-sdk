@@ -22,7 +22,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ReadStatsRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

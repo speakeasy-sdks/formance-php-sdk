@@ -26,14 +26,18 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\AddMetadataOnTransactionRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AddMetadataOnTransactionRequest();
-    $request->idempotencyKey = 'Fresh Diesel';
+    $request->idempotencyKey = 'string';
     $request->requestBody = [
-        'Hybrid' => 'mechanise',
+        'withdrawal' => 'string',
     ];
     $request->async = true;
     $request->dryRun = true;
@@ -78,7 +82,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\CountTransactionsRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -88,11 +96,11 @@ try {
     $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-20T09:59:27.603Z');
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'till' => 'South',
+        'till' => 'string',
     ];
     $request->reference = 'ref:001';
     $request->source = 'users:001';
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-01-30T03:50:53.859Z');
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-16T00:36:33.819Z');
 
     $response = $sdk->transactions->countTransactions($request);
 
@@ -136,15 +144,19 @@ use \formance\formance\Models\Shared\Posting;
 use \formance\formance\Models\Shared\PostTransactionScript;
 use \formance\formance\Models\Shared\PostTransactionScriptVars;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateTransactionRequest();
-    $request->idempotencyKey = 'Ball brr what';
+    $request->idempotencyKey = 'string';
     $request->postTransaction = new PostTransaction();
     $request->postTransaction->metadata = [
-        'South' => 'Crescent',
+        'before' => 'string',
     ];
     $request->postTransaction->postings = [
         new Posting(),
@@ -160,7 +172,7 @@ try {
     )
     ';
     $request->postTransaction->script->vars = new PostTransactionScriptVars();
-    $request->postTransaction->timestamp = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-05-17T21:08:34.426Z');
+    $request->postTransaction->timestamp = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-17T06:38:42.895Z');
     $request->async = true;
     $request->dryRun = true;
     $request->ledger = 'ledger001';
@@ -203,7 +215,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetTransactionRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -249,7 +265,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ListTransactionsRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -260,12 +280,12 @@ try {
     $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-08T16:09:19.098Z');
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'South' => 'deposit',
+        'South' => 'string',
     ];
-    $request->pageSize = 565586;
+    $request->pageSize = 459510;
     $request->reference = 'ref:001';
     $request->source = 'users:001';
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-08-08T12:03:04.706Z');
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-19T18:05:01.432Z');
 
     $response = $sdk->transactions->listTransactions($request);
 
@@ -305,7 +325,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\RevertTransactionRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

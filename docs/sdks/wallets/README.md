@@ -37,7 +37,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ConfirmHoldRequest;
 use \formance\formance\Models\Shared\ConfirmHoldRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -45,7 +49,7 @@ try {
     $request->confirmHoldRequest = new ConfirmHoldRequest();
     $request->confirmHoldRequest->amount = 100;
     $request->confirmHoldRequest->final = true;
-    $request->holdId = 'Missouri holistic';
+    $request->holdId = 'string';
 
     $response = $sdk->wallets->confirmHold($request);
 
@@ -86,15 +90,19 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\CreateBalanceRequest;
 use \formance\formance\Models\Shared\CreateBalanceRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateBalanceRequest();
     $request->createBalanceRequest = new CreateBalanceRequest();
     $request->createBalanceRequest->expiresAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-08T09:54:54.366Z');
-    $request->createBalanceRequest->name = 'vortals Lawrence female';
-    $request->createBalanceRequest->priority = 98814;
+    $request->createBalanceRequest->name = 'string';
+    $request->createBalanceRequest->priority = 851262;
     $request->id = '<ID>';
 
     $response = $sdk->wallets->createBalance($request);
@@ -135,15 +143,19 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Shared\CreateWalletRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateWalletRequest();
     $request->metadata = [
-        'array' => 'Islands',
+        'array' => 'string',
     ];
-    $request->name = 'Versatile what orchid';
+    $request->name = 'string';
 
     $response = $sdk->wallets->createWallet($request);
 
@@ -185,7 +197,11 @@ use \formance\formance\Models\Operations\CreditWalletRequest;
 use \formance\formance\Models\Shared\CreditWalletRequest;
 use \formance\formance\Models\Shared\Monetary;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -193,14 +209,14 @@ try {
     $request->creditWalletRequest = new CreditWalletRequest();
     $request->creditWalletRequest->amount = new Monetary();
     $request->creditWalletRequest->amount->amount = 201874;
-    $request->creditWalletRequest->amount->asset = 'second';
-    $request->creditWalletRequest->balance = 'Bike';
+    $request->creditWalletRequest->amount->asset = 'string';
+    $request->creditWalletRequest->balance = 'string';
     $request->creditWalletRequest->metadata = [
-        'Supervisor' => 'Clothing',
+        'South' => 'string',
     ];
-    $request->creditWalletRequest->reference = 'Remington';
+    $request->creditWalletRequest->reference = 'string';
     $request->creditWalletRequest->sources = [
-        'intranet',
+        'string',
     ];
     $request->id = '<ID>';
 
@@ -244,7 +260,11 @@ use \formance\formance\Models\Operations\DebitWalletRequest;
 use \formance\formance\Models\Shared\DebitWalletRequest;
 use \formance\formance\Models\Shared\Monetary;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -252,14 +272,14 @@ try {
     $request->debitWalletRequest = new DebitWalletRequest();
     $request->debitWalletRequest->amount = new Monetary();
     $request->debitWalletRequest->amount->amount = 245256;
-    $request->debitWalletRequest->amount->asset = 'azure';
+    $request->debitWalletRequest->amount->asset = 'string';
     $request->debitWalletRequest->balances = [
-        'Tasty',
+        'string',
     ];
-    $request->debitWalletRequest->description = 'Total 6th generation conglomeration';
-    $request->debitWalletRequest->destination = 'Steel';
+    $request->debitWalletRequest->description = 'Enhanced regional synergy';
+    $request->debitWalletRequest->destination = 'string';
     $request->debitWalletRequest->metadata = [
-        'impactful' => 'Hop',
+        'Tasty' => 'string',
     ];
     $request->debitWalletRequest->pending = false;
     $request->id = '<ID>';
@@ -302,12 +322,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetBalanceRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetBalanceRequest();
-    $request->balanceName = 'Kids Franc hmph';
+    $request->balanceName = 'string';
     $request->id = '<ID>';
 
     $response = $sdk->wallets->getBalance($request);
@@ -348,12 +372,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetHoldRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetHoldRequest();
-    $request->holdID = 'taper';
+    $request->holdID = 'string';
 
     $response = $sdk->wallets->getHold($request);
 
@@ -393,17 +421,21 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetHoldsRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetHoldsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->metadata = [
-        'Engineer' => 'Folding',
+        'Engineer' => 'string',
     ];
-    $request->pageSize = 350274;
-    $request->walletID = 'male Division';
+    $request->pageSize = 766481;
+    $request->walletID = 'string';
 
     $response = $sdk->wallets->getHolds($request);
 
@@ -441,14 +473,18 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetTransactionsRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetTransactionsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->pageSize = 680555;
-    $request->walletID = 'Account';
+    $request->walletID = 'string';
 
     $response = $sdk->wallets->getTransactions($request);
 
@@ -488,7 +524,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetWalletRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -533,7 +573,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetWalletSummaryRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -578,7 +622,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ListBalancesRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -623,17 +671,21 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ListWalletsRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ListWalletsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->metadata = [
-        'Auto' => 'Mobility',
+        'Auto' => 'string',
     ];
-    $request->name = 'teal South Aston';
-    $request->pageSize = 826763;
+    $request->name = 'string';
+    $request->pageSize = 677327;
 
     $response = $sdk->wallets->listWallets($request);
 
@@ -674,14 +726,18 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\UpdateWalletRequest;
 use \formance\formance\Models\Operations\UpdateWalletRequestBody;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new UpdateWalletRequest();
     $request->requestBody = new UpdateWalletRequestBody();
     $request->requestBody->metadata = [
-        'override' => 'South',
+        'override' => 'string',
     ];
     $request->id = '<ID>';
 
@@ -723,12 +779,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\VoidHoldRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new VoidHoldRequest();
-    $request->holdId = 'redundant yesterday Hat';
+    $request->holdId = 'string';
 
     $response = $sdk->wallets->voidHold($request);
 
@@ -767,7 +827,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

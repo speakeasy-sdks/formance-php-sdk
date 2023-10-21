@@ -31,12 +31,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\CancelEventRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CancelEventRequest();
-    $request->instanceID = 'revolutionary';
+    $request->instanceID = 'string';
 
     $response = $sdk->orchestration->cancelEvent($request);
 
@@ -76,15 +80,19 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Shared\CreateWorkflowRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateWorkflowRequest();
-    $request->name = 'amidst leverage kelvin';
+    $request->name = 'string';
     $request->stages = [
         [
-            'Dubnium' => 'hm',
+            'why' => 'string',
         ],
     ];
 
@@ -126,12 +134,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetInstanceRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetInstanceRequest();
-    $request->instanceID = 'digital North Borders';
+    $request->instanceID = 'string';
 
     $response = $sdk->orchestration->getInstance($request);
 
@@ -171,12 +183,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetInstanceHistoryRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetInstanceHistoryRequest();
-    $request->instanceID = 'Bedfordshire';
+    $request->instanceID = 'string';
 
     $response = $sdk->orchestration->getInstanceHistory($request);
 
@@ -216,13 +232,17 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetInstanceStageHistoryRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetInstanceStageHistoryRequest();
-    $request->instanceID = 'UAE Beauty';
-    $request->number = 789895;
+    $request->instanceID = 'string';
+    $request->number = 600636;
 
     $response = $sdk->orchestration->getInstanceStageHistory($request);
 
@@ -262,12 +282,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetWorkflowRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new GetWorkflowRequest();
-    $request->flowId = 'Security restrain';
+    $request->flowId = 'string';
 
     $response = $sdk->orchestration->getWorkflow($request);
 
@@ -307,13 +331,17 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ListInstancesRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ListInstancesRequest();
     $request->running = false;
-    $request->workflowID = 'Hybrid Azerbaijanian';
+    $request->workflowID = 'string';
 
     $response = $sdk->orchestration->listInstances($request);
 
@@ -352,7 +380,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -387,7 +419,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -423,16 +459,20 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\RunWorkflowRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new RunWorkflowRequest();
     $request->requestBody = [
-        'off' => 'quick',
+        'off' => 'string',
     ];
     $request->wait = false;
-    $request->workflowID = 'Ball female loyally';
+    $request->workflowID = 'string';
 
     $response = $sdk->orchestration->runWorkflow($request);
 
@@ -473,14 +513,18 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\SendEventRequest;
 use \formance\formance\Models\Operations\SendEventRequestBody;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new SendEventRequest();
     $request->requestBody = new SendEventRequestBody();
-    $request->requestBody->name = 'Male lavender Fritsch';
-    $request->instanceID = 'Regional once East';
+    $request->requestBody->name = 'string';
+    $request->instanceID = 'string';
 
     $response = $sdk->orchestration->sendEvent($request);
 

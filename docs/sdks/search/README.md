@@ -23,7 +23,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Shared\Query;
 use \formance\formance\Models\Shared\QueryRaw;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -39,7 +43,7 @@ try {
     $request->policy = 'OR';
     $request->raw = new QueryRaw();
     $request->sort = 'txid:asc';
-    $request->target = 'Movies';
+    $request->target = 'string';
     $request->terms = [
         'destination=central_bank1',
     ];
@@ -81,7 +85,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

@@ -29,13 +29,17 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\AddScopeToClientRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AddScopeToClientRequest();
-    $request->clientId = 'East laudantium HTTP';
-    $request->scopeId = 'boo Senior';
+    $request->clientId = 'string';
+    $request->scopeId = 'string';
 
     $response = $sdk->clients->addScopeToClient($request);
 
@@ -75,22 +79,26 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Shared\CreateClientRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateClientRequest();
     $request->description = 'Managed optimizing help-desk';
     $request->metadata = [
-        'pessimistic' => 'Dong',
+        'pessimistic' => 'string',
     ];
-    $request->name = 'microchip';
+    $request->name = 'string';
     $request->postLogoutRedirectUris = [
-        'Polestar',
+        'string',
     ];
     $request->public = false;
     $request->redirectUris = [
-        'East',
+        'string',
     ];
     $request->trusted = false;
 
@@ -133,17 +141,21 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\CreateSecretRequest;
 use \formance\formance\Models\Shared\CreateSecretRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateSecretRequest();
     $request->createSecretRequest = new CreateSecretRequest();
     $request->createSecretRequest->metadata = [
-        'architecture' => 'hmph',
+        'architecture' => 'string',
     ];
-    $request->createSecretRequest->name = 'National';
-    $request->clientId = 'Taka Alabama';
+    $request->createSecretRequest->name = 'string';
+    $request->clientId = 'string';
 
     $response = $sdk->clients->createSecret($request);
 
@@ -183,12 +195,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\DeleteClientRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteClientRequest();
-    $request->clientId = 'salmon synergize';
+    $request->clientId = 'string';
 
     $response = $sdk->clients->deleteClient($request);
 
@@ -228,13 +244,17 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\DeleteScopeFromClientRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteScopeFromClientRequest();
-    $request->clientId = 'Northeast synergy zowie';
-    $request->scopeId = 'befriend coherent';
+    $request->clientId = 'string';
+    $request->scopeId = 'string';
 
     $response = $sdk->clients->deleteScopeFromClient($request);
 
@@ -274,13 +294,17 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\DeleteSecretRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteSecretRequest();
-    $request->clientId = 'ashamed transform past';
-    $request->secretId = 'Afghani rosemary South';
+    $request->clientId = 'string';
+    $request->secretId = 'string';
 
     $response = $sdk->clients->deleteSecret($request);
 
@@ -319,7 +343,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -355,12 +383,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ReadClientRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ReadClientRequest();
-    $request->clientId = 'COM Wagon';
+    $request->clientId = 'string';
 
     $response = $sdk->clients->readClient($request);
 
@@ -401,7 +433,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\UpdateClientRequest;
 use \formance\formance\Models\Shared\UpdateClientRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -409,18 +445,18 @@ try {
     $request->updateClientRequest = new UpdateClientRequest();
     $request->updateClientRequest->description = 'Secured static model';
     $request->updateClientRequest->metadata = [
-        'Bentley' => 'Creative',
+        'Bentley' => 'string',
     ];
-    $request->updateClientRequest->name = 'magenta collaborative payment';
+    $request->updateClientRequest->name = 'string';
     $request->updateClientRequest->postLogoutRedirectUris = [
-        'finally',
+        'string',
     ];
     $request->updateClientRequest->public = false;
     $request->updateClientRequest->redirectUris = [
-        'Chevrolet',
+        'string',
     ];
     $request->updateClientRequest->trusted = false;
-    $request->clientId = 'Mouse';
+    $request->clientId = 'string';
 
     $response = $sdk->clients->updateClient($request);
 

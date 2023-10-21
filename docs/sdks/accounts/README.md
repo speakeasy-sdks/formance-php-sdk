@@ -24,14 +24,18 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\AddMetadataToAccountRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AddMetadataToAccountRequest();
-    $request->idempotencyKey = 'silver';
+    $request->idempotencyKey = 'string';
     $request->requestBody = [
-        'Administrator' => 'revolutionize',
+        'Oriental' => 'string',
     ];
     $request->address = 'users:001';
     $request->async = true;
@@ -77,7 +81,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\CountAccountsRequest;
 use \formance\formance\Models\Operations\CountAccountsMetadata;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -124,7 +132,11 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\GetAccountRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -171,7 +183,11 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ListAccountsRequest;
 use \formance\formance\Models\Operations\ListAccountsBalanceOperator;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -182,9 +198,9 @@ try {
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'glistening' => 'Loan',
+        'glistening' => 'string',
     ];
-    $request->pageSize = 692329;
+    $request->pageSize = 412291;
 
     $response = $sdk->accounts->listAccounts($request);
 

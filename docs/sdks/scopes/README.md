@@ -27,13 +27,17 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\AddTransientScopeRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new AddTransientScopeRequest();
-    $request->scopeId = 'executive Soul';
-    $request->transientScopeId = 'Keyboard neural tan';
+    $request->scopeId = 'string';
+    $request->transientScopeId = 'string';
 
     $response = $sdk->scopes->addTransientScope($request);
 
@@ -73,14 +77,18 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Shared\CreateScopeRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new CreateScopeRequest();
-    $request->label = 'neural Sunrise';
+    $request->label = 'string';
     $request->metadata = [
-        'internal' => 'Northwest',
+        'sensor' => 'string',
     ];
 
     $response = $sdk->scopes->createScope($request);
@@ -121,12 +129,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\DeleteScopeRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteScopeRequest();
-    $request->scopeId = 'impedit Bronze';
+    $request->scopeId = 'string';
 
     $response = $sdk->scopes->deleteScope($request);
 
@@ -166,13 +178,17 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\DeleteTransientScopeRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new DeleteTransientScopeRequest();
-    $request->scopeId = 'billion Chips';
-    $request->transientScopeId = 'Account untidy haptic';
+    $request->scopeId = 'string';
+    $request->transientScopeId = 'string';
 
     $response = $sdk->scopes->deleteTransientScope($request);
 
@@ -211,7 +227,11 @@ require_once 'vendor/autoload.php';
 use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -247,12 +267,16 @@ use \formance\formance\SDK;
 use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\ReadScopeRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new ReadScopeRequest();
-    $request->scopeId = 'Internal Credit Hermaphrodite';
+    $request->scopeId = 'string';
 
     $response = $sdk->scopes->readScope($request);
 
@@ -293,17 +317,21 @@ use \formance\formance\Models\Shared\Security;
 use \formance\formance\Models\Operations\UpdateScopeRequest;
 use \formance\formance\Models\Shared\UpdateScopeRequest;
 
+$security = new Security();
+$security->authorization = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
     $request = new UpdateScopeRequest();
     $request->updateScopeRequest = new UpdateScopeRequest();
-    $request->updateScopeRequest->label = 'East South Luxurious';
+    $request->updateScopeRequest->label = 'string';
     $request->updateScopeRequest->metadata = [
-        'Martin' => 'meh',
+        'Paradigm' => 'string',
     ];
-    $request->scopeId = 'handcuff Xenon Timmy';
+    $request->scopeId = 'string';
 
     $response = $sdk->scopes->updateScope($request);
 
