@@ -1,0 +1,810 @@
+# Payments
+(*payments*)
+
+### Available Operations
+
+* [connectorsStripeTransfer](#connectorsstripetransfer) - Transfer funds between Stripe accounts
+* [connectorsTransfer](#connectorstransfer) - Transfer funds between Connector accounts
+* [getConnectorTask](#getconnectortask) - Read a specific task of the connector
+* [getPayment](#getpayment) - Get a payment
+* [installConnector](#installconnector) - Install a connector
+* [listAllConnectors](#listallconnectors) - List all installed connectors
+* [listConfigsAvailableConnectors](#listconfigsavailableconnectors) - List the configs of each available connector
+* [listConnectorTasks](#listconnectortasks) - List tasks from a connector
+* [listConnectorsTransfers](#listconnectorstransfers) - List transfers and their statuses
+* [listPayments](#listpayments) - List payments
+* [paymentsgetServerInfo](#paymentsgetserverinfo) - Get server info
+* [paymentslistAccounts](#paymentslistaccounts) - List accounts
+* [readConnectorConfig](#readconnectorconfig) - Read the config of a connector
+* [resetConnector](#resetconnector) - Reset a connector
+* [uninstallConnector](#uninstallconnector) - Uninstall a connector
+* [updateMetadata](#updatemetadata) - Update metadata
+
+## connectorsStripeTransfer
+
+Execute a transfer between two Stripe accounts.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Shared\StripeTransferRequest;
+use \formance\formance\Models\Shared\StripeTransferRequestMetadata;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new StripeTransferRequest();
+    $request->amount = 100;
+    $request->asset = 'USD';
+    $request->destination = 'acct_1Gqj58KZcSIg2N2q';
+    $request->metadata = new StripeTransferRequestMetadata();
+
+    $response = $sdk->payments->connectorsStripeTransfer($request);
+
+    if ($response->stripeTransferResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [\formance\formance\Models\Shared\StripeTransferRequest](../../models/shared/StripeTransferRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\ConnectorsStripeTransferResponse](../../models/operations/ConnectorsStripeTransferResponse.md)**
+
+
+## connectorsTransfer
+
+Execute a transfer between two accounts.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Operations\ConnectorsTransferRequest;
+use \formance\formance\Models\Shared\TransferRequest;
+use \formance\formance\Models\Shared\Connector;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ConnectorsTransferRequest();
+    $request->transferRequest = new TransferRequest();
+    $request->transferRequest->amount = 100;
+    $request->transferRequest->asset = 'USD';
+    $request->transferRequest->destination = 'acct_1Gqj58KZcSIg2N2q';
+    $request->transferRequest->source = 'acct_1Gqj58KZcSIg2N2q';
+    $request->connector = Connector::Wise;
+
+    $response = $sdk->payments->connectorsTransfer($request);
+
+    if ($response->transferResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                             | [\formance\formance\Models\Operations\ConnectorsTransferRequest](../../models/operations/ConnectorsTransferRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\ConnectorsTransferResponse](../../models/operations/ConnectorsTransferResponse.md)**
+
+
+## getConnectorTask
+
+Get a specific task associated to the connector.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Operations\GetConnectorTaskRequest;
+use \formance\formance\Models\Shared\Connector;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetConnectorTaskRequest();
+    $request->connector = Connector::BankingCircle;
+    $request->taskId = 'string';
+
+    $response = $sdk->payments->getConnectorTask($request);
+
+    if ($response->taskResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                         | [\formance\formance\Models\Operations\GetConnectorTaskRequest](../../models/operations/GetConnectorTaskRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\GetConnectorTaskResponse](../../models/operations/GetConnectorTaskResponse.md)**
+
+
+## getPayment
+
+Get a payment
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Operations\GetPaymentRequest;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new GetPaymentRequest();
+    $request->paymentId = 'string';
+
+    $response = $sdk->payments->getPayment($request);
+
+    if ($response->paymentResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [\formance\formance\Models\Operations\GetPaymentRequest](../../models/operations/GetPaymentRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\GetPaymentResponse](../../models/operations/GetPaymentResponse.md)**
+
+
+## installConnector
+
+Install a connector by its name and config.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Operations\InstallConnectorRequest;
+use \formance\formance\Models\Shared\Connector;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new InstallConnectorRequest();
+    $request->requestBody = 'string';
+    $request->connector = Connector::DummyPay;
+
+    $response = $sdk->payments->installConnector($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                         | [\formance\formance\Models\Operations\InstallConnectorRequest](../../models/operations/InstallConnectorRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\InstallConnectorResponse](../../models/operations/InstallConnectorResponse.md)**
+
+
+## listAllConnectors
+
+List all installed connectors.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $response = $sdk->payments->listAllConnectors();
+
+    if ($response->connectorsResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\ListAllConnectorsResponse](../../models/operations/ListAllConnectorsResponse.md)**
+
+
+## listConfigsAvailableConnectors
+
+List the configs of each available connector.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $response = $sdk->payments->listConfigsAvailableConnectors();
+
+    if ($response->connectorsConfigsResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\ListConfigsAvailableConnectorsResponse](../../models/operations/ListConfigsAvailableConnectorsResponse.md)**
+
+
+## listConnectorTasks
+
+List all tasks associated with this connector.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Operations\ListConnectorTasksRequest;
+use \formance\formance\Models\Shared\Connector;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListConnectorTasksRequest();
+    $request->connector = Connector::DummyPay;
+    $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
+    $request->pageSize = 501686;
+
+    $response = $sdk->payments->listConnectorTasks($request);
+
+    if ($response->tasksCursor !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                             | [\formance\formance\Models\Operations\ListConnectorTasksRequest](../../models/operations/ListConnectorTasksRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\ListConnectorTasksResponse](../../models/operations/ListConnectorTasksResponse.md)**
+
+
+## listConnectorsTransfers
+
+List transfers
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Operations\ListConnectorsTransfersRequest;
+use \formance\formance\Models\Shared\Connector;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListConnectorsTransfersRequest();
+    $request->connector = Connector::Modulr;
+
+    $response = $sdk->payments->listConnectorsTransfers($request);
+
+    if ($response->transfersResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                       | [\formance\formance\Models\Operations\ListConnectorsTransfersRequest](../../models/operations/ListConnectorsTransfersRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\ListConnectorsTransfersResponse](../../models/operations/ListConnectorsTransfersResponse.md)**
+
+
+## listPayments
+
+List payments
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Operations\ListPaymentsRequest;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ListPaymentsRequest();
+    $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
+    $request->pageSize = 13778;
+    $request->sort = [
+        'string',
+    ];
+
+    $response = $sdk->payments->listPayments($request);
+
+    if ($response->paymentsCursor !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [\formance\formance\Models\Operations\ListPaymentsRequest](../../models/operations/ListPaymentsRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\ListPaymentsResponse](../../models/operations/ListPaymentsResponse.md)**
+
+
+## paymentsgetServerInfo
+
+Get server info
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $response = $sdk->payments->paymentsgetServerInfo();
+
+    if ($response->serverInfo !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\PaymentsgetServerInfoResponse](../../models/operations/PaymentsgetServerInfoResponse.md)**
+
+
+## paymentslistAccounts
+
+List accounts
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Operations\PaymentslistAccountsRequest;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new PaymentslistAccountsRequest();
+    $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
+    $request->pageSize = 227071;
+    $request->sort = [
+        'string',
+    ];
+
+    $response = $sdk->payments->paymentslistAccounts($request);
+
+    if ($response->accountsCursor !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                 | [\formance\formance\Models\Operations\PaymentslistAccountsRequest](../../models/operations/PaymentslistAccountsRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\PaymentslistAccountsResponse](../../models/operations/PaymentslistAccountsResponse.md)**
+
+
+## readConnectorConfig
+
+Read connector config
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Operations\ReadConnectorConfigRequest;
+use \formance\formance\Models\Shared\Connector;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ReadConnectorConfigRequest();
+    $request->connector = Connector::BankingCircle;
+
+    $response = $sdk->payments->readConnectorConfig($request);
+
+    if ($response->connectorConfigResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                               | [\formance\formance\Models\Operations\ReadConnectorConfigRequest](../../models/operations/ReadConnectorConfigRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\ReadConnectorConfigResponse](../../models/operations/ReadConnectorConfigResponse.md)**
+
+
+## resetConnector
+
+Reset a connector by its name.
+It will remove the connector and ALL PAYMENTS generated with it.
+
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Operations\ResetConnectorRequest;
+use \formance\formance\Models\Shared\Connector;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new ResetConnectorRequest();
+    $request->connector = Connector::CurrencyCloud;
+
+    $response = $sdk->payments->resetConnector($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [\formance\formance\Models\Operations\ResetConnectorRequest](../../models/operations/ResetConnectorRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\ResetConnectorResponse](../../models/operations/ResetConnectorResponse.md)**
+
+
+## uninstallConnector
+
+Uninstall a connector by its name.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Operations\UninstallConnectorRequest;
+use \formance\formance\Models\Shared\Connector;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UninstallConnectorRequest();
+    $request->connector = Connector::DummyPay;
+
+    $response = $sdk->payments->uninstallConnector($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                             | [\formance\formance\Models\Operations\UninstallConnectorRequest](../../models/operations/UninstallConnectorRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\UninstallConnectorResponse](../../models/operations/UninstallConnectorResponse.md)**
+
+
+## updateMetadata
+
+Update metadata
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \formance\formance\SDK;
+use \formance\formance\Models\Shared\Security;
+use \formance\formance\Models\Operations\UpdateMetadataRequest;
+use \formance\formance\Models\Shared\PaymentMetadata;
+
+$security = new Security();
+$security->authorization = '';
+
+$sdk = SDK::builder()
+    ->setSecurity($security)
+    ->build();
+
+try {
+    $request = new UpdateMetadataRequest();
+    $request->paymentMetadata = new PaymentMetadata();
+    $request->paymentMetadata->key = '<key>';
+    $request->paymentId = 'string';
+
+    $response = $sdk->payments->updateMetadata($request);
+
+    if ($response->statusCode === 200) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [\formance\formance\Models\Operations\UpdateMetadataRequest](../../models/operations/UpdateMetadataRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\UpdateMetadataResponse](../../models/operations/UpdateMetadataResponse.md)**
+
