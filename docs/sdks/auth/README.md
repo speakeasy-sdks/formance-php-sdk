@@ -1,5 +1,5 @@
 # Auth
-(*auth*)
+
 
 ### Available Operations
 
@@ -35,19 +35,19 @@ Add scope to client
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\AddScopeToClientRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AddScopeToClientRequest();
+    $request = new Operations\AddScopeToClientRequest();
     $request->clientId = 'string';
     $request->scopeId = 'string';
 
@@ -85,19 +85,19 @@ Add a transient scope to a scope
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\AddTransientScopeRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AddTransientScopeRequest();
+    $request = new Operations\AddTransientScopeRequest();
     $request->scopeId = 'string';
     $request->transientScopeId = 'string';
 
@@ -135,19 +135,18 @@ Create client
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Shared\CreateClientRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateClientRequest();
+    $request = new Shared\CreateClientRequest();
     $request->description = 'Managed optimizing help-desk';
     $request->metadata = [
         'pessimistic' => 'string',
@@ -196,19 +195,18 @@ Create scope
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Shared\CreateScopeRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateScopeRequest();
+    $request = new Shared\CreateScopeRequest();
     $request->label = 'string';
     $request->metadata = [
         'sensor' => 'string',
@@ -248,21 +246,20 @@ Add a secret to a client
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\CreateSecretRequest;
-use \formance\formance\Models\Shared\CreateSecretRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateSecretRequest();
-    $request->createSecretRequest = new CreateSecretRequest();
+    $request = new Operations\CreateSecretRequest();
+    $request->createSecretRequest = new Shared\CreateSecretRequest();
     $request->createSecretRequest->metadata = [
         'architecture' => 'string',
     ];
@@ -303,19 +300,19 @@ Delete client
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\DeleteClientRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteClientRequest();
+    $request = new Operations\DeleteClientRequest();
     $request->clientId = 'string';
 
     $response = $sdk->auth->deleteClient($request);
@@ -352,19 +349,19 @@ Delete scope
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\DeleteScopeRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteScopeRequest();
+    $request = new Operations\DeleteScopeRequest();
     $request->scopeId = 'string';
 
     $response = $sdk->auth->deleteScope($request);
@@ -401,19 +398,19 @@ Delete scope from client
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\DeleteScopeFromClientRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteScopeFromClientRequest();
+    $request = new Operations\DeleteScopeFromClientRequest();
     $request->clientId = 'string';
     $request->scopeId = 'string';
 
@@ -451,19 +448,19 @@ Delete a secret from a client
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\DeleteSecretRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteSecretRequest();
+    $request = new Operations\DeleteSecretRequest();
     $request->clientId = 'string';
     $request->secretId = 'string';
 
@@ -501,19 +498,19 @@ Delete a transient scope from a scope
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\DeleteTransientScopeRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteTransientScopeRequest();
+    $request = new Operations\DeleteTransientScopeRequest();
     $request->scopeId = 'string';
     $request->transientScopeId = 'string';
 
@@ -551,13 +548,13 @@ Get server info
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
@@ -590,13 +587,13 @@ List clients
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
@@ -629,13 +626,13 @@ List Scopes
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
@@ -668,13 +665,13 @@ List users
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
@@ -707,19 +704,19 @@ Read client
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ReadClientRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ReadClientRequest();
+    $request = new Operations\ReadClientRequest();
     $request->clientId = 'string';
 
     $response = $sdk->auth->readClient($request);
@@ -756,19 +753,19 @@ Read scope
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ReadScopeRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ReadScopeRequest();
+    $request = new Operations\ReadScopeRequest();
     $request->scopeId = 'string';
 
     $response = $sdk->auth->readScope($request);
@@ -805,19 +802,19 @@ Read user
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ReadUserRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ReadUserRequest();
+    $request = new Operations\ReadUserRequest();
     $request->userId = 'string';
 
     $response = $sdk->auth->readUser($request);
@@ -854,21 +851,20 @@ Update client
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\UpdateClientRequest;
-use \formance\formance\Models\Shared\UpdateClientRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateClientRequest();
-    $request->updateClientRequest = new UpdateClientRequest();
+    $request = new Operations\UpdateClientRequest();
+    $request->updateClientRequest = new Shared\UpdateClientRequest();
     $request->updateClientRequest->description = 'Secured static model';
     $request->updateClientRequest->metadata = [
         'Bentley' => 'string',
@@ -918,21 +914,20 @@ Update scope
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\UpdateScopeRequest;
-use \formance\formance\Models\Shared\UpdateScopeRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateScopeRequest();
-    $request->updateScopeRequest = new UpdateScopeRequest();
+    $request = new Operations\UpdateScopeRequest();
+    $request->updateScopeRequest = new Shared\UpdateScopeRequest();
     $request->updateScopeRequest->label = 'string';
     $request->updateScopeRequest->metadata = [
         'Paradigm' => 'string',

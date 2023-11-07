@@ -14,10 +14,10 @@ class ResponseCursor
     /**
      * $data
      * 
-     * @var ?array<\formance\formance\Models\Shared\ResponseCursorData> $data
+     * @var ?array<\formance\formance\Models\Shared\ResponseSchemasData> $data
      */
 	#[\JMS\Serializer\Annotation\SerializedName('data')]
-    #[\JMS\Serializer\Annotation\Type('array<formance\formance\Models\Shared\ResponseCursorData>')]
+    #[\JMS\Serializer\Annotation\Type('array<formance\formance\Models\Shared\ResponseSchemasData>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $data = null;
     
@@ -42,9 +42,9 @@ class ResponseCursor
     public ?string $previous = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('total')]
-    #[\JMS\Serializer\Annotation\Type('formance\formance\Models\Shared\ResponseCursorTotal')]
+    #[\JMS\Serializer\Annotation\Type('formance\formance\Models\Shared\Total')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ResponseCursorTotal $total = null;
+    public ?Total $total = null;
     
 	public function __construct()
 	{

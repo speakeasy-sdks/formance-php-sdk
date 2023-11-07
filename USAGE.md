@@ -7,18 +7,18 @@
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use formance\formance\SDK;
-use formance\formance\Models\Shared\Security;
+use formance\formance;
+use formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $response = $sdk->sdk->getVersions();
+    $response = $sdk->getVersions();
 
     if ($response->getVersionsResponse !== null) {
         // handle response

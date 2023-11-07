@@ -1,5 +1,5 @@
 # Ledger
-(*ledger*)
+
 
 ### Available Operations
 
@@ -32,19 +32,19 @@ Set the metadata of a transaction by its ID
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\AddMetadataOnTransactionRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AddMetadataOnTransactionRequest();
+    $request = new Operations\AddMetadataOnTransactionRequest();
     $request->idempotencyKey = 'string';
     $request->requestBody = [
         'withdrawal' => 'string',
@@ -88,19 +88,19 @@ Add metadata to an account
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\AddMetadataToAccountRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AddMetadataToAccountRequest();
+    $request = new Operations\AddMetadataToAccountRequest();
     $request->idempotencyKey = 'string';
     $request->requestBody = [
         'Oriental' => 'string',
@@ -144,23 +144,22 @@ Count the accounts from a ledger
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\CountAccountsRequest;
-use \formance\formance\Models\Operations\CountAccountsMetadata;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CountAccountsRequest();
+    $request = new Operations\CountAccountsRequest();
     $request->address = 'users:.+';
     $request->ledger = 'ledger001';
-    $request->metadata = new CountAccountsMetadata();
+    $request->metadata = new Operations\Metadata();
 
     $response = $sdk->ledger->countAccounts($request);
 
@@ -196,19 +195,19 @@ Count the transactions from a ledger
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\CountTransactionsRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CountTransactionsRequest();
+    $request = new Operations\CountTransactionsRequest();
     $request->account = 'users:001';
     $request->destination = 'users:001';
     $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-20T09:59:27.603Z');
@@ -254,33 +253,29 @@ Create a new transaction to a ledger
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\CreateTransactionRequest;
-use \formance\formance\Models\Shared\PostTransaction;
-use \formance\formance\Models\Shared\Posting;
-use \formance\formance\Models\Shared\PostTransactionScript;
-use \formance\formance\Models\Shared\PostTransactionScriptVars;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateTransactionRequest();
+    $request = new Operations\CreateTransactionRequest();
     $request->idempotencyKey = 'string';
-    $request->postTransaction = new PostTransaction();
+    $request->postTransaction = new Shared\PostTransaction();
     $request->postTransaction->metadata = [
         'before' => 'string',
     ];
     $request->postTransaction->postings = [
-        new Posting(),
+        new Shared\Posting(),
     ];
     $request->postTransaction->reference = 'ref:001';
-    $request->postTransaction->script = new PostTransactionScript();
+    $request->postTransaction->script = new Shared\Script();
     $request->postTransaction->script->plain = 'vars {
     account $user
     }
@@ -289,7 +284,7 @@ try {
     	destination = $user
     )
     ';
-    $request->postTransaction->script->vars = new PostTransactionScriptVars();
+    $request->postTransaction->script->vars = new Shared\Vars();
     $request->postTransaction->timestamp = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-17T06:38:42.895Z');
     $request->async = true;
     $request->dryRun = true;
@@ -329,19 +324,19 @@ Get account by its address
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetAccountRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAccountRequest();
+    $request = new Operations\GetAccountRequest();
     $request->address = 'users:001';
     $request->ledger = 'ledger001';
 
@@ -379,19 +374,19 @@ Get the balances from a ledger's account
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetBalancesRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetBalancesRequest();
+    $request = new Operations\GetBalancesRequest();
     $request->address = 'users:001';
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
@@ -431,19 +426,19 @@ Get the aggregated balances from selected accounts
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetBalancesAggregatedRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetBalancesAggregatedRequest();
+    $request = new Operations\GetBalancesAggregatedRequest();
     $request->address = 'users:001';
     $request->ledger = 'ledger001';
 
@@ -481,13 +476,13 @@ Show server information
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
@@ -520,19 +515,19 @@ Get information about a ledger
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetLedgerInfoRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetLedgerInfoRequest();
+    $request = new Operations\GetLedgerInfoRequest();
     $request->ledger = 'ledger001';
 
     $response = $sdk->ledger->getLedgerInfo($request);
@@ -569,19 +564,19 @@ Get transaction from a ledger by its ID
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetTransactionRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetTransactionRequest();
+    $request = new Operations\GetTransactionRequest();
     $request->ledger = 'ledger001';
     $request->txid = 1234;
 
@@ -619,23 +614,22 @@ List accounts from a ledger, sorted by address in descending order.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ListAccountsRequest;
-use \formance\formance\Models\Operations\ListAccountsBalanceOperator;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAccountsRequest();
+    $request = new Operations\ListAccountsRequest();
     $request->address = 'users:.+';
     $request->balance = 2400;
-    $request->balanceOperator = ListAccountsBalanceOperator::Gte;
+    $request->balanceOperator = Operations\BalanceOperator::Gte;
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
     $request->metadata = [
@@ -677,19 +671,19 @@ List the logs from a ledger, sorted by ID in descending order.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ListLogsRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListLogsRequest();
+    $request = new Operations\ListLogsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-04T05:10:40.788Z');
     $request->ledger = 'ledger001';
@@ -730,19 +724,19 @@ List transactions from a ledger, sorted by txid in descending order.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ListTransactionsRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListTransactionsRequest();
+    $request = new Operations\ListTransactionsRequest();
     $request->account = 'users:001';
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->destination = 'users:001';
@@ -791,19 +785,19 @@ Get statistics from a ledger. (aggregate metrics on accounts and transactions)
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ReadStatsRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ReadStatsRequest();
+    $request = new Operations\ReadStatsRequest();
     $request->ledger = 'ledger001';
 
     $response = $sdk->ledger->readStats($request);
@@ -840,19 +834,19 @@ Revert a ledger transaction by its ID
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\RevertTransactionRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RevertTransactionRequest();
+    $request = new Operations\RevertTransactionRequest();
     $request->ledger = 'ledger001';
     $request->txid = 1234;
 

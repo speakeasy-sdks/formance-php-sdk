@@ -1,5 +1,5 @@
 # Balances
-(*balances*)
+
 
 ### Available Operations
 
@@ -18,19 +18,19 @@ Get the balances from a ledger's account
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetBalancesRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetBalancesRequest();
+    $request = new Operations\GetBalancesRequest();
     $request->address = 'users:001';
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
@@ -70,19 +70,19 @@ Get the aggregated balances from selected accounts
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetBalancesAggregatedRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetBalancesAggregatedRequest();
+    $request = new Operations\GetBalancesAggregatedRequest();
     $request->address = 'users:001';
     $request->ledger = 'ledger001';
 

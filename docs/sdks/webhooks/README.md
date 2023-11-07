@@ -1,5 +1,5 @@
 # Webhooks
-(*webhooks*)
+
 
 ### Available Operations
 
@@ -23,19 +23,19 @@ Activate a webhooks config by ID, to start receiving webhooks to its endpoint.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ActivateConfigRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ActivateConfigRequest();
+    $request = new Operations\ActivateConfigRequest();
     $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';
 
     $response = $sdk->webhooks->activateConfig($request);
@@ -76,21 +76,20 @@ The format is a random string of bytes of size 24, base64 encoded. (larger size 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ChangeConfigSecretRequest;
-use \formance\formance\Models\Shared\ConfigChangeSecret;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ChangeConfigSecretRequest();
-    $request->configChangeSecret = new ConfigChangeSecret();
+    $request = new Operations\ChangeConfigSecretRequest();
+    $request->configChangeSecret = new Shared\ConfigChangeSecret();
     $request->configChangeSecret->secret = 'V0bivxRWveaoz08afqjU6Ko/jwO0Cb+3';
     $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';
 
@@ -128,19 +127,19 @@ Deactivate a webhooks config by ID, to stop receiving webhooks to its endpoint.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\DeactivateConfigRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeactivateConfigRequest();
+    $request = new Operations\DeactivateConfigRequest();
     $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';
 
     $response = $sdk->webhooks->deactivateConfig($request);
@@ -177,19 +176,19 @@ Delete a webhooks config by ID.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\DeleteConfigRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DeleteConfigRequest();
+    $request = new Operations\DeleteConfigRequest();
     $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';
 
     $response = $sdk->webhooks->deleteConfig($request);
@@ -226,19 +225,19 @@ Sorted by updated date descending
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetManyConfigsRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetManyConfigsRequest();
+    $request = new Operations\GetManyConfigsRequest();
     $request->endpoint = 'https://example.com';
     $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';
 
@@ -285,19 +284,18 @@ All eventTypes are converted to lower-case when inserted.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Shared\ConfigUser;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ConfigUser();
+    $request = new Shared\ConfigUser();
     $request->endpoint = 'https://example.com';
     $request->eventTypes = [
         'TYPE1',
@@ -338,19 +336,19 @@ Test a config by sending a webhook to its endpoint.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\TestConfigRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TestConfigRequest();
+    $request = new Operations\TestConfigRequest();
     $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';
 
     $response = $sdk->webhooks->testConfig($request);

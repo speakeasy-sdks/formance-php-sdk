@@ -32,12 +32,12 @@ class ActivityStripeTransfer
      * It can be useful for storing additional information about the transfer in a structured format.
      * 
      * 
-     * @var ?\formance\formance\Models\Shared\ActivityStripeTransferMetadata $metadata
+     * @var ?\formance\formance\Models\Shared\Metadata $metadata
      */
 	#[\JMS\Serializer\Annotation\SerializedName('metadata')]
-    #[\JMS\Serializer\Annotation\Type('formance\formance\Models\Shared\ActivityStripeTransferMetadata')]
+    #[\JMS\Serializer\Annotation\Type('formance\formance\Models\Shared\Metadata')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ActivityStripeTransferMetadata $metadata = null;
+    public ?Metadata $metadata = null;
     
 	public function __construct()
 	{

@@ -15,9 +15,9 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 - [ ] 🎁 Publish your SDK to package managers by [configuring automatic publishing](https://www.speakeasyapi.dev/docs/productionize-sdks/publish-sdks)
 - [ ] ✨ When ready to productionize, delete this section from the README
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## Composer
+### Composer
 
 To install the SDK first add the below to your `composer.json` file:
 
@@ -44,26 +44,24 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```php
 <?php
 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use formance\formance\SDK;
-use formance\formance\Models\Shared\Security;
+use formance\formance;
+use formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $response = $sdk->sdk->getVersions();
+    $response = $sdk->getVersions();
 
     if ($response->getVersionsResponse !== null) {
         // handle response
@@ -76,20 +74,13 @@ try {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
-## [SDK](docs/sdks/sdk/README.md)
+### [SDK](docs/sdks/sdk/README.md)
 
 * [getVersions](docs/sdks/sdk/README.md#getversions) - Show stack version information
 
-## [accounts](docs/sdks/accounts/README.md)
-
-* [addMetadataToAccount](docs/sdks/accounts/README.md#addmetadatatoaccount) - Add metadata to an account
-* [countAccounts](docs/sdks/accounts/README.md#countaccounts) - Count the accounts from a ledger
-* [getAccount](docs/sdks/accounts/README.md#getaccount) - Get account by its address
-* [listAccounts](docs/sdks/accounts/README.md#listaccounts) - List accounts from a ledger
-
-## [auth](docs/sdks/auth/README.md)
+### [Auth](docs/sdks/auth/README.md)
 
 * [addScopeToClient](docs/sdks/auth/README.md#addscopetoclient) - Add scope to client
 * [addTransientScope](docs/sdks/auth/README.md#addtransientscope) - Add a transient scope to a scope
@@ -111,12 +102,7 @@ try {
 * [updateClient](docs/sdks/auth/README.md#updateclient) - Update client
 * [updateScope](docs/sdks/auth/README.md#updatescope) - Update scope
 
-## [balances](docs/sdks/balances/README.md)
-
-* [getBalances](docs/sdks/balances/README.md#getbalances) - Get the balances from a ledger's account
-* [getBalancesAggregated](docs/sdks/balances/README.md#getbalancesaggregated) - Get the aggregated balances from selected accounts
-
-## [clients](docs/sdks/clients/README.md)
+### [Clients](docs/sdks/clients/README.md)
 
 * [addScopeToClient](docs/sdks/clients/README.md#addscopetoclient) - Add scope to client
 * [createClient](docs/sdks/clients/README.md#createclient) - Create client
@@ -128,7 +114,22 @@ try {
 * [readClient](docs/sdks/clients/README.md#readclient) - Read client
 * [updateClient](docs/sdks/clients/README.md#updateclient) - Update client
 
-## [ledger](docs/sdks/ledger/README.md)
+### [Scopes](docs/sdks/scopes/README.md)
+
+* [addTransientScope](docs/sdks/scopes/README.md#addtransientscope) - Add a transient scope to a scope
+* [createScope](docs/sdks/scopes/README.md#createscope) - Create scope
+* [deleteScope](docs/sdks/scopes/README.md#deletescope) - Delete scope
+* [deleteTransientScope](docs/sdks/scopes/README.md#deletetransientscope) - Delete a transient scope from a scope
+* [listScopes](docs/sdks/scopes/README.md#listscopes) - List scopes
+* [readScope](docs/sdks/scopes/README.md#readscope) - Read scope
+* [updateScope](docs/sdks/scopes/README.md#updatescope) - Update scope
+
+### [Users](docs/sdks/users/README.md)
+
+* [listUsers](docs/sdks/users/README.md#listusers) - List users
+* [readUser](docs/sdks/users/README.md#readuser) - Read user
+
+### [Ledger](docs/sdks/ledger/README.md)
 
 * [addMetadataOnTransaction](docs/sdks/ledger/README.md#addmetadataontransaction) - Set the metadata of a transaction by its ID
 * [addMetadataToAccount](docs/sdks/ledger/README.md#addmetadatatoaccount) - Add metadata to an account
@@ -147,11 +148,40 @@ try {
 * [readStats](docs/sdks/ledger/README.md#readstats) - Get statistics from a ledger
 * [revertTransaction](docs/sdks/ledger/README.md#reverttransaction) - Revert a ledger transaction by its ID
 
-## [logs](docs/sdks/logs/README.md)
+### [Server](docs/sdks/server/README.md)
+
+* [getInfo](docs/sdks/server/README.md#getinfo) - Show server information
+
+### [Accounts](docs/sdks/accounts/README.md)
+
+* [addMetadataToAccount](docs/sdks/accounts/README.md#addmetadatatoaccount) - Add metadata to an account
+* [countAccounts](docs/sdks/accounts/README.md#countaccounts) - Count the accounts from a ledger
+* [getAccount](docs/sdks/accounts/README.md#getaccount) - Get account by its address
+* [listAccounts](docs/sdks/accounts/README.md#listaccounts) - List accounts from a ledger
+
+### [Balances](docs/sdks/balances/README.md)
+
+* [getBalances](docs/sdks/balances/README.md#getbalances) - Get the balances from a ledger's account
+* [getBalancesAggregated](docs/sdks/balances/README.md#getbalancesaggregated) - Get the aggregated balances from selected accounts
+
+### [Logs](docs/sdks/logs/README.md)
 
 * [listLogs](docs/sdks/logs/README.md#listlogs) - List the logs from a ledger
 
-## [orchestration](docs/sdks/orchestration/README.md)
+### [Stats](docs/sdks/stats/README.md)
+
+* [readStats](docs/sdks/stats/README.md#readstats) - Get statistics from a ledger
+
+### [Transactions](docs/sdks/transactions/README.md)
+
+* [addMetadataOnTransaction](docs/sdks/transactions/README.md#addmetadataontransaction) - Set the metadata of a transaction by its ID
+* [countTransactions](docs/sdks/transactions/README.md#counttransactions) - Count the transactions from a ledger
+* [createTransaction](docs/sdks/transactions/README.md#createtransaction) - Create a new transaction to a ledger
+* [getTransaction](docs/sdks/transactions/README.md#gettransaction) - Get transaction from a ledger by its ID
+* [listTransactions](docs/sdks/transactions/README.md#listtransactions) - List transactions from a ledger
+* [revertTransaction](docs/sdks/transactions/README.md#reverttransaction) - Revert a ledger transaction by its ID
+
+### [Orchestration](docs/sdks/orchestration/README.md)
 
 * [cancelEvent](docs/sdks/orchestration/README.md#cancelevent) - Cancel a running workflow
 * [createWorkflow](docs/sdks/orchestration/README.md#createworkflow) - Create workflow
@@ -165,7 +195,7 @@ try {
 * [runWorkflow](docs/sdks/orchestration/README.md#runworkflow) - Run workflow
 * [sendEvent](docs/sdks/orchestration/README.md#sendevent) - Send an event to a running workflow
 
-## [payments](docs/sdks/payments/README.md)
+### [Payments](docs/sdks/payments/README.md)
 
 * [connectorsStripeTransfer](docs/sdks/payments/README.md#connectorsstripetransfer) - Transfer funds between Stripe accounts
 * [connectorsTransfer](docs/sdks/payments/README.md#connectorstransfer) - Transfer funds between Connector accounts
@@ -184,44 +214,12 @@ try {
 * [uninstallConnector](docs/sdks/payments/README.md#uninstallconnector) - Uninstall a connector
 * [updateMetadata](docs/sdks/payments/README.md#updatemetadata) - Update metadata
 
-## [scopes](docs/sdks/scopes/README.md)
-
-* [addTransientScope](docs/sdks/scopes/README.md#addtransientscope) - Add a transient scope to a scope
-* [createScope](docs/sdks/scopes/README.md#createscope) - Create scope
-* [deleteScope](docs/sdks/scopes/README.md#deletescope) - Delete scope
-* [deleteTransientScope](docs/sdks/scopes/README.md#deletetransientscope) - Delete a transient scope from a scope
-* [listScopes](docs/sdks/scopes/README.md#listscopes) - List scopes
-* [readScope](docs/sdks/scopes/README.md#readscope) - Read scope
-* [updateScope](docs/sdks/scopes/README.md#updatescope) - Update scope
-
-## [search](docs/sdks/search/README.md)
+### [Search](docs/sdks/search/README.md)
 
 * [search](docs/sdks/search/README.md#search) - Search
 * [searchgetServerInfo](docs/sdks/search/README.md#searchgetserverinfo) - Get server info
 
-## [server](docs/sdks/server/README.md)
-
-* [getInfo](docs/sdks/server/README.md#getinfo) - Show server information
-
-## [stats](docs/sdks/stats/README.md)
-
-* [readStats](docs/sdks/stats/README.md#readstats) - Get statistics from a ledger
-
-## [transactions](docs/sdks/transactions/README.md)
-
-* [addMetadataOnTransaction](docs/sdks/transactions/README.md#addmetadataontransaction) - Set the metadata of a transaction by its ID
-* [countTransactions](docs/sdks/transactions/README.md#counttransactions) - Count the transactions from a ledger
-* [createTransaction](docs/sdks/transactions/README.md#createtransaction) - Create a new transaction to a ledger
-* [getTransaction](docs/sdks/transactions/README.md#gettransaction) - Get transaction from a ledger by its ID
-* [listTransactions](docs/sdks/transactions/README.md#listtransactions) - List transactions from a ledger
-* [revertTransaction](docs/sdks/transactions/README.md#reverttransaction) - Revert a ledger transaction by its ID
-
-## [users](docs/sdks/users/README.md)
-
-* [listUsers](docs/sdks/users/README.md#listusers) - List users
-* [readUser](docs/sdks/users/README.md#readuser) - Read user
-
-## [wallets](docs/sdks/wallets/README.md)
+### [Wallets](docs/sdks/wallets/README.md)
 
 * [confirmHold](docs/sdks/wallets/README.md#confirmhold) - Confirm a hold
 * [createBalance](docs/sdks/wallets/README.md#createbalance) - Create a balance
@@ -240,7 +238,7 @@ try {
 * [voidHold](docs/sdks/wallets/README.md#voidhold) - Cancel a hold
 * [walletsgetServerInfo](docs/sdks/wallets/README.md#walletsgetserverinfo) - Get server info
 
-## [webhooks](docs/sdks/webhooks/README.md)
+### [Webhooks](docs/sdks/webhooks/README.md)
 
 * [activateConfig](docs/sdks/webhooks/README.md#activateconfig) - Activate one config
 * [changeConfigSecret](docs/sdks/webhooks/README.md#changeconfigsecret) - Change the signing secret of a config
@@ -252,8 +250,6 @@ try {
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 

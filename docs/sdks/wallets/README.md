@@ -1,5 +1,5 @@
 # Wallets
-(*wallets*)
+
 
 ### Available Operations
 
@@ -32,21 +32,20 @@ Confirm a hold
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ConfirmHoldRequest;
-use \formance\formance\Models\Shared\ConfirmHoldRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ConfirmHoldRequest();
-    $request->confirmHoldRequest = new ConfirmHoldRequest();
+    $request = new Operations\ConfirmHoldRequest();
+    $request->confirmHoldRequest = new Shared\ConfirmHoldRequest();
     $request->confirmHoldRequest->amount = 100;
     $request->confirmHoldRequest->final = true;
     $request->holdId = 'string';
@@ -85,21 +84,20 @@ Create a balance
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\CreateBalanceRequest;
-use \formance\formance\Models\Shared\CreateBalanceRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateBalanceRequest();
-    $request->createBalanceRequest = new CreateBalanceRequest();
+    $request = new Operations\CreateBalanceRequest();
+    $request->createBalanceRequest = new Shared\CreateBalanceRequest();
     $request->createBalanceRequest->expiresAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-08T09:54:54.366Z');
     $request->createBalanceRequest->name = 'string';
     $request->createBalanceRequest->priority = 851262;
@@ -139,19 +137,18 @@ Create a new wallet
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Shared\CreateWalletRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateWalletRequest();
+    $request = new Shared\CreateWalletRequest();
     $request->metadata = [
         'array' => 'string',
     ];
@@ -191,23 +188,21 @@ Credit a wallet
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\CreditWalletRequest;
-use \formance\formance\Models\Shared\CreditWalletRequest;
-use \formance\formance\Models\Shared\Monetary;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreditWalletRequest();
-    $request->creditWalletRequest = new CreditWalletRequest();
-    $request->creditWalletRequest->amount = new Monetary();
+    $request = new Operations\CreditWalletRequest();
+    $request->creditWalletRequest = new Shared\CreditWalletRequest();
+    $request->creditWalletRequest->amount = new Shared\Monetary();
     $request->creditWalletRequest->amount->amount = 201874;
     $request->creditWalletRequest->amount->asset = 'string';
     $request->creditWalletRequest->balance = 'string';
@@ -254,23 +249,21 @@ Debit a wallet
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\DebitWalletRequest;
-use \formance\formance\Models\Shared\DebitWalletRequest;
-use \formance\formance\Models\Shared\Monetary;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new DebitWalletRequest();
-    $request->debitWalletRequest = new DebitWalletRequest();
-    $request->debitWalletRequest->amount = new Monetary();
+    $request = new Operations\DebitWalletRequest();
+    $request->debitWalletRequest = new Shared\DebitWalletRequest();
+    $request->debitWalletRequest->amount = new Shared\Monetary();
     $request->debitWalletRequest->amount->amount = 245256;
     $request->debitWalletRequest->amount->asset = 'string';
     $request->debitWalletRequest->balances = [
@@ -318,19 +311,19 @@ Get detailed balance
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetBalanceRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetBalanceRequest();
+    $request = new Operations\GetBalanceRequest();
     $request->balanceName = 'string';
     $request->id = '<ID>';
 
@@ -368,19 +361,19 @@ Get a hold
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetHoldRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetHoldRequest();
+    $request = new Operations\GetHoldRequest();
     $request->holdID = 'string';
 
     $response = $sdk->wallets->getHold($request);
@@ -417,19 +410,19 @@ Get all holds for a wallet
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetHoldsRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetHoldsRequest();
+    $request = new Operations\GetHoldsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->metadata = [
         'Engineer' => 'string',
@@ -469,19 +462,19 @@ try {
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetTransactionsRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetTransactionsRequest();
+    $request = new Operations\GetTransactionsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->pageSize = 680555;
     $request->walletID = 'string';
@@ -520,19 +513,19 @@ Get a wallet
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetWalletRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetWalletRequest();
+    $request = new Operations\GetWalletRequest();
     $request->id = '<ID>';
 
     $response = $sdk->wallets->getWallet($request);
@@ -569,19 +562,19 @@ Get wallet summary
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetWalletSummaryRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetWalletSummaryRequest();
+    $request = new Operations\GetWalletSummaryRequest();
     $request->id = '<ID>';
 
     $response = $sdk->wallets->getWalletSummary($request);
@@ -618,19 +611,19 @@ List balances of a wallet
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ListBalancesRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListBalancesRequest();
+    $request = new Operations\ListBalancesRequest();
     $request->id = '<ID>';
 
     $response = $sdk->wallets->listBalances($request);
@@ -667,19 +660,19 @@ List all wallets
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ListWalletsRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListWalletsRequest();
+    $request = new Operations\ListWalletsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->metadata = [
         'Auto' => 'string',
@@ -721,21 +714,20 @@ Update a wallet
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\UpdateWalletRequest;
-use \formance\formance\Models\Operations\UpdateWalletRequestBody;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateWalletRequest();
-    $request->requestBody = new UpdateWalletRequestBody();
+    $request = new Operations\UpdateWalletRequest();
+    $request->requestBody = new Operations\UpdateWalletRequestBody();
     $request->requestBody->metadata = [
         'override' => 'string',
     ];
@@ -775,19 +767,19 @@ Cancel a hold
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\VoidHoldRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new VoidHoldRequest();
+    $request = new Operations\VoidHoldRequest();
     $request->holdId = 'string';
 
     $response = $sdk->wallets->voidHold($request);
@@ -824,13 +816,13 @@ Get server info
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 

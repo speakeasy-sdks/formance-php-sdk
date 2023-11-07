@@ -35,33 +35,33 @@ class SDK
 		'https://{organization}.sandbox.formance.cloud',
 	];
   	
-	public Accounts $accounts;
-	
 	public Auth $auth;
-	
-	public Balances $balances;
 	
 	public Clients $clients;
 	
-	public Ledger $ledger;
-	
-	public Logs $logs;
-	
-	public Orchestration $orchestration;
-	
-	public Payments $payments;
-	
 	public Scopes $scopes;
 	
-	public Search $search;
+	public Users $users;
+	
+	public Ledger $ledger;
 	
 	public Server $server;
+	
+	public Accounts $accounts;
+	
+	public Balances $balances;
+	
+	public Logs $logs;
 	
 	public Stats $stats;
 	
 	public Transactions $transactions;
 	
-	public Users $users;
+	public Orchestration $orchestration;
+	
+	public Payments $payments;
+	
+	public Search $search;
 	
 	public Wallets $wallets;
 	
@@ -86,33 +86,33 @@ class SDK
 	{
 		$this->sdkConfiguration = $sdkConfiguration;
 		
-		$this->accounts = new Accounts($this->sdkConfiguration);
-		
 		$this->auth = new Auth($this->sdkConfiguration);
-		
-		$this->balances = new Balances($this->sdkConfiguration);
 		
 		$this->clients = new Clients($this->sdkConfiguration);
 		
-		$this->ledger = new Ledger($this->sdkConfiguration);
-		
-		$this->logs = new Logs($this->sdkConfiguration);
-		
-		$this->orchestration = new Orchestration($this->sdkConfiguration);
-		
-		$this->payments = new Payments($this->sdkConfiguration);
-		
 		$this->scopes = new Scopes($this->sdkConfiguration);
 		
-		$this->search = new Search($this->sdkConfiguration);
+		$this->users = new Users($this->sdkConfiguration);
+		
+		$this->ledger = new Ledger($this->sdkConfiguration);
 		
 		$this->server = new Server($this->sdkConfiguration);
+		
+		$this->accounts = new Accounts($this->sdkConfiguration);
+		
+		$this->balances = new Balances($this->sdkConfiguration);
+		
+		$this->logs = new Logs($this->sdkConfiguration);
 		
 		$this->stats = new Stats($this->sdkConfiguration);
 		
 		$this->transactions = new Transactions($this->sdkConfiguration);
 		
-		$this->users = new Users($this->sdkConfiguration);
+		$this->orchestration = new Orchestration($this->sdkConfiguration);
+		
+		$this->payments = new Payments($this->sdkConfiguration);
+		
+		$this->search = new Search($this->sdkConfiguration);
 		
 		$this->wallets = new Wallets($this->sdkConfiguration);
 		
@@ -138,8 +138,10 @@ class SDK
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
+        $statusCode = $httpResponse->getStatusCode();
+
         $response = new \formance\formance\Models\Operations\GetVersionsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
+        $response->statusCode = $statusCode;
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
         

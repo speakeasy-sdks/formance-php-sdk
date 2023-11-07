@@ -1,5 +1,5 @@
 # Accounts
-(*accounts*)
+
 
 ### Available Operations
 
@@ -20,19 +20,19 @@ Add metadata to an account
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\AddMetadataToAccountRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new AddMetadataToAccountRequest();
+    $request = new Operations\AddMetadataToAccountRequest();
     $request->idempotencyKey = 'string';
     $request->requestBody = [
         'Oriental' => 'string',
@@ -76,23 +76,22 @@ Count the accounts from a ledger
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\CountAccountsRequest;
-use \formance\formance\Models\Operations\CountAccountsMetadata;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CountAccountsRequest();
+    $request = new Operations\CountAccountsRequest();
     $request->address = 'users:.+';
     $request->ledger = 'ledger001';
-    $request->metadata = new CountAccountsMetadata();
+    $request->metadata = new Operations\Metadata();
 
     $response = $sdk->accounts->countAccounts($request);
 
@@ -128,19 +127,19 @@ Get account by its address
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetAccountRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetAccountRequest();
+    $request = new Operations\GetAccountRequest();
     $request->address = 'users:001';
     $request->ledger = 'ledger001';
 
@@ -178,23 +177,22 @@ List accounts from a ledger, sorted by address in descending order.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ListAccountsRequest;
-use \formance\formance\Models\Operations\ListAccountsBalanceOperator;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListAccountsRequest();
+    $request = new Operations\ListAccountsRequest();
     $request->address = 'users:.+';
     $request->balance = 2400;
-    $request->balanceOperator = ListAccountsBalanceOperator::Gte;
+    $request->balanceOperator = Operations\BalanceOperator::Gte;
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
     $request->metadata = [

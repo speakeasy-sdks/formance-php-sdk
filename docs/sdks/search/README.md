@@ -1,5 +1,5 @@
 # Search
-(*search*)
+
 
 ### Available Operations
 
@@ -18,20 +18,18 @@ ElasticSearch query engine
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Shared\Query;
-use \formance\formance\Models\Shared\QueryRaw;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new Query();
+    $request = new Shared\Query();
     $request->after = [
         'users:002',
     ];
@@ -41,7 +39,7 @@ try {
     ];
     $request->pageSize = 307631;
     $request->policy = 'OR';
-    $request->raw = new QueryRaw();
+    $request->raw = new Shared\QueryRaw();
     $request->sort = 'txid:asc';
     $request->target = 'string';
     $request->terms = [
@@ -82,13 +80,13 @@ Get server info
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 

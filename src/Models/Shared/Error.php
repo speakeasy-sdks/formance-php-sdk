@@ -12,8 +12,8 @@ namespace formance\formance\Models\Shared;
 class Error
 {
 	#[\JMS\Serializer\Annotation\SerializedName('errorCode')]
-    #[\JMS\Serializer\Annotation\Type('enum<formance\formance\Models\Shared\ErrorErrorCode>')]
-    public ErrorErrorCode $errorCode;
+    #[\JMS\Serializer\Annotation\Type('enum<formance\formance\Models\Shared\ErrorCode>')]
+    public ErrorCode $errorCode;
     
 	#[\JMS\Serializer\Annotation\SerializedName('errorMessage')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -21,7 +21,7 @@ class Error
     
 	public function __construct()
 	{
-		$this->errorCode = \formance\formance\Models\Shared\ErrorErrorCode::Validation;
+		$this->errorCode = \formance\formance\Models\Shared\ErrorCode::Validation;
 		$this->errorMessage = "";
 	}
 }

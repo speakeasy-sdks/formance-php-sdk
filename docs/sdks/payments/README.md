@@ -1,5 +1,5 @@
 # Payments
-(*payments*)
+
 
 ### Available Operations
 
@@ -32,24 +32,22 @@ Execute a transfer between two Stripe accounts.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Shared\StripeTransferRequest;
-use \formance\formance\Models\Shared\StripeTransferRequestMetadata;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new StripeTransferRequest();
+    $request = new Shared\StripeTransferRequest();
     $request->amount = 100;
     $request->asset = 'USD';
     $request->destination = 'acct_1Gqj58KZcSIg2N2q';
-    $request->metadata = new StripeTransferRequestMetadata();
+    $request->metadata = new Shared\StripeTransferRequestMetadata();
 
     $response = $sdk->payments->connectorsStripeTransfer($request);
 
@@ -85,27 +83,25 @@ Execute a transfer between two accounts.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ConnectorsTransferRequest;
-use \formance\formance\Models\Shared\TransferRequest;
-use \formance\formance\Models\Shared\Connector;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ConnectorsTransferRequest();
-    $request->transferRequest = new TransferRequest();
+    $request = new Operations\ConnectorsTransferRequest();
+    $request->transferRequest = new Shared\TransferRequest();
     $request->transferRequest->amount = 100;
     $request->transferRequest->asset = 'USD';
     $request->transferRequest->destination = 'acct_1Gqj58KZcSIg2N2q';
     $request->transferRequest->source = 'acct_1Gqj58KZcSIg2N2q';
-    $request->connector = Connector::Wise;
+    $request->connector = Shared\Connector::Wise;
 
     $response = $sdk->payments->connectorsTransfer($request);
 
@@ -141,21 +137,20 @@ Get a specific task associated to the connector.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetConnectorTaskRequest;
-use \formance\formance\Models\Shared\Connector;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetConnectorTaskRequest();
-    $request->connector = Connector::BankingCircle;
+    $request = new Operations\GetConnectorTaskRequest();
+    $request->connector = Shared\Connector::BankingCircle;
     $request->taskId = 'string';
 
     $response = $sdk->payments->getConnectorTask($request);
@@ -192,19 +187,19 @@ Get a payment
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\GetPaymentRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new GetPaymentRequest();
+    $request = new Operations\GetPaymentRequest();
     $request->paymentId = 'string';
 
     $response = $sdk->payments->getPayment($request);
@@ -241,22 +236,21 @@ Install a connector by its name and config.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\InstallConnectorRequest;
-use \formance\formance\Models\Shared\Connector;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new InstallConnectorRequest();
+    $request = new Operations\InstallConnectorRequest();
     $request->requestBody = 'string';
-    $request->connector = Connector::DummyPay;
+    $request->connector = Shared\Connector::DummyPay;
 
     $response = $sdk->payments->installConnector($request);
 
@@ -292,13 +286,13 @@ List all installed connectors.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
@@ -331,13 +325,13 @@ List the configs of each available connector.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
@@ -370,21 +364,20 @@ List all tasks associated with this connector.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ListConnectorTasksRequest;
-use \formance\formance\Models\Shared\Connector;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListConnectorTasksRequest();
-    $request->connector = Connector::DummyPay;
+    $request = new Operations\ListConnectorTasksRequest();
+    $request->connector = Shared\Connector::DummyPay;
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->pageSize = 501686;
 
@@ -422,21 +415,20 @@ List transfers
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ListConnectorsTransfersRequest;
-use \formance\formance\Models\Shared\Connector;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListConnectorsTransfersRequest();
-    $request->connector = Connector::Modulr;
+    $request = new Operations\ListConnectorsTransfersRequest();
+    $request->connector = Shared\Connector::Modulr;
 
     $response = $sdk->payments->listConnectorsTransfers($request);
 
@@ -472,19 +464,19 @@ List payments
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ListPaymentsRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ListPaymentsRequest();
+    $request = new Operations\ListPaymentsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->pageSize = 13778;
     $request->sort = [
@@ -525,13 +517,13 @@ Get server info
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
+use \formance\formance;
+use \formance\formance\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
@@ -564,19 +556,19 @@ List accounts
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\PaymentslistAccountsRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new PaymentslistAccountsRequest();
+    $request = new Operations\PaymentslistAccountsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->pageSize = 227071;
     $request->sort = [
@@ -617,21 +609,20 @@ Read connector config
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ReadConnectorConfigRequest;
-use \formance\formance\Models\Shared\Connector;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ReadConnectorConfigRequest();
-    $request->connector = Connector::BankingCircle;
+    $request = new Operations\ReadConnectorConfigRequest();
+    $request->connector = Shared\Connector::BankingCircle;
 
     $response = $sdk->payments->readConnectorConfig($request);
 
@@ -669,21 +660,20 @@ It will remove the connector and ALL PAYMENTS generated with it.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ResetConnectorRequest;
-use \formance\formance\Models\Shared\Connector;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ResetConnectorRequest();
-    $request->connector = Connector::CurrencyCloud;
+    $request = new Operations\ResetConnectorRequest();
+    $request->connector = Shared\Connector::CurrencyCloud;
 
     $response = $sdk->payments->resetConnector($request);
 
@@ -719,21 +709,20 @@ Uninstall a connector by its name.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\UninstallConnectorRequest;
-use \formance\formance\Models\Shared\Connector;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UninstallConnectorRequest();
-    $request->connector = Connector::DummyPay;
+    $request = new Operations\UninstallConnectorRequest();
+    $request->connector = Shared\Connector::DummyPay;
 
     $response = $sdk->payments->uninstallConnector($request);
 
@@ -769,21 +758,20 @@ Update metadata
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\UpdateMetadataRequest;
-use \formance\formance\Models\Shared\PaymentMetadata;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateMetadataRequest();
-    $request->paymentMetadata = new PaymentMetadata();
+    $request = new Operations\UpdateMetadataRequest();
+    $request->paymentMetadata = new Shared\PaymentMetadata();
     $request->paymentMetadata->key = '<key>';
     $request->paymentId = 'string';
 

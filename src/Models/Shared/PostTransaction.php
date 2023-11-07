@@ -36,9 +36,9 @@ class PostTransaction
     public ?string $reference = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('script')]
-    #[\JMS\Serializer\Annotation\Type('formance\formance\Models\Shared\PostTransactionScript')]
+    #[\JMS\Serializer\Annotation\Type('formance\formance\Models\Shared\Script')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?PostTransactionScript $script = null;
+    public ?Script $script = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('timestamp')]
     #[\JMS\Serializer\Annotation\Type("DateTime<'Y-m-d\TH:i:s.up'>")]

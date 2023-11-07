@@ -32,10 +32,10 @@ class ListAccountsRequest
      * 
      * 
      * 
-     * @var ?\formance\formance\Models\Operations\ListAccountsBalanceOperator $balanceOperator
+     * @var ?\formance\formance\Models\Operations\BalanceOperator $balanceOperator
      */
 	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=balanceOperator')]
-    public ?ListAccountsBalanceOperator $balanceOperator = null;
+    public ?BalanceOperator $balanceOperator = null;
     
     /**
      * Parameter used in pagination requests. Maximum page size is set to 15.

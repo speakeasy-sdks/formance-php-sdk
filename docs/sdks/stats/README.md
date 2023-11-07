@@ -1,5 +1,5 @@
 # Stats
-(*stats*)
+
 
 ### Available Operations
 
@@ -18,19 +18,19 @@ Get statistics from a ledger. (aggregate metrics on accounts and transactions)
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \formance\formance\SDK;
-use \formance\formance\Models\Shared\Security;
-use \formance\formance\Models\Operations\ReadStatsRequest;
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->authorization = '';
 
-$sdk = SDK::builder()
+$sdk = formance\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ReadStatsRequest();
+    $request = new Operations\ReadStatsRequest();
     $request->ledger = 'ledger001';
 
     $response = $sdk->stats->readStats($request);

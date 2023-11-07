@@ -28,8 +28,8 @@ class Log
     public int $id;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<formance\formance\Models\Shared\LogType>')]
-    public LogType $type;
+    #[\JMS\Serializer\Annotation\Type('enum<formance\formance\Models\Shared\Type>')]
+    public Type $type;
     
 	public function __construct()
 	{
@@ -37,6 +37,6 @@ class Log
 		$this->date = new \DateTime();
 		$this->hash = "";
 		$this->id = 0;
-		$this->type = \formance\formance\Models\Shared\LogType::NewTransaction;
+		$this->type = \formance\formance\Models\Shared\Type::NewTransaction;
 	}
 }
