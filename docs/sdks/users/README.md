@@ -42,7 +42,7 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ListUsersResponse](../../models/operations/ListUsersResponse.md)**
+**[?\formance\formance\Models\Operations\ListUsersResponse](../../Models/Operations/ListUsersResponse.md)**
 
 
 ## readUser
@@ -86,10 +86,10 @@ try {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [\formance\formance\Models\Operations\ReadUserRequest](../../models/operations/ReadUserRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [\formance\formance\Models\Operations\ReadUserRequest](../../Models/Operations/ReadUserRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ReadUserResponse](../../models/operations/ReadUserResponse.md)**
+**[?\formance\formance\Models\Operations\ReadUserResponse](../../Models/Operations/ReadUserResponse.md)**
 

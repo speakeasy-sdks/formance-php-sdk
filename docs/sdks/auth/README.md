@@ -65,12 +65,12 @@ try {
 
 | Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                         | [\formance\formance\Models\Operations\AddScopeToClientRequest](../../models/operations/AddScopeToClientRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `$request`                                                                                                         | [\formance\formance\Models\Operations\AddScopeToClientRequest](../../Models/Operations/AddScopeToClientRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\AddScopeToClientResponse](../../models/operations/AddScopeToClientResponse.md)**
+**[?\formance\formance\Models\Operations\AddScopeToClientResponse](../../Models/Operations/AddScopeToClientResponse.md)**
 
 
 ## addTransientScope
@@ -115,12 +115,12 @@ try {
 
 | Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                           | [\formance\formance\Models\Operations\AddTransientScopeRequest](../../models/operations/AddTransientScopeRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `$request`                                                                                                           | [\formance\formance\Models\Operations\AddTransientScopeRequest](../../Models/Operations/AddTransientScopeRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\AddTransientScopeResponse](../../models/operations/AddTransientScopeResponse.md)**
+**[?\formance\formance\Models\Operations\AddTransientScopeResponse](../../Models/Operations/AddTransientScopeResponse.md)**
 
 
 ## createClient
@@ -175,12 +175,12 @@ try {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [\formance\formance\Models\Shared\CreateClientRequest](../../models/shared/CreateClientRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [\formance\formance\Models\Shared\CreateClientRequest](../../Models/Shared/CreateClientRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\CreateClientResponse](../../models/operations/CreateClientResponse.md)**
+**[?\formance\formance\Models\Operations\CreateClientResponse](../../Models/Operations/CreateClientResponse.md)**
 
 
 ## createScope
@@ -226,12 +226,12 @@ try {
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [\formance\formance\Models\Shared\CreateScopeRequest](../../models/shared/CreateScopeRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `$request`                                                                                       | [\formance\formance\Models\Shared\CreateScopeRequest](../../Models/Shared/CreateScopeRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\CreateScopeResponse](../../models/operations/CreateScopeResponse.md)**
+**[?\formance\formance\Models\Operations\CreateScopeResponse](../../Models/Operations/CreateScopeResponse.md)**
 
 
 ## createSecret
@@ -280,12 +280,12 @@ try {
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [\formance\formance\Models\Operations\CreateSecretRequest](../../models/operations/CreateSecretRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `$request`                                                                                                 | [\formance\formance\Models\Operations\CreateSecretRequest](../../Models/Operations/CreateSecretRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\CreateSecretResponse](../../models/operations/CreateSecretResponse.md)**
+**[?\formance\formance\Models\Operations\CreateSecretResponse](../../Models/Operations/CreateSecretResponse.md)**
 
 
 ## deleteClient
@@ -329,12 +329,12 @@ try {
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [\formance\formance\Models\Operations\DeleteClientRequest](../../models/operations/DeleteClientRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `$request`                                                                                                 | [\formance\formance\Models\Operations\DeleteClientRequest](../../Models/Operations/DeleteClientRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\DeleteClientResponse](../../models/operations/DeleteClientResponse.md)**
+**[?\formance\formance\Models\Operations\DeleteClientResponse](../../Models/Operations/DeleteClientResponse.md)**
 
 
 ## deleteScope
@@ -378,12 +378,12 @@ try {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [\formance\formance\Models\Operations\DeleteScopeRequest](../../models/operations/DeleteScopeRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [\formance\formance\Models\Operations\DeleteScopeRequest](../../Models/Operations/DeleteScopeRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\DeleteScopeResponse](../../models/operations/DeleteScopeResponse.md)**
+**[?\formance\formance\Models\Operations\DeleteScopeResponse](../../Models/Operations/DeleteScopeResponse.md)**
 
 
 ## deleteScopeFromClient
@@ -428,12 +428,12 @@ try {
 
 | Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                   | [\formance\formance\Models\Operations\DeleteScopeFromClientRequest](../../models/operations/DeleteScopeFromClientRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `$request`                                                                                                                   | [\formance\formance\Models\Operations\DeleteScopeFromClientRequest](../../Models/Operations/DeleteScopeFromClientRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\DeleteScopeFromClientResponse](../../models/operations/DeleteScopeFromClientResponse.md)**
+**[?\formance\formance\Models\Operations\DeleteScopeFromClientResponse](../../Models/Operations/DeleteScopeFromClientResponse.md)**
 
 
 ## deleteSecret
@@ -478,12 +478,12 @@ try {
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [\formance\formance\Models\Operations\DeleteSecretRequest](../../models/operations/DeleteSecretRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `$request`                                                                                                 | [\formance\formance\Models\Operations\DeleteSecretRequest](../../Models/Operations/DeleteSecretRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\DeleteSecretResponse](../../models/operations/DeleteSecretResponse.md)**
+**[?\formance\formance\Models\Operations\DeleteSecretResponse](../../Models/Operations/DeleteSecretResponse.md)**
 
 
 ## deleteTransientScope
@@ -528,12 +528,12 @@ try {
 
 | Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                 | [\formance\formance\Models\Operations\DeleteTransientScopeRequest](../../models/operations/DeleteTransientScopeRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `$request`                                                                                                                 | [\formance\formance\Models\Operations\DeleteTransientScopeRequest](../../Models/Operations/DeleteTransientScopeRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\DeleteTransientScopeResponse](../../models/operations/DeleteTransientScopeResponse.md)**
+**[?\formance\formance\Models\Operations\DeleteTransientScopeResponse](../../Models/Operations/DeleteTransientScopeResponse.md)**
 
 
 ## getServerInfo
@@ -572,7 +572,7 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\GetServerInfoResponse](../../models/operations/GetServerInfoResponse.md)**
+**[?\formance\formance\Models\Operations\GetServerInfoResponse](../../Models/Operations/GetServerInfoResponse.md)**
 
 
 ## listClients
@@ -611,7 +611,7 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ListClientsResponse](../../models/operations/ListClientsResponse.md)**
+**[?\formance\formance\Models\Operations\ListClientsResponse](../../Models/Operations/ListClientsResponse.md)**
 
 
 ## listScopes
@@ -650,7 +650,7 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ListScopesResponse](../../models/operations/ListScopesResponse.md)**
+**[?\formance\formance\Models\Operations\ListScopesResponse](../../Models/Operations/ListScopesResponse.md)**
 
 
 ## listUsers
@@ -689,7 +689,7 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ListUsersResponse](../../models/operations/ListUsersResponse.md)**
+**[?\formance\formance\Models\Operations\ListUsersResponse](../../Models/Operations/ListUsersResponse.md)**
 
 
 ## readClient
@@ -733,12 +733,12 @@ try {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [\formance\formance\Models\Operations\ReadClientRequest](../../models/operations/ReadClientRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [\formance\formance\Models\Operations\ReadClientRequest](../../Models/Operations/ReadClientRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ReadClientResponse](../../models/operations/ReadClientResponse.md)**
+**[?\formance\formance\Models\Operations\ReadClientResponse](../../Models/Operations/ReadClientResponse.md)**
 
 
 ## readScope
@@ -782,12 +782,12 @@ try {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [\formance\formance\Models\Operations\ReadScopeRequest](../../models/operations/ReadScopeRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [\formance\formance\Models\Operations\ReadScopeRequest](../../Models/Operations/ReadScopeRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ReadScopeResponse](../../models/operations/ReadScopeResponse.md)**
+**[?\formance\formance\Models\Operations\ReadScopeResponse](../../Models/Operations/ReadScopeResponse.md)**
 
 
 ## readUser
@@ -831,12 +831,12 @@ try {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [\formance\formance\Models\Operations\ReadUserRequest](../../models/operations/ReadUserRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [\formance\formance\Models\Operations\ReadUserRequest](../../Models/Operations/ReadUserRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ReadUserResponse](../../models/operations/ReadUserResponse.md)**
+**[?\formance\formance\Models\Operations\ReadUserResponse](../../Models/Operations/ReadUserResponse.md)**
 
 
 ## updateClient
@@ -894,12 +894,12 @@ try {
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [\formance\formance\Models\Operations\UpdateClientRequest](../../models/operations/UpdateClientRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `$request`                                                                                                 | [\formance\formance\Models\Operations\UpdateClientRequest](../../Models/Operations/UpdateClientRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\UpdateClientResponse](../../models/operations/UpdateClientResponse.md)**
+**[?\formance\formance\Models\Operations\UpdateClientResponse](../../Models/Operations/UpdateClientResponse.md)**
 
 
 ## updateScope
@@ -948,10 +948,10 @@ try {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [\formance\formance\Models\Operations\UpdateScopeRequest](../../models/operations/UpdateScopeRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [\formance\formance\Models\Operations\UpdateScopeRequest](../../Models/Operations/UpdateScopeRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\UpdateScopeResponse](../../models/operations/UpdateScopeResponse.md)**
+**[?\formance\formance\Models\Operations\UpdateScopeResponse](../../Models/Operations/UpdateScopeResponse.md)**
 

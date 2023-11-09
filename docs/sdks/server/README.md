@@ -41,5 +41,5 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\GetInfoResponse](../../models/operations/GetInfoResponse.md)**
+**[?\formance\formance\Models\Operations\GetInfoResponse](../../Models/Operations/GetInfoResponse.md)**
 

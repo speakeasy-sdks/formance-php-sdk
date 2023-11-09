@@ -52,12 +52,12 @@ try {
 
 | Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [\formance\formance\Models\Operations\ActivateConfigRequest](../../models/operations/ActivateConfigRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `$request`                                                                                                     | [\formance\formance\Models\Operations\ActivateConfigRequest](../../Models/Operations/ActivateConfigRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ActivateConfigResponse](../../models/operations/ActivateConfigResponse.md)**
+**[?\formance\formance\Models\Operations\ActivateConfigResponse](../../Models/Operations/ActivateConfigResponse.md)**
 
 
 ## changeConfigSecret
@@ -107,12 +107,12 @@ try {
 
 | Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                             | [\formance\formance\Models\Operations\ChangeConfigSecretRequest](../../models/operations/ChangeConfigSecretRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `$request`                                                                                                             | [\formance\formance\Models\Operations\ChangeConfigSecretRequest](../../Models/Operations/ChangeConfigSecretRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ChangeConfigSecretResponse](../../models/operations/ChangeConfigSecretResponse.md)**
+**[?\formance\formance\Models\Operations\ChangeConfigSecretResponse](../../Models/Operations/ChangeConfigSecretResponse.md)**
 
 
 ## deactivateConfig
@@ -156,12 +156,12 @@ try {
 
 | Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                         | [\formance\formance\Models\Operations\DeactivateConfigRequest](../../models/operations/DeactivateConfigRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `$request`                                                                                                         | [\formance\formance\Models\Operations\DeactivateConfigRequest](../../Models/Operations/DeactivateConfigRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\DeactivateConfigResponse](../../models/operations/DeactivateConfigResponse.md)**
+**[?\formance\formance\Models\Operations\DeactivateConfigResponse](../../Models/Operations/DeactivateConfigResponse.md)**
 
 
 ## deleteConfig
@@ -205,12 +205,12 @@ try {
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [\formance\formance\Models\Operations\DeleteConfigRequest](../../models/operations/DeleteConfigRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `$request`                                                                                                 | [\formance\formance\Models\Operations\DeleteConfigRequest](../../Models/Operations/DeleteConfigRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\DeleteConfigResponse](../../models/operations/DeleteConfigResponse.md)**
+**[?\formance\formance\Models\Operations\DeleteConfigResponse](../../Models/Operations/DeleteConfigResponse.md)**
 
 
 ## getManyConfigs
@@ -255,12 +255,12 @@ try {
 
 | Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [\formance\formance\Models\Operations\GetManyConfigsRequest](../../models/operations/GetManyConfigsRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `$request`                                                                                                     | [\formance\formance\Models\Operations\GetManyConfigsRequest](../../Models/Operations/GetManyConfigsRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\GetManyConfigsResponse](../../models/operations/GetManyConfigsResponse.md)**
+**[?\formance\formance\Models\Operations\GetManyConfigsResponse](../../Models/Operations/GetManyConfigsResponse.md)**
 
 
 ## insertConfig
@@ -316,12 +316,12 @@ try {
 
 | Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
 | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `$request`                                                                       | [\formance\formance\Models\Shared\ConfigUser](../../models/shared/ConfigUser.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `$request`                                                                       | [\formance\formance\Models\Shared\ConfigUser](../../Models/Shared/ConfigUser.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\InsertConfigResponse](../../models/operations/InsertConfigResponse.md)**
+**[?\formance\formance\Models\Operations\InsertConfigResponse](../../Models/Operations/InsertConfigResponse.md)**
 
 
 ## testConfig
@@ -365,10 +365,10 @@ try {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [\formance\formance\Models\Operations\TestConfigRequest](../../models/operations/TestConfigRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [\formance\formance\Models\Operations\TestConfigRequest](../../Models/Operations/TestConfigRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\TestConfigResponse](../../models/operations/TestConfigResponse.md)**
+**[?\formance\formance\Models\Operations\TestConfigResponse](../../Models/Operations/TestConfigResponse.md)**
 

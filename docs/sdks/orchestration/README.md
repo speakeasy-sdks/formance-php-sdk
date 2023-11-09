@@ -56,12 +56,12 @@ try {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [\formance\formance\Models\Operations\CancelEventRequest](../../models/operations/CancelEventRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [\formance\formance\Models\Operations\CancelEventRequest](../../Models/Operations/CancelEventRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\CancelEventResponse](../../models/operations/CancelEventResponse.md)**
+**[?\formance\formance\Models\Operations\CancelEventResponse](../../Models/Operations/CancelEventResponse.md)**
 
 
 ## createWorkflow
@@ -109,12 +109,12 @@ try {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [\formance\formance\Models\Shared\CreateWorkflowRequest](../../models/shared/CreateWorkflowRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [\formance\formance\Models\Shared\CreateWorkflowRequest](../../Models/Shared/CreateWorkflowRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\CreateWorkflowResponse](../../models/operations/CreateWorkflowResponse.md)**
+**[?\formance\formance\Models\Operations\CreateWorkflowResponse](../../Models/Operations/CreateWorkflowResponse.md)**
 
 
 ## getInstance
@@ -158,12 +158,12 @@ try {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [\formance\formance\Models\Operations\GetInstanceRequest](../../models/operations/GetInstanceRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [\formance\formance\Models\Operations\GetInstanceRequest](../../Models/Operations/GetInstanceRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\GetInstanceResponse](../../models/operations/GetInstanceResponse.md)**
+**[?\formance\formance\Models\Operations\GetInstanceResponse](../../Models/Operations/GetInstanceResponse.md)**
 
 
 ## getInstanceHistory
@@ -207,12 +207,12 @@ try {
 
 | Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                             | [\formance\formance\Models\Operations\GetInstanceHistoryRequest](../../models/operations/GetInstanceHistoryRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `$request`                                                                                                             | [\formance\formance\Models\Operations\GetInstanceHistoryRequest](../../Models/Operations/GetInstanceHistoryRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\GetInstanceHistoryResponse](../../models/operations/GetInstanceHistoryResponse.md)**
+**[?\formance\formance\Models\Operations\GetInstanceHistoryResponse](../../Models/Operations/GetInstanceHistoryResponse.md)**
 
 
 ## getInstanceStageHistory
@@ -257,12 +257,12 @@ try {
 
 | Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                       | [\formance\formance\Models\Operations\GetInstanceStageHistoryRequest](../../models/operations/GetInstanceStageHistoryRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `$request`                                                                                                                       | [\formance\formance\Models\Operations\GetInstanceStageHistoryRequest](../../Models/Operations/GetInstanceStageHistoryRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\GetInstanceStageHistoryResponse](../../models/operations/GetInstanceStageHistoryResponse.md)**
+**[?\formance\formance\Models\Operations\GetInstanceStageHistoryResponse](../../Models/Operations/GetInstanceStageHistoryResponse.md)**
 
 
 ## getWorkflow
@@ -306,12 +306,12 @@ try {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [\formance\formance\Models\Operations\GetWorkflowRequest](../../models/operations/GetWorkflowRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [\formance\formance\Models\Operations\GetWorkflowRequest](../../Models/Operations/GetWorkflowRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\GetWorkflowResponse](../../models/operations/GetWorkflowResponse.md)**
+**[?\formance\formance\Models\Operations\GetWorkflowResponse](../../Models/Operations/GetWorkflowResponse.md)**
 
 
 ## listInstances
@@ -356,12 +356,12 @@ try {
 
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [\formance\formance\Models\Operations\ListInstancesRequest](../../models/operations/ListInstancesRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `$request`                                                                                                   | [\formance\formance\Models\Operations\ListInstancesRequest](../../Models/Operations/ListInstancesRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ListInstancesResponse](../../models/operations/ListInstancesResponse.md)**
+**[?\formance\formance\Models\Operations\ListInstancesResponse](../../Models/Operations/ListInstancesResponse.md)**
 
 
 ## listWorkflows
@@ -400,7 +400,7 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ListWorkflowsResponse](../../models/operations/ListWorkflowsResponse.md)**
+**[?\formance\formance\Models\Operations\ListWorkflowsResponse](../../Models/Operations/ListWorkflowsResponse.md)**
 
 
 ## orchestrationgetServerInfo
@@ -439,7 +439,7 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\OrchestrationgetServerInfoResponse](../../models/operations/OrchestrationgetServerInfoResponse.md)**
+**[?\formance\formance\Models\Operations\OrchestrationgetServerInfoResponse](../../Models/Operations/OrchestrationgetServerInfoResponse.md)**
 
 
 ## runWorkflow
@@ -487,12 +487,12 @@ try {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [\formance\formance\Models\Operations\RunWorkflowRequest](../../models/operations/RunWorkflowRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [\formance\formance\Models\Operations\RunWorkflowRequest](../../Models/Operations/RunWorkflowRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\RunWorkflowResponse](../../models/operations/RunWorkflowResponse.md)**
+**[?\formance\formance\Models\Operations\RunWorkflowResponse](../../Models/Operations/RunWorkflowResponse.md)**
 
 
 ## sendEvent
@@ -538,10 +538,10 @@ try {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [\formance\formance\Models\Operations\SendEventRequest](../../models/operations/SendEventRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [\formance\formance\Models\Operations\SendEventRequest](../../Models/Operations/SendEventRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\SendEventResponse](../../models/operations/SendEventResponse.md)**
+**[?\formance\formance\Models\Operations\SendEventResponse](../../Models/Operations/SendEventResponse.md)**
 

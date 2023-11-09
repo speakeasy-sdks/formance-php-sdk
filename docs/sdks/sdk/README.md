@@ -56,5 +56,5 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\GetVersionsResponse](../../models/operations/GetVersionsResponse.md)**
+**[?\formance\formance\Models\Operations\GetVersionsResponse](../../Models/Operations/GetVersionsResponse.md)**
 

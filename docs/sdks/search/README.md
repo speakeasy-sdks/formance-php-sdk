@@ -60,12 +60,12 @@ try {
 
 | Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `$request`                                                             | [\formance\formance\Models\Shared\Query](../../models/shared/Query.md) | :heavy_check_mark:                                                     | The request object to use for the request.                             |
+| `$request`                                                             | [\formance\formance\Models\Shared\Query](../../Models/Shared/Query.md) | :heavy_check_mark:                                                     | The request object to use for the request.                             |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\SearchResponse](../../models/operations/SearchResponse.md)**
+**[?\formance\formance\Models\Operations\SearchResponse](../../Models/Operations/SearchResponse.md)**
 
 
 ## searchgetServerInfo
@@ -104,5 +104,5 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\SearchgetServerInfoResponse](../../models/operations/SearchgetServerInfoResponse.md)**
+**[?\formance\formance\Models\Operations\SearchgetServerInfoResponse](../../Models/Operations/SearchgetServerInfoResponse.md)**
 

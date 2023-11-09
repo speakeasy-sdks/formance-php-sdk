@@ -63,12 +63,12 @@ try {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [\formance\formance\Models\Shared\StripeTransferRequest](../../models/shared/StripeTransferRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [\formance\formance\Models\Shared\StripeTransferRequest](../../Models/Shared/StripeTransferRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ConnectorsStripeTransferResponse](../../models/operations/ConnectorsStripeTransferResponse.md)**
+**[?\formance\formance\Models\Operations\ConnectorsStripeTransferResponse](../../Models/Operations/ConnectorsStripeTransferResponse.md)**
 
 
 ## connectorsTransfer
@@ -117,12 +117,12 @@ try {
 
 | Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                             | [\formance\formance\Models\Operations\ConnectorsTransferRequest](../../models/operations/ConnectorsTransferRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `$request`                                                                                                             | [\formance\formance\Models\Operations\ConnectorsTransferRequest](../../Models/Operations/ConnectorsTransferRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ConnectorsTransferResponse](../../models/operations/ConnectorsTransferResponse.md)**
+**[?\formance\formance\Models\Operations\ConnectorsTransferResponse](../../Models/Operations/ConnectorsTransferResponse.md)**
 
 
 ## getConnectorTask
@@ -167,12 +167,12 @@ try {
 
 | Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                         | [\formance\formance\Models\Operations\GetConnectorTaskRequest](../../models/operations/GetConnectorTaskRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `$request`                                                                                                         | [\formance\formance\Models\Operations\GetConnectorTaskRequest](../../Models/Operations/GetConnectorTaskRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\GetConnectorTaskResponse](../../models/operations/GetConnectorTaskResponse.md)**
+**[?\formance\formance\Models\Operations\GetConnectorTaskResponse](../../Models/Operations/GetConnectorTaskResponse.md)**
 
 
 ## getPayment
@@ -216,12 +216,12 @@ try {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [\formance\formance\Models\Operations\GetPaymentRequest](../../models/operations/GetPaymentRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [\formance\formance\Models\Operations\GetPaymentRequest](../../Models/Operations/GetPaymentRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\GetPaymentResponse](../../models/operations/GetPaymentResponse.md)**
+**[?\formance\formance\Models\Operations\GetPaymentResponse](../../Models/Operations/GetPaymentResponse.md)**
 
 
 ## installConnector
@@ -266,12 +266,12 @@ try {
 
 | Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                         | [\formance\formance\Models\Operations\InstallConnectorRequest](../../models/operations/InstallConnectorRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `$request`                                                                                                         | [\formance\formance\Models\Operations\InstallConnectorRequest](../../Models/Operations/InstallConnectorRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\InstallConnectorResponse](../../models/operations/InstallConnectorResponse.md)**
+**[?\formance\formance\Models\Operations\InstallConnectorResponse](../../Models/Operations/InstallConnectorResponse.md)**
 
 
 ## listAllConnectors
@@ -310,7 +310,7 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ListAllConnectorsResponse](../../models/operations/ListAllConnectorsResponse.md)**
+**[?\formance\formance\Models\Operations\ListAllConnectorsResponse](../../Models/Operations/ListAllConnectorsResponse.md)**
 
 
 ## listConfigsAvailableConnectors
@@ -349,7 +349,7 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ListConfigsAvailableConnectorsResponse](../../models/operations/ListConfigsAvailableConnectorsResponse.md)**
+**[?\formance\formance\Models\Operations\ListConfigsAvailableConnectorsResponse](../../Models/Operations/ListConfigsAvailableConnectorsResponse.md)**
 
 
 ## listConnectorTasks
@@ -395,12 +395,12 @@ try {
 
 | Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                             | [\formance\formance\Models\Operations\ListConnectorTasksRequest](../../models/operations/ListConnectorTasksRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `$request`                                                                                                             | [\formance\formance\Models\Operations\ListConnectorTasksRequest](../../Models/Operations/ListConnectorTasksRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ListConnectorTasksResponse](../../models/operations/ListConnectorTasksResponse.md)**
+**[?\formance\formance\Models\Operations\ListConnectorTasksResponse](../../Models/Operations/ListConnectorTasksResponse.md)**
 
 
 ## listConnectorsTransfers
@@ -444,12 +444,12 @@ try {
 
 | Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                       | [\formance\formance\Models\Operations\ListConnectorsTransfersRequest](../../models/operations/ListConnectorsTransfersRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `$request`                                                                                                                       | [\formance\formance\Models\Operations\ListConnectorsTransfersRequest](../../Models/Operations/ListConnectorsTransfersRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ListConnectorsTransfersResponse](../../models/operations/ListConnectorsTransfersResponse.md)**
+**[?\formance\formance\Models\Operations\ListConnectorsTransfersResponse](../../Models/Operations/ListConnectorsTransfersResponse.md)**
 
 
 ## listPayments
@@ -497,12 +497,12 @@ try {
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [\formance\formance\Models\Operations\ListPaymentsRequest](../../models/operations/ListPaymentsRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `$request`                                                                                                 | [\formance\formance\Models\Operations\ListPaymentsRequest](../../Models/Operations/ListPaymentsRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ListPaymentsResponse](../../models/operations/ListPaymentsResponse.md)**
+**[?\formance\formance\Models\Operations\ListPaymentsResponse](../../Models/Operations/ListPaymentsResponse.md)**
 
 
 ## paymentsgetServerInfo
@@ -541,7 +541,7 @@ try {
 
 ### Response
 
-**[?\formance\formance\Models\Operations\PaymentsgetServerInfoResponse](../../models/operations/PaymentsgetServerInfoResponse.md)**
+**[?\formance\formance\Models\Operations\PaymentsgetServerInfoResponse](../../Models/Operations/PaymentsgetServerInfoResponse.md)**
 
 
 ## paymentslistAccounts
@@ -589,12 +589,12 @@ try {
 
 | Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                 | [\formance\formance\Models\Operations\PaymentslistAccountsRequest](../../models/operations/PaymentslistAccountsRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `$request`                                                                                                                 | [\formance\formance\Models\Operations\PaymentslistAccountsRequest](../../Models/Operations/PaymentslistAccountsRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\PaymentslistAccountsResponse](../../models/operations/PaymentslistAccountsResponse.md)**
+**[?\formance\formance\Models\Operations\PaymentslistAccountsResponse](../../Models/Operations/PaymentslistAccountsResponse.md)**
 
 
 ## readConnectorConfig
@@ -638,12 +638,12 @@ try {
 
 | Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                               | [\formance\formance\Models\Operations\ReadConnectorConfigRequest](../../models/operations/ReadConnectorConfigRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `$request`                                                                                                               | [\formance\formance\Models\Operations\ReadConnectorConfigRequest](../../Models/Operations/ReadConnectorConfigRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ReadConnectorConfigResponse](../../models/operations/ReadConnectorConfigResponse.md)**
+**[?\formance\formance\Models\Operations\ReadConnectorConfigResponse](../../Models/Operations/ReadConnectorConfigResponse.md)**
 
 
 ## resetConnector
@@ -689,12 +689,12 @@ try {
 
 | Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [\formance\formance\Models\Operations\ResetConnectorRequest](../../models/operations/ResetConnectorRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `$request`                                                                                                     | [\formance\formance\Models\Operations\ResetConnectorRequest](../../Models/Operations/ResetConnectorRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\ResetConnectorResponse](../../models/operations/ResetConnectorResponse.md)**
+**[?\formance\formance\Models\Operations\ResetConnectorResponse](../../Models/Operations/ResetConnectorResponse.md)**
 
 
 ## uninstallConnector
@@ -738,12 +738,12 @@ try {
 
 | Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                             | [\formance\formance\Models\Operations\UninstallConnectorRequest](../../models/operations/UninstallConnectorRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `$request`                                                                                                             | [\formance\formance\Models\Operations\UninstallConnectorRequest](../../Models/Operations/UninstallConnectorRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\UninstallConnectorResponse](../../models/operations/UninstallConnectorResponse.md)**
+**[?\formance\formance\Models\Operations\UninstallConnectorResponse](../../Models/Operations/UninstallConnectorResponse.md)**
 
 
 ## updateMetadata
@@ -789,10 +789,10 @@ try {
 
 | Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [\formance\formance\Models\Operations\UpdateMetadataRequest](../../models/operations/UpdateMetadataRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `$request`                                                                                                     | [\formance\formance\Models\Operations\UpdateMetadataRequest](../../Models/Operations/UpdateMetadataRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
 
-**[?\formance\formance\Models\Operations\UpdateMetadataResponse](../../models/operations/UpdateMetadataResponse.md)**
+**[?\formance\formance\Models\Operations\UpdateMetadataResponse](../../Models/Operations/UpdateMetadataResponse.md)**
 
