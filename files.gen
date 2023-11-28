@@ -374,7 +374,6 @@ src/Models/Shared/ConfigUser.php
 src/Models/Shared/AttemptResponse.php
 src/Models/Shared/Attempt.php
 src/Models/Shared/Security.php
-USAGE.md
 docs/Models/Operations/GetVersionsResponse.md
 docs/Models/Operations/AddScopeToClientRequest.md
 docs/Models/Operations/AddScopeToClientResponse.md
@@ -731,4 +730,5 @@ docs/sdks/payments/README.md
 docs/sdks/search/README.md
 docs/sdks/wallets/README.md
 docs/sdks/webhooks/README.md
+USAGE.md
 .gitattributes
