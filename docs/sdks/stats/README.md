@@ -23,15 +23,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ReadStatsRequest();
-    $request->ledger = 'ledger001';
+        $request = new Operations\ReadStatsRequest();
+    $request->ledger = 'ledger001';;
 
     $response = $sdk->stats->readStats($request);
 

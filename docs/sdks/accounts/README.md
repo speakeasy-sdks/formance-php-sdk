@@ -25,14 +25,12 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AddMetadataToAccountRequest();
+        $request = new Operations\AddMetadataToAccountRequest();
     $request->idempotencyKey = 'string';
     $request->requestBody = [
         'Oriental' => 'string',
@@ -40,7 +38,7 @@ try {
     $request->address = 'users:001';
     $request->async = true;
     $request->dryRun = true;
-    $request->ledger = 'ledger001';
+    $request->ledger = 'ledger001';;
 
     $response = $sdk->accounts->addMetadataToAccount($request);
 
@@ -81,17 +79,15 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CountAccountsRequest();
+        $request = new Operations\CountAccountsRequest();
     $request->address = 'users:.+';
     $request->ledger = 'ledger001';
-    $request->metadata = new Operations\Metadata();
+    $request->metadata = new Operations\Metadata();;
 
     $response = $sdk->accounts->countAccounts($request);
 
@@ -132,16 +128,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetAccountRequest();
+        $request = new Operations\GetAccountRequest();
     $request->address = 'users:001';
-    $request->ledger = 'ledger001';
+    $request->ledger = 'ledger001';;
 
     $response = $sdk->accounts->getAccount($request);
 
@@ -182,14 +176,12 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListAccountsRequest();
+        $request = new Operations\ListAccountsRequest();
     $request->address = 'users:.+';
     $request->balance = 2400;
     $request->balanceOperator = Operations\BalanceOperator::Gte;
@@ -198,7 +190,7 @@ try {
     $request->metadata = [
         'glistening' => 'string',
     ];
-    $request->pageSize = 412291;
+    $request->pageSize = 412291;;
 
     $response = $sdk->accounts->listAccounts($request);
 

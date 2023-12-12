@@ -28,15 +28,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ActivateConfigRequest();
-    $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';
+        $request = new Operations\ActivateConfigRequest();
+    $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';;
 
     $response = $sdk->webhooks->activateConfig($request);
 
@@ -81,17 +79,15 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ChangeConfigSecretRequest();
+        $request = new Operations\ChangeConfigSecretRequest();
     $request->configChangeSecret = new Shared\ConfigChangeSecret();
     $request->configChangeSecret->secret = 'V0bivxRWveaoz08afqjU6Ko/jwO0Cb+3';
-    $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';
+    $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';;
 
     $response = $sdk->webhooks->changeConfigSecret($request);
 
@@ -132,15 +128,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeactivateConfigRequest();
-    $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';
+        $request = new Operations\DeactivateConfigRequest();
+    $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';;
 
     $response = $sdk->webhooks->deactivateConfig($request);
 
@@ -181,15 +175,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteConfigRequest();
-    $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';
+        $request = new Operations\DeleteConfigRequest();
+    $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';;
 
     $response = $sdk->webhooks->deleteConfig($request);
 
@@ -230,16 +222,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetManyConfigsRequest();
+        $request = new Operations\GetManyConfigsRequest();
     $request->endpoint = 'https://example.com';
-    $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';
+    $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';;
 
     $response = $sdk->webhooks->getManyConfigs($request);
 
@@ -288,19 +278,17 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\ConfigUser();
+        $request = new Shared\ConfigUser();
     $request->endpoint = 'https://example.com';
     $request->eventTypes = [
         'TYPE1',
     ];
-    $request->secret = 'V0bivxRWveaoz08afqjU6Ko/jwO0Cb+3';
+    $request->secret = 'V0bivxRWveaoz08afqjU6Ko/jwO0Cb+3';;
 
     $response = $sdk->webhooks->insertConfig($request);
 
@@ -341,15 +329,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TestConfigRequest();
-    $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';
+        $request = new Operations\TestConfigRequest();
+    $request->id = '4997257d-dfb6-445b-929c-cbe2ab182818';;
 
     $response = $sdk->webhooks->testConfig($request);
 

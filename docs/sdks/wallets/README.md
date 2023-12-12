@@ -37,18 +37,16 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ConfirmHoldRequest();
+        $request = new Operations\ConfirmHoldRequest();
     $request->confirmHoldRequest = new Shared\ConfirmHoldRequest();
     $request->confirmHoldRequest->amount = 100;
     $request->confirmHoldRequest->final = true;
-    $request->holdId = 'string';
+    $request->holdId = 'string';;
 
     $response = $sdk->wallets->confirmHold($request);
 
@@ -89,19 +87,17 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateBalanceRequest();
+        $request = new Operations\CreateBalanceRequest();
     $request->createBalanceRequest = new Shared\CreateBalanceRequest();
     $request->createBalanceRequest->expiresAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-08T09:54:54.366Z');
     $request->createBalanceRequest->name = 'string';
     $request->createBalanceRequest->priority = 851262;
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->wallets->createBalance($request);
 
@@ -141,18 +137,16 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\CreateWalletRequest();
+        $request = new Shared\CreateWalletRequest();
     $request->metadata = [
         'array' => 'string',
     ];
-    $request->name = 'string';
+    $request->name = 'string';;
 
     $response = $sdk->wallets->createWallet($request);
 
@@ -193,14 +187,12 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreditWalletRequest();
+        $request = new Operations\CreditWalletRequest();
     $request->creditWalletRequest = new Shared\CreditWalletRequest();
     $request->creditWalletRequest->amount = new Shared\Monetary();
     $request->creditWalletRequest->amount->amount = 201874;
@@ -213,7 +205,7 @@ try {
     $request->creditWalletRequest->sources = [
         'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->wallets->creditWallet($request);
 
@@ -254,14 +246,12 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DebitWalletRequest();
+        $request = new Operations\DebitWalletRequest();
     $request->debitWalletRequest = new Shared\DebitWalletRequest();
     $request->debitWalletRequest->amount = new Shared\Monetary();
     $request->debitWalletRequest->amount->amount = 245256;
@@ -275,7 +265,7 @@ try {
         'Tasty' => 'string',
     ];
     $request->debitWalletRequest->pending = false;
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->wallets->debitWallet($request);
 
@@ -316,16 +306,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetBalanceRequest();
+        $request = new Operations\GetBalanceRequest();
     $request->balanceName = 'string';
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->wallets->getBalance($request);
 
@@ -366,15 +354,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetHoldRequest();
-    $request->holdID = 'string';
+        $request = new Operations\GetHoldRequest();
+    $request->holdID = 'string';;
 
     $response = $sdk->wallets->getHold($request);
 
@@ -415,20 +401,18 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetHoldsRequest();
+        $request = new Operations\GetHoldsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->metadata = [
         'Engineer' => 'string',
     ];
     $request->pageSize = 766481;
-    $request->walletID = 'string';
+    $request->walletID = 'string';;
 
     $response = $sdk->wallets->getHolds($request);
 
@@ -467,17 +451,15 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetTransactionsRequest();
+        $request = new Operations\GetTransactionsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->pageSize = 680555;
-    $request->walletID = 'string';
+    $request->walletID = 'string';;
 
     $response = $sdk->wallets->getTransactions($request);
 
@@ -518,15 +500,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetWalletRequest();
-    $request->id = '<ID>';
+        $request = new Operations\GetWalletRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->wallets->getWallet($request);
 
@@ -567,15 +547,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetWalletSummaryRequest();
-    $request->id = '<ID>';
+        $request = new Operations\GetWalletSummaryRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->wallets->getWalletSummary($request);
 
@@ -616,15 +594,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListBalancesRequest();
-    $request->id = '<ID>';
+        $request = new Operations\ListBalancesRequest();
+    $request->id = '<ID>';;
 
     $response = $sdk->wallets->listBalances($request);
 
@@ -665,20 +641,18 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListWalletsRequest();
+        $request = new Operations\ListWalletsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->metadata = [
         'Auto' => 'string',
     ];
     $request->name = 'string';
-    $request->pageSize = 677327;
+    $request->pageSize = 677327;;
 
     $response = $sdk->wallets->listWallets($request);
 
@@ -719,19 +693,17 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateWalletRequest();
+        $request = new Operations\UpdateWalletRequest();
     $request->requestBody = new Operations\UpdateWalletRequestBody();
     $request->requestBody->metadata = [
         'override' => 'string',
     ];
-    $request->id = '<ID>';
+    $request->id = '<ID>';;
 
     $response = $sdk->wallets->updateWallet($request);
 
@@ -772,15 +744,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\VoidHoldRequest();
-    $request->holdId = 'string';
+        $request = new Operations\VoidHoldRequest();
+    $request->holdId = 'string';;
 
     $response = $sdk->wallets->voidHold($request);
 
@@ -820,11 +790,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->wallets->walletsgetServerInfo();

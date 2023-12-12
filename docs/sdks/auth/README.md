@@ -40,16 +40,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AddScopeToClientRequest();
+        $request = new Operations\AddScopeToClientRequest();
     $request->clientId = 'string';
-    $request->scopeId = 'string';
+    $request->scopeId = 'string';;
 
     $response = $sdk->auth->addScopeToClient($request);
 
@@ -90,16 +88,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AddTransientScopeRequest();
+        $request = new Operations\AddTransientScopeRequest();
     $request->scopeId = 'string';
-    $request->transientScopeId = 'string';
+    $request->transientScopeId = 'string';;
 
     $response = $sdk->auth->addTransientScope($request);
 
@@ -139,14 +135,12 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\CreateClientRequest();
+        $request = new Shared\CreateClientRequest();
     $request->description = 'Managed optimizing help-desk';
     $request->metadata = [
         'pessimistic' => 'string',
@@ -159,7 +153,7 @@ try {
     $request->redirectUris = [
         'string',
     ];
-    $request->trusted = false;
+    $request->trusted = false;;
 
     $response = $sdk->auth->createClient($request);
 
@@ -199,18 +193,16 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\CreateScopeRequest();
+        $request = new Shared\CreateScopeRequest();
     $request->label = 'string';
     $request->metadata = [
         'sensor' => 'string',
-    ];
+    ];;
 
     $response = $sdk->auth->createScope($request);
 
@@ -251,20 +243,18 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateSecretRequest();
+        $request = new Operations\CreateSecretRequest();
     $request->createSecretRequest = new Shared\CreateSecretRequest();
     $request->createSecretRequest->metadata = [
         'architecture' => 'string',
     ];
     $request->createSecretRequest->name = 'string';
-    $request->clientId = 'string';
+    $request->clientId = 'string';;
 
     $response = $sdk->auth->createSecret($request);
 
@@ -305,15 +295,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteClientRequest();
-    $request->clientId = 'string';
+        $request = new Operations\DeleteClientRequest();
+    $request->clientId = 'string';;
 
     $response = $sdk->auth->deleteClient($request);
 
@@ -354,15 +342,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteScopeRequest();
-    $request->scopeId = 'string';
+        $request = new Operations\DeleteScopeRequest();
+    $request->scopeId = 'string';;
 
     $response = $sdk->auth->deleteScope($request);
 
@@ -403,16 +389,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteScopeFromClientRequest();
+        $request = new Operations\DeleteScopeFromClientRequest();
     $request->clientId = 'string';
-    $request->scopeId = 'string';
+    $request->scopeId = 'string';;
 
     $response = $sdk->auth->deleteScopeFromClient($request);
 
@@ -453,16 +437,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteSecretRequest();
+        $request = new Operations\DeleteSecretRequest();
     $request->clientId = 'string';
-    $request->secretId = 'string';
+    $request->secretId = 'string';;
 
     $response = $sdk->auth->deleteSecret($request);
 
@@ -503,16 +485,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteTransientScopeRequest();
+        $request = new Operations\DeleteTransientScopeRequest();
     $request->scopeId = 'string';
-    $request->transientScopeId = 'string';
+    $request->transientScopeId = 'string';;
 
     $response = $sdk->auth->deleteTransientScope($request);
 
@@ -552,11 +532,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->auth->getServerInfo();
@@ -591,11 +569,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->auth->listClients();
@@ -630,11 +606,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->auth->listScopes();
@@ -669,11 +643,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->auth->listUsers();
@@ -709,15 +681,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ReadClientRequest();
-    $request->clientId = 'string';
+        $request = new Operations\ReadClientRequest();
+    $request->clientId = 'string';;
 
     $response = $sdk->auth->readClient($request);
 
@@ -758,15 +728,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ReadScopeRequest();
-    $request->scopeId = 'string';
+        $request = new Operations\ReadScopeRequest();
+    $request->scopeId = 'string';;
 
     $response = $sdk->auth->readScope($request);
 
@@ -807,15 +775,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ReadUserRequest();
-    $request->userId = 'string';
+        $request = new Operations\ReadUserRequest();
+    $request->userId = 'string';;
 
     $response = $sdk->auth->readUser($request);
 
@@ -856,14 +822,12 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateClientRequest();
+        $request = new Operations\UpdateClientRequest();
     $request->updateClientRequest = new Shared\UpdateClientRequest();
     $request->updateClientRequest->description = 'Secured static model';
     $request->updateClientRequest->metadata = [
@@ -878,7 +842,7 @@ try {
         'string',
     ];
     $request->updateClientRequest->trusted = false;
-    $request->clientId = 'string';
+    $request->clientId = 'string';;
 
     $response = $sdk->auth->updateClient($request);
 
@@ -919,20 +883,18 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateScopeRequest();
+        $request = new Operations\UpdateScopeRequest();
     $request->updateScopeRequest = new Shared\UpdateScopeRequest();
     $request->updateScopeRequest->label = 'string';
     $request->updateScopeRequest->metadata = [
         'Paradigm' => 'string',
     ];
-    $request->scopeId = 'string';
+    $request->scopeId = 'string';;
 
     $response = $sdk->auth->updateScope($request);
 

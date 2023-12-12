@@ -28,16 +28,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AddTransientScopeRequest();
+        $request = new Operations\AddTransientScopeRequest();
     $request->scopeId = 'string';
-    $request->transientScopeId = 'string';
+    $request->transientScopeId = 'string';;
 
     $response = $sdk->scopes->addTransientScope($request);
 
@@ -77,18 +75,16 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\CreateScopeRequest();
+        $request = new Shared\CreateScopeRequest();
     $request->label = 'string';
     $request->metadata = [
         'sensor' => 'string',
-    ];
+    ];;
 
     $response = $sdk->scopes->createScope($request);
 
@@ -129,15 +125,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteScopeRequest();
-    $request->scopeId = 'string';
+        $request = new Operations\DeleteScopeRequest();
+    $request->scopeId = 'string';;
 
     $response = $sdk->scopes->deleteScope($request);
 
@@ -178,16 +172,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteTransientScopeRequest();
+        $request = new Operations\DeleteTransientScopeRequest();
     $request->scopeId = 'string';
-    $request->transientScopeId = 'string';
+    $request->transientScopeId = 'string';;
 
     $response = $sdk->scopes->deleteTransientScope($request);
 
@@ -227,11 +219,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->scopes->listScopes();
@@ -267,15 +257,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ReadScopeRequest();
-    $request->scopeId = 'string';
+        $request = new Operations\ReadScopeRequest();
+    $request->scopeId = 'string';;
 
     $response = $sdk->scopes->readScope($request);
 
@@ -316,20 +304,18 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateScopeRequest();
+        $request = new Operations\UpdateScopeRequest();
     $request->updateScopeRequest = new Shared\UpdateScopeRequest();
     $request->updateScopeRequest->label = 'string';
     $request->updateScopeRequest->metadata = [
         'Paradigm' => 'string',
     ];
-    $request->scopeId = 'string';
+    $request->scopeId = 'string';;
 
     $response = $sdk->scopes->updateScope($request);
 

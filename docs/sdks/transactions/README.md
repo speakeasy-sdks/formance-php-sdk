@@ -27,14 +27,12 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AddMetadataOnTransactionRequest();
+        $request = new Operations\AddMetadataOnTransactionRequest();
     $request->idempotencyKey = 'string';
     $request->requestBody = [
         'withdrawal' => 'string',
@@ -42,7 +40,7 @@ try {
     $request->async = true;
     $request->dryRun = true;
     $request->ledger = 'ledger001';
-    $request->txid = 1234;
+    $request->txid = 1234;;
 
     $response = $sdk->transactions->addMetadataOnTransaction($request);
 
@@ -83,14 +81,12 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CountTransactionsRequest();
+        $request = new Operations\CountTransactionsRequest();
     $request->account = 'users:001';
     $request->destination = 'users:001';
     $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-20T09:59:27.603Z');
@@ -100,7 +96,7 @@ try {
     ];
     $request->reference = 'ref:001';
     $request->source = 'users:001';
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-16T00:36:33.819Z');
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-16T00:36:33.819Z');;
 
     $response = $sdk->transactions->countTransactions($request);
 
@@ -141,14 +137,12 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateTransactionRequest();
+        $request = new Operations\CreateTransactionRequest();
     $request->idempotencyKey = 'string';
     $request->postTransaction = new Shared\PostTransaction();
     $request->postTransaction->metadata = [
@@ -171,7 +165,7 @@ try {
     $request->postTransaction->timestamp = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-17T06:38:42.895Z');
     $request->async = true;
     $request->dryRun = true;
-    $request->ledger = 'ledger001';
+    $request->ledger = 'ledger001';;
 
     $response = $sdk->transactions->createTransaction($request);
 
@@ -212,16 +206,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetTransactionRequest();
+        $request = new Operations\GetTransactionRequest();
     $request->ledger = 'ledger001';
-    $request->txid = 1234;
+    $request->txid = 1234;;
 
     $response = $sdk->transactions->getTransaction($request);
 
@@ -262,14 +254,12 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListTransactionsRequest();
+        $request = new Operations\ListTransactionsRequest();
     $request->account = 'users:001';
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->destination = 'users:001';
@@ -281,7 +271,7 @@ try {
     $request->pageSize = 459510;
     $request->reference = 'ref:001';
     $request->source = 'users:001';
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-19T18:05:01.432Z');
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-19T18:05:01.432Z');;
 
     $response = $sdk->transactions->listTransactions($request);
 
@@ -322,16 +312,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RevertTransactionRequest();
+        $request = new Operations\RevertTransactionRequest();
     $request->ledger = 'ledger001';
-    $request->txid = 1234;
+    $request->txid = 1234;;
 
     $response = $sdk->transactions->revertTransaction($request);
 

@@ -23,18 +23,16 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetBalancesRequest();
+        $request = new Operations\GetBalancesRequest();
     $request->address = 'users:001';
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
-    $request->pageSize = 755286;
+    $request->pageSize = 755286;;
 
     $response = $sdk->balances->getBalances($request);
 
@@ -75,16 +73,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetBalancesAggregatedRequest();
+        $request = new Operations\GetBalancesAggregatedRequest();
     $request->address = 'users:001';
-    $request->ledger = 'ledger001';
+    $request->ledger = 'ledger001';;
 
     $response = $sdk->balances->getBalancesAggregated($request);
 

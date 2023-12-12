@@ -36,18 +36,16 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\StripeTransferRequest();
+        $request = new Shared\StripeTransferRequest();
     $request->amount = 100;
     $request->asset = 'USD';
     $request->destination = 'acct_1Gqj58KZcSIg2N2q';
-    $request->metadata = new Shared\StripeTransferRequestMetadata();
+    $request->metadata = new Shared\StripeTransferRequestMetadata();;
 
     $response = $sdk->payments->connectorsStripeTransfer($request);
 
@@ -88,20 +86,18 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ConnectorsTransferRequest();
+        $request = new Operations\ConnectorsTransferRequest();
     $request->transferRequest = new Shared\TransferRequest();
     $request->transferRequest->amount = 100;
     $request->transferRequest->asset = 'USD';
     $request->transferRequest->destination = 'acct_1Gqj58KZcSIg2N2q';
     $request->transferRequest->source = 'acct_1Gqj58KZcSIg2N2q';
-    $request->connector = Shared\Connector::Wise;
+    $request->connector = Shared\Connector::Wise;;
 
     $response = $sdk->payments->connectorsTransfer($request);
 
@@ -142,16 +138,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetConnectorTaskRequest();
+        $request = new Operations\GetConnectorTaskRequest();
     $request->connector = Shared\Connector::BankingCircle;
-    $request->taskId = 'string';
+    $request->taskId = 'string';;
 
     $response = $sdk->payments->getConnectorTask($request);
 
@@ -192,15 +186,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetPaymentRequest();
-    $request->paymentId = 'string';
+        $request = new Operations\GetPaymentRequest();
+    $request->paymentId = 'string';;
 
     $response = $sdk->payments->getPayment($request);
 
@@ -241,16 +233,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\InstallConnectorRequest();
+        $request = new Operations\InstallConnectorRequest();
     $request->requestBody = 'string';
-    $request->connector = Shared\Connector::DummyPay;
+    $request->connector = Shared\Connector::DummyPay;;
 
     $response = $sdk->payments->installConnector($request);
 
@@ -290,11 +280,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->payments->listAllConnectors();
@@ -329,11 +317,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->payments->listConfigsAvailableConnectors();
@@ -369,17 +355,15 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListConnectorTasksRequest();
+        $request = new Operations\ListConnectorTasksRequest();
     $request->connector = Shared\Connector::DummyPay;
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
-    $request->pageSize = 501686;
+    $request->pageSize = 501686;;
 
     $response = $sdk->payments->listConnectorTasks($request);
 
@@ -420,15 +404,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListConnectorsTransfersRequest();
-    $request->connector = Shared\Connector::Modulr;
+        $request = new Operations\ListConnectorsTransfersRequest();
+    $request->connector = Shared\Connector::Modulr;;
 
     $response = $sdk->payments->listConnectorsTransfers($request);
 
@@ -469,19 +451,17 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListPaymentsRequest();
+        $request = new Operations\ListPaymentsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->pageSize = 13778;
     $request->sort = [
         'string',
-    ];
+    ];;
 
     $response = $sdk->payments->listPayments($request);
 
@@ -521,11 +501,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->payments->paymentsgetServerInfo();
@@ -561,19 +539,17 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\PaymentslistAccountsRequest();
+        $request = new Operations\PaymentslistAccountsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->pageSize = 227071;
     $request->sort = [
         'string',
-    ];
+    ];;
 
     $response = $sdk->payments->paymentslistAccounts($request);
 
@@ -614,15 +590,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ReadConnectorConfigRequest();
-    $request->connector = Shared\Connector::BankingCircle;
+        $request = new Operations\ReadConnectorConfigRequest();
+    $request->connector = Shared\Connector::BankingCircle;;
 
     $response = $sdk->payments->readConnectorConfig($request);
 
@@ -665,15 +639,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ResetConnectorRequest();
-    $request->connector = Shared\Connector::CurrencyCloud;
+        $request = new Operations\ResetConnectorRequest();
+    $request->connector = Shared\Connector::CurrencyCloud;;
 
     $response = $sdk->payments->resetConnector($request);
 
@@ -714,15 +686,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UninstallConnectorRequest();
-    $request->connector = Shared\Connector::DummyPay;
+        $request = new Operations\UninstallConnectorRequest();
+    $request->connector = Shared\Connector::DummyPay;;
 
     $response = $sdk->payments->uninstallConnector($request);
 
@@ -763,17 +733,15 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateMetadataRequest();
+        $request = new Operations\UpdateMetadataRequest();
     $request->paymentMetadata = new Shared\PaymentMetadata();
     $request->paymentMetadata->key = '<key>';
-    $request->paymentId = 'string';
+    $request->paymentId = 'string';;
 
     $response = $sdk->payments->updateMetadata($request);
 

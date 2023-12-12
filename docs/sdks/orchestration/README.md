@@ -32,15 +32,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CancelEventRequest();
-    $request->instanceID = 'string';
+        $request = new Operations\CancelEventRequest();
+    $request->instanceID = 'string';;
 
     $response = $sdk->orchestration->cancelEvent($request);
 
@@ -80,20 +78,18 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\CreateWorkflowRequest();
+        $request = new Shared\CreateWorkflowRequest();
     $request->name = 'string';
     $request->stages = [
         [
             'why' => 'string',
         ],
-    ];
+    ];;
 
     $response = $sdk->orchestration->createWorkflow($request);
 
@@ -134,15 +130,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetInstanceRequest();
-    $request->instanceID = 'string';
+        $request = new Operations\GetInstanceRequest();
+    $request->instanceID = 'string';;
 
     $response = $sdk->orchestration->getInstance($request);
 
@@ -183,15 +177,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetInstanceHistoryRequest();
-    $request->instanceID = 'string';
+        $request = new Operations\GetInstanceHistoryRequest();
+    $request->instanceID = 'string';;
 
     $response = $sdk->orchestration->getInstanceHistory($request);
 
@@ -232,16 +224,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetInstanceStageHistoryRequest();
+        $request = new Operations\GetInstanceStageHistoryRequest();
     $request->instanceID = 'string';
-    $request->number = 600636;
+    $request->number = 600636;;
 
     $response = $sdk->orchestration->getInstanceStageHistory($request);
 
@@ -282,15 +272,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\GetWorkflowRequest();
-    $request->flowId = 'string';
+        $request = new Operations\GetWorkflowRequest();
+    $request->flowId = 'string';;
 
     $response = $sdk->orchestration->getWorkflow($request);
 
@@ -331,16 +319,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ListInstancesRequest();
+        $request = new Operations\ListInstancesRequest();
     $request->running = false;
-    $request->workflowID = 'string';
+    $request->workflowID = 'string';;
 
     $response = $sdk->orchestration->listInstances($request);
 
@@ -380,11 +366,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->orchestration->listWorkflows();
@@ -419,11 +403,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->orchestration->orchestrationgetServerInfo();
@@ -459,19 +441,17 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RunWorkflowRequest();
+        $request = new Operations\RunWorkflowRequest();
     $request->requestBody = [
         'off' => 'string',
     ];
     $request->wait = false;
-    $request->workflowID = 'string';
+    $request->workflowID = 'string';;
 
     $response = $sdk->orchestration->runWorkflow($request);
 
@@ -512,17 +492,15 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SendEventRequest();
+        $request = new Operations\SendEventRequest();
     $request->requestBody = new Operations\SendEventRequestBody();
     $request->requestBody->name = 'string';
-    $request->instanceID = 'string';
+    $request->instanceID = 'string';;
 
     $response = $sdk->orchestration->sendEvent($request);
 

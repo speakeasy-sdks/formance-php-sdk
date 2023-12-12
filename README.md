@@ -57,7 +57,7 @@ use formance\formance;
 use formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
 $sdk = formance\SDK::builder()
     ->setSecurity($security)
@@ -251,6 +251,32 @@ try {
 * [insertConfig](docs/sdks/webhooks/README.md#insertconfig) - Insert a new config
 * [testConfig](docs/sdks/webhooks/README.md#testconfig) - Test one config
 <!-- End Available Resources and Operations [operations] -->
+
+<!-- Start Server Selection [server] -->
+## Server Selection
+
+## Server Selection
+
+### Select Server by Index
+
+You can override the default server globally by passing a server index to the `server_idx: int` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `http://localhost` | None |
+| 1 | `https://{organization}.sandbox.formance.cloud` | `organization` |
+
+
+
+#### Variables
+
+Some of the server options above contain variables. If you want to set the values of those variables, the following optional parameters are available when initializing the SDK client instance:
+ * `organization: string`
+
+### Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
+<!-- End Server Selection [server] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

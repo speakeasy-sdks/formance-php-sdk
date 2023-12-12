@@ -22,14 +22,12 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\Query();
+        $request = new Shared\Query();
     $request->after = [
         'users:002',
     ];
@@ -44,7 +42,7 @@ try {
     $request->target = 'string';
     $request->terms = [
         'destination=central_bank1',
-    ];
+    ];;
 
     $response = $sdk->search->search($request);
 
@@ -84,11 +82,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->search->searchgetServerInfo();

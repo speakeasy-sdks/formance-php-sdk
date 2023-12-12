@@ -30,16 +30,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\AddScopeToClientRequest();
+        $request = new Operations\AddScopeToClientRequest();
     $request->clientId = 'string';
-    $request->scopeId = 'string';
+    $request->scopeId = 'string';;
 
     $response = $sdk->clients->addScopeToClient($request);
 
@@ -79,14 +77,12 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\CreateClientRequest();
+        $request = new Shared\CreateClientRequest();
     $request->description = 'Managed optimizing help-desk';
     $request->metadata = [
         'pessimistic' => 'string',
@@ -99,7 +95,7 @@ try {
     $request->redirectUris = [
         'string',
     ];
-    $request->trusted = false;
+    $request->trusted = false;;
 
     $response = $sdk->clients->createClient($request);
 
@@ -140,20 +136,18 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CreateSecretRequest();
+        $request = new Operations\CreateSecretRequest();
     $request->createSecretRequest = new Shared\CreateSecretRequest();
     $request->createSecretRequest->metadata = [
         'architecture' => 'string',
     ];
     $request->createSecretRequest->name = 'string';
-    $request->clientId = 'string';
+    $request->clientId = 'string';;
 
     $response = $sdk->clients->createSecret($request);
 
@@ -194,15 +188,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteClientRequest();
-    $request->clientId = 'string';
+        $request = new Operations\DeleteClientRequest();
+    $request->clientId = 'string';;
 
     $response = $sdk->clients->deleteClient($request);
 
@@ -243,16 +235,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteScopeFromClientRequest();
+        $request = new Operations\DeleteScopeFromClientRequest();
     $request->clientId = 'string';
-    $request->scopeId = 'string';
+    $request->scopeId = 'string';;
 
     $response = $sdk->clients->deleteScopeFromClient($request);
 
@@ -293,16 +283,14 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\DeleteSecretRequest();
+        $request = new Operations\DeleteSecretRequest();
     $request->clientId = 'string';
-    $request->secretId = 'string';
+    $request->secretId = 'string';;
 
     $response = $sdk->clients->deleteSecret($request);
 
@@ -342,11 +330,9 @@ use \formance\formance;
 use \formance\formance\Models\Shared;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->clients->listClients();
@@ -382,15 +368,13 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ReadClientRequest();
-    $request->clientId = 'string';
+        $request = new Operations\ReadClientRequest();
+    $request->clientId = 'string';;
 
     $response = $sdk->clients->readClient($request);
 
@@ -431,14 +415,12 @@ use \formance\formance\Models\Shared;
 use \formance\formance\Models\Operations;
 
 $security = new Shared\Security();
-$security->authorization = '';
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
 
-$sdk = formance\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateClientRequest();
+        $request = new Operations\UpdateClientRequest();
     $request->updateClientRequest = new Shared\UpdateClientRequest();
     $request->updateClientRequest->description = 'Secured static model';
     $request->updateClientRequest->metadata = [
@@ -453,7 +435,7 @@ try {
         'string',
     ];
     $request->updateClientRequest->trusted = false;
-    $request->clientId = 'string';
+    $request->clientId = 'string';;
 
     $response = $sdk->clients->updateClient($request);
 
