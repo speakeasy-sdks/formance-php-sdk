@@ -94,7 +94,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CreateBalanceRequest();
     $request->createBalanceRequest = new Shared\CreateBalanceRequest();
-    $request->createBalanceRequest->expiresAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-03-08T09:54:54.366Z');
+    $request->createBalanceRequest->expiresAt = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-03-08T03:22:14.635Z');
     $request->createBalanceRequest->name = 'string';
     $request->createBalanceRequest->priority = 851262;
     $request->id = '<ID>';;

@@ -202,14 +202,14 @@ try {
         $request = new Operations\CountTransactionsRequest();
     $request->account = 'users:001';
     $request->destination = 'users:001';
-    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-07-20T09:59:27.603Z');
+    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-20T14:23:01.272Z');
     $request->ledger = 'ledger001';
     $request->metadata = [
         'till' => 'string',
     ];
     $request->reference = 'ref:001';
     $request->source = 'users:001';
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-04-16T00:36:33.819Z');;
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-04-16T02:54:40.754Z');;
 
     $response = $sdk->ledger->countTransactions($request);
 
@@ -275,7 +275,7 @@ try {
     )
     ';
     $request->postTransaction->script->vars = new Shared\Vars();
-    $request->postTransaction->timestamp = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-10-17T06:38:42.895Z');
+    $request->postTransaction->timestamp = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2024-10-17T04:59:08.030Z');
     $request->async = true;
     $request->dryRun = true;
     $request->ledger = 'ledger001';;
@@ -659,10 +659,10 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListLogsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
-    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-04T05:10:40.788Z');
+    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T18:34:28.222Z');
     $request->ledger = 'ledger001';
     $request->pageSize = 657242;
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-03T02:36:34.808Z');;
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-03T09:19:08.045Z');;
 
     $response = $sdk->ledger->listLogs($request);
 
@@ -712,7 +712,7 @@ try {
     $request->account = 'users:001';
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->destination = 'users:001';
-    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-08T16:09:19.098Z');
+    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-09T05:38:58.239Z');
     $request->ledger = 'ledger001';
     $request->metadata = [
         'South' => 'string',
@@ -720,7 +720,7 @@ try {
     $request->pageSize = 459510;
     $request->reference = 'ref:001';
     $request->source = 'users:001';
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-03-19T18:05:01.432Z');;
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-03-19T19:47:16.501Z');;
 
     $response = $sdk->ledger->listTransactions($request);
 

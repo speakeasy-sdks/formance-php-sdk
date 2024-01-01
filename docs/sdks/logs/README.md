@@ -29,10 +29,10 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListLogsRequest();
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
-    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-09-04T05:10:40.788Z');
+    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T18:34:28.222Z');
     $request->ledger = 'ledger001';
     $request->pageSize = 657242;
-    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2021-11-03T02:36:34.808Z');;
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-03T09:19:08.045Z');;
 
     $response = $sdk->logs->listLogs($request);
 
