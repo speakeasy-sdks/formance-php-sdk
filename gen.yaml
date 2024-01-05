@@ -1,22 +1,10 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 2f1ad9a515a2f02418a6e63ef5afbcf5
-  docVersion: v1.0.20230614
-  speakeasyVersion: 1.129.1
-  generationVersion: 2.223.3
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: SDK
-  repoURL: https://github.com/speakeasy-sdks/formance-php-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
-features:
-  php:
-    core: 3.2.1
-    globalSecurity: 2.81.2
-    globalServerURLs: 2.82.1
 php:
   version: 0.3.1
   imports:
@@ -28,9 +16,7 @@ php:
       shared: Models/Shared
       webhooks: Models/Webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks/formance-php-sdk
   maxMethodParams: 0
   namespace: formance\formance
   outputModelSuffix: output
   packageName: formance/formance
-  repoSubDirectory: .
