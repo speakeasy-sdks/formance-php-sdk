@@ -4,15 +4,15 @@ management:
   docChecksum: 2f1ad9a515a2f02418a6e63ef5afbcf5
   docVersion: v1.0.20230614
   speakeasyVersion: internal
-  generationVersion: 2.237.2
-  releaseVersion: 0.3.2
-  configChecksum: 0e1445cbda1df86b193dda753948d950
+  generationVersion: 2.253.0
+  releaseVersion: 0.3.3
+  configChecksum: db9dd6cfebf5c18e86c3a0ca0566f0c0
   repoURL: https://github.com/speakeasy-sdks/formance-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/formance-php-sdk
 features:
   php:
-    core: 3.3.0
+    core: 3.3.1
     globalSecurity: 2.81.3
     globalServerURLs: 2.82.1
 generatedFiles:
@@ -37,6 +37,7 @@ generatedFiles:
   - src/SDKBuilder.php
   - composer.json
   - phpstan.neon
+  - rector.php
   - src/Utils/EnumHandler.php
   - src/Utils/FormMetadata.php
   - src/Utils/Headers.php

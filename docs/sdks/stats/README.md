@@ -36,7 +36,7 @@ try {
     if ($response->statsResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

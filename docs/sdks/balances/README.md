@@ -39,7 +39,7 @@ try {
     if ($response->balancesCursorResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -87,7 +87,7 @@ try {
     if ($response->aggregateBalancesResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

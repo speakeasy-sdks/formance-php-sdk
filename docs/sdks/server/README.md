@@ -31,7 +31,7 @@ try {
     if ($response->configInfoResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
