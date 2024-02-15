@@ -38,7 +38,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\CancelEventRequest();
-    $request->instanceID = 'string';;
+    $request->instanceID = '<value>';;
 
     $response = $sdk->orchestration->cancelEvent($request);
 
@@ -84,10 +84,10 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Shared\CreateWorkflowRequest();
-    $request->name = 'string';
+    $request->name = '<value>';
     $request->stages = [
         [
-            'why' => 'string',
+            'why' => '<value>',
         ],
     ];;
 
@@ -136,7 +136,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetInstanceRequest();
-    $request->instanceID = 'string';;
+    $request->instanceID = '<value>';;
 
     $response = $sdk->orchestration->getInstance($request);
 
@@ -183,7 +183,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetInstanceHistoryRequest();
-    $request->instanceID = 'string';;
+    $request->instanceID = '<value>';;
 
     $response = $sdk->orchestration->getInstanceHistory($request);
 
@@ -230,7 +230,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetInstanceStageHistoryRequest();
-    $request->instanceID = 'string';
+    $request->instanceID = '<value>';
     $request->number = 600636;;
 
     $response = $sdk->orchestration->getInstanceStageHistory($request);
@@ -278,7 +278,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetWorkflowRequest();
-    $request->flowId = 'string';;
+    $request->flowId = '<value>';;
 
     $response = $sdk->orchestration->getWorkflow($request);
 
@@ -326,7 +326,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ListInstancesRequest();
     $request->running = false;
-    $request->workflowID = 'string';;
+    $request->workflowID = '<value>';;
 
     $response = $sdk->orchestration->listInstances($request);
 
@@ -448,10 +448,10 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\RunWorkflowRequest();
     $request->requestBody = [
-        'off' => 'string',
+        'off' => '<value>',
     ];
     $request->wait = false;
-    $request->workflowID = 'string';;
+    $request->workflowID = '<value>';;
 
     $response = $sdk->orchestration->runWorkflow($request);
 
@@ -499,8 +499,8 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\SendEventRequest();
     $request->requestBody = new Operations\SendEventRequestBody();
-    $request->requestBody->name = 'string';
-    $request->instanceID = 'string';;
+    $request->requestBody->name = '<value>';
+    $request->instanceID = '<value>';;
 
     $response = $sdk->orchestration->sendEvent($request);
 

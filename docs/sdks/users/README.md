@@ -66,7 +66,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ReadUserRequest();
-    $request->userId = 'string';;
+    $request->userId = '<value>';;
 
     $response = $sdk->users->readUser($request);
 

@@ -145,7 +145,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\GetConnectorTaskRequest();
     $request->connector = Shared\Connector::BankingCircle;
-    $request->taskId = 'string';;
+    $request->taskId = '<value>';;
 
     $response = $sdk->payments->getConnectorTask($request);
 
@@ -192,7 +192,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\GetPaymentRequest();
-    $request->paymentId = 'string';;
+    $request->paymentId = '<value>';;
 
     $response = $sdk->payments->getPayment($request);
 
@@ -239,7 +239,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\InstallConnectorRequest();
-    $request->requestBody = 'string';
+    $request->requestBody = '<value>';
     $request->connector = Shared\Connector::DummyPay;;
 
     $response = $sdk->payments->installConnector($request);
@@ -460,7 +460,7 @@ try {
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->pageSize = 13778;
     $request->sort = [
-        'string',
+        '<value>',
     ];;
 
     $response = $sdk->payments->listPayments($request);
@@ -548,7 +548,7 @@ try {
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->pageSize = 227071;
     $request->sort = [
-        'string',
+        '<value>',
     ];;
 
     $response = $sdk->payments->paymentslistAccounts($request);
@@ -741,7 +741,7 @@ try {
         $request = new Operations\UpdateMetadataRequest();
     $request->paymentMetadata = new Shared\PaymentMetadata();
     $request->paymentMetadata->key = '<key>';
-    $request->paymentId = 'string';;
+    $request->paymentId = '<value>';;
 
     $response = $sdk->payments->updateMetadata($request);
 

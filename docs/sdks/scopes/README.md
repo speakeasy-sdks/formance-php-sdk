@@ -34,8 +34,8 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AddTransientScopeRequest();
-    $request->scopeId = 'string';
-    $request->transientScopeId = 'string';;
+    $request->scopeId = '<value>';
+    $request->transientScopeId = '<value>';;
 
     $response = $sdk->scopes->addTransientScope($request);
 
@@ -81,9 +81,9 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Shared\CreateScopeRequest();
-    $request->label = 'string';
+    $request->label = '<value>';
     $request->metadata = [
-        'sensor' => 'string',
+        'sensor' => '<value>',
     ];;
 
     $response = $sdk->scopes->createScope($request);
@@ -131,7 +131,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DeleteScopeRequest();
-    $request->scopeId = 'string';;
+    $request->scopeId = '<value>';;
 
     $response = $sdk->scopes->deleteScope($request);
 
@@ -178,8 +178,8 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DeleteTransientScopeRequest();
-    $request->scopeId = 'string';
-    $request->transientScopeId = 'string';;
+    $request->scopeId = '<value>';
+    $request->transientScopeId = '<value>';;
 
     $response = $sdk->scopes->deleteTransientScope($request);
 
@@ -263,7 +263,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ReadScopeRequest();
-    $request->scopeId = 'string';;
+    $request->scopeId = '<value>';;
 
     $response = $sdk->scopes->readScope($request);
 
@@ -311,11 +311,11 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateScopeRequest();
     $request->updateScopeRequest = new Shared\UpdateScopeRequest();
-    $request->updateScopeRequest->label = 'string';
+    $request->updateScopeRequest->label = '<value>';
     $request->updateScopeRequest->metadata = [
-        'Paradigm' => 'string',
+        'Paradigm' => '<value>',
     ];
-    $request->scopeId = 'string';;
+    $request->scopeId = '<value>';;
 
     $response = $sdk->scopes->updateScope($request);
 

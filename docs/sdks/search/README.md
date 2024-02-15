@@ -39,7 +39,7 @@ try {
     $request->policy = 'OR';
     $request->raw = new Shared\QueryRaw();
     $request->sort = 'txid:asc';
-    $request->target = 'string';
+    $request->target = '<value>';
     $request->terms = [
         'destination=central_bank1',
     ];;

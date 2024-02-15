@@ -46,8 +46,8 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AddScopeToClientRequest();
-    $request->clientId = 'string';
-    $request->scopeId = 'string';;
+    $request->clientId = '<value>';
+    $request->scopeId = '<value>';;
 
     $response = $sdk->auth->addScopeToClient($request);
 
@@ -94,8 +94,8 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AddTransientScopeRequest();
-    $request->scopeId = 'string';
-    $request->transientScopeId = 'string';;
+    $request->scopeId = '<value>';
+    $request->transientScopeId = '<value>';;
 
     $response = $sdk->auth->addTransientScope($request);
 
@@ -143,15 +143,15 @@ try {
         $request = new Shared\CreateClientRequest();
     $request->description = 'Managed optimizing help-desk';
     $request->metadata = [
-        'pessimistic' => 'string',
+        'pessimistic' => '<value>',
     ];
-    $request->name = 'string';
+    $request->name = '<value>';
     $request->postLogoutRedirectUris = [
-        'string',
+        '<value>',
     ];
     $request->public = false;
     $request->redirectUris = [
-        'string',
+        '<value>',
     ];
     $request->trusted = false;;
 
@@ -199,9 +199,9 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Shared\CreateScopeRequest();
-    $request->label = 'string';
+    $request->label = '<value>';
     $request->metadata = [
-        'sensor' => 'string',
+        'sensor' => '<value>',
     ];;
 
     $response = $sdk->auth->createScope($request);
@@ -251,10 +251,10 @@ try {
         $request = new Operations\CreateSecretRequest();
     $request->createSecretRequest = new Shared\CreateSecretRequest();
     $request->createSecretRequest->metadata = [
-        'architecture' => 'string',
+        'architecture' => '<value>',
     ];
-    $request->createSecretRequest->name = 'string';
-    $request->clientId = 'string';;
+    $request->createSecretRequest->name = '<value>';
+    $request->clientId = '<value>';;
 
     $response = $sdk->auth->createSecret($request);
 
@@ -301,7 +301,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DeleteClientRequest();
-    $request->clientId = 'string';;
+    $request->clientId = '<value>';;
 
     $response = $sdk->auth->deleteClient($request);
 
@@ -348,7 +348,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DeleteScopeRequest();
-    $request->scopeId = 'string';;
+    $request->scopeId = '<value>';;
 
     $response = $sdk->auth->deleteScope($request);
 
@@ -395,8 +395,8 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DeleteScopeFromClientRequest();
-    $request->clientId = 'string';
-    $request->scopeId = 'string';;
+    $request->clientId = '<value>';
+    $request->scopeId = '<value>';;
 
     $response = $sdk->auth->deleteScopeFromClient($request);
 
@@ -443,8 +443,8 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DeleteSecretRequest();
-    $request->clientId = 'string';
-    $request->secretId = 'string';;
+    $request->clientId = '<value>';
+    $request->secretId = '<value>';;
 
     $response = $sdk->auth->deleteSecret($request);
 
@@ -491,8 +491,8 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\DeleteTransientScopeRequest();
-    $request->scopeId = 'string';
-    $request->transientScopeId = 'string';;
+    $request->scopeId = '<value>';
+    $request->transientScopeId = '<value>';;
 
     $response = $sdk->auth->deleteTransientScope($request);
 
@@ -687,7 +687,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ReadClientRequest();
-    $request->clientId = 'string';;
+    $request->clientId = '<value>';;
 
     $response = $sdk->auth->readClient($request);
 
@@ -734,7 +734,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ReadScopeRequest();
-    $request->scopeId = 'string';;
+    $request->scopeId = '<value>';;
 
     $response = $sdk->auth->readScope($request);
 
@@ -781,7 +781,7 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\ReadUserRequest();
-    $request->userId = 'string';;
+    $request->userId = '<value>';;
 
     $response = $sdk->auth->readUser($request);
 
@@ -831,18 +831,18 @@ try {
     $request->updateClientRequest = new Shared\UpdateClientRequest();
     $request->updateClientRequest->description = 'Secured static model';
     $request->updateClientRequest->metadata = [
-        'Bentley' => 'string',
+        'Bentley' => '<value>',
     ];
-    $request->updateClientRequest->name = 'string';
+    $request->updateClientRequest->name = '<value>';
     $request->updateClientRequest->postLogoutRedirectUris = [
-        'string',
+        '<value>',
     ];
     $request->updateClientRequest->public = false;
     $request->updateClientRequest->redirectUris = [
-        'string',
+        '<value>',
     ];
     $request->updateClientRequest->trusted = false;
-    $request->clientId = 'string';;
+    $request->clientId = '<value>';;
 
     $response = $sdk->auth->updateClient($request);
 
@@ -890,11 +890,11 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\UpdateScopeRequest();
     $request->updateScopeRequest = new Shared\UpdateScopeRequest();
-    $request->updateScopeRequest->label = 'string';
+    $request->updateScopeRequest->label = '<value>';
     $request->updateScopeRequest->metadata = [
-        'Paradigm' => 'string',
+        'Paradigm' => '<value>',
     ];
-    $request->scopeId = 'string';;
+    $request->scopeId = '<value>';;
 
     $response = $sdk->auth->updateScope($request);
 

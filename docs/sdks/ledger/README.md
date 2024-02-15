@@ -43,9 +43,9 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AddMetadataOnTransactionRequest();
-    $request->idempotencyKey = 'string';
+    $request->idempotencyKey = '<value>';
     $request->requestBody = [
-        'withdrawal' => 'string',
+        'withdrawal' => '<value>',
     ];
     $request->async = true;
     $request->dryRun = true;
@@ -97,9 +97,9 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AddMetadataToAccountRequest();
-    $request->idempotencyKey = 'string';
+    $request->idempotencyKey = '<value>';
     $request->requestBody = [
-        'Oriental' => 'string',
+        'Oriental' => '<value>',
     ];
     $request->address = 'users:001';
     $request->async = true;
@@ -205,7 +205,7 @@ try {
     $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-07-20T14:23:01.272Z');
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'till' => 'string',
+        'till' => '<value>',
     ];
     $request->reference = 'ref:001';
     $request->source = 'users:001';
@@ -256,10 +256,10 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\CreateTransactionRequest();
-    $request->idempotencyKey = 'string';
+    $request->idempotencyKey = '<value>';
     $request->postTransaction = new Shared\PostTransaction();
     $request->postTransaction->metadata = [
-        'before' => 'string',
+        'before' => '<value>',
     ];
     $request->postTransaction->postings = [
         new Shared\Posting(),
@@ -609,7 +609,7 @@ try {
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'glistening' => 'string',
+        'glistening' => '<value>',
     ];
     $request->pageSize = 412291;;
 
@@ -715,7 +715,7 @@ try {
     $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-09T05:38:58.239Z');
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'South' => 'string',
+        'South' => '<value>',
     ];
     $request->pageSize = 459510;
     $request->reference = 'ref:001';

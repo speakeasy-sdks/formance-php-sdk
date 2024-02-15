@@ -31,9 +31,9 @@ $sdk = formance\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\AddMetadataToAccountRequest();
-    $request->idempotencyKey = 'string';
+    $request->idempotencyKey = '<value>';
     $request->requestBody = [
-        'Oriental' => 'string',
+        'Oriental' => '<value>',
     ];
     $request->address = 'users:001';
     $request->async = true;
@@ -188,7 +188,7 @@ try {
     $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
     $request->ledger = 'ledger001';
     $request->metadata = [
-        'glistening' => 'string',
+        'glistening' => '<value>',
     ];
     $request->pageSize = 412291;;
 
