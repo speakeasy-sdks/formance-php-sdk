@@ -16,7 +16,8 @@ Get the balances from a ledger's account
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -66,7 +67,8 @@ Get the aggregated balances from selected accounts
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;

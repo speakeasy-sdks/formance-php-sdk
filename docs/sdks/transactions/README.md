@@ -20,7 +20,8 @@ Set the metadata of a transaction by its ID
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -74,7 +75,8 @@ Count the transactions from a ledger
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -130,7 +132,8 @@ Create a new transaction to a ledger
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -199,7 +202,8 @@ Get transaction from a ledger by its ID
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -247,7 +251,8 @@ List transactions from a ledger, sorted by txid in descending order.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -305,7 +310,8 @@ Revert a ledger transaction by its ID
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;

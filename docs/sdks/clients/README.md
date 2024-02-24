@@ -23,7 +23,8 @@ Add scope to client
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -71,7 +72,8 @@ Create client
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -129,7 +131,8 @@ Add a secret to a client
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -181,7 +184,8 @@ Delete client
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -228,7 +232,8 @@ Delete scope from client
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -276,7 +281,8 @@ Delete a secret from a client
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -324,7 +330,8 @@ List clients
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -361,7 +368,8 @@ Read client
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -408,7 +416,8 @@ Update client
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;

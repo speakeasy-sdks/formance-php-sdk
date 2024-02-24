@@ -18,7 +18,8 @@ Add metadata to an account
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -72,7 +73,8 @@ Count the accounts from a ledger
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -121,7 +123,8 @@ Get account by its address
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;
@@ -169,7 +172,8 @@ List accounts from a ledger, sorted by address in descending order.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;

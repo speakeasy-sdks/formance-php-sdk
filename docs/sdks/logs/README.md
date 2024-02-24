@@ -15,7 +15,8 @@ List the logs from a ledger, sorted by ID in descending order.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \formance\formance;
 use \formance\formance\Models\Shared;

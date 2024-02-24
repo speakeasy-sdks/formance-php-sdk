@@ -4,16 +4,16 @@ management:
   docChecksum: 2f1ad9a515a2f02418a6e63ef5afbcf5
   docVersion: v1.0.20230614
   speakeasyVersion: internal
-  generationVersion: 2.258.2
-  releaseVersion: 0.3.4
-  configChecksum: 7b386815e3344b797b7f8973135ba0a2
+  generationVersion: 2.272.4
+  releaseVersion: 0.3.5
+  configChecksum: a996dba110d134987ac1e2289c915747
   repoURL: https://github.com/speakeasy-sdks/formance-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/formance-php-sdk
 features:
   php:
-    core: 3.3.2
-    globalSecurity: 2.81.3
+    core: 3.3.3
+    globalSecurity: 2.81.4
     globalServerURLs: 2.82.1
 generatedFiles:
   - src/SDKConfiguration.php

@@ -6,4 +6,4 @@
 | Field                   | Type                    | Required                | Description             | Example                 |
 | ----------------------- | ----------------------- | ----------------------- | ----------------------- | ----------------------- |
 | `address`               | *string*                | :heavy_check_mark:      | N/A                     | users:001               |
-| `metadata`              | array<string, *string*> | :heavy_check_mark:      | N/A                     | {"admin":"true"}        |
+| `metadata`              | array<string, *string*> | :heavy_check_mark:      | N/A                     | {<br/>"admin": "true"<br/>} |
