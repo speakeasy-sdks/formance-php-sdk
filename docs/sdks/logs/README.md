@@ -1,0 +1,58 @@
+# Logs
+
+
+### Available Operations
+
+* [listLogs](#listlogs) - List the logs from a ledger
+
+## listLogs
+
+List the logs from a ledger, sorted by ID in descending order.
+
+### Example Usage
+
+```php
+<?php
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use \formance\formance;
+use \formance\formance\Models\Shared;
+use \formance\formance\Models\Operations;
+
+$security = new Shared\Security();
+$security->authorization = 'Bearer <YOUR_ACCESS_TOKEN_HERE>';
+
+$sdk = formance\SDK::builder()->setSecurity($security)->build();
+
+try {
+        $request = new Operations\ListLogsRequest();
+    $request->cursor = 'aHR0cHM6Ly9nLnBhZ2UvTmVrby1SYW1lbj9zaGFyZQ==';
+    $request->endTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2023-09-04T18:34:28.222Z');
+    $request->ledger = 'ledger001';
+    $request->pageSize = 657242;
+    $request->startTime = DateTime::createFromFormat('Y-m-d\TH:i:s+', '2022-11-03T09:19:08.045Z');;
+
+    $response = $sdk->logs->listLogs($request);
+
+    if ($response->logsCursorResponse !== null) {
+        // handle response
+    }
+} catch (Throwable $e) {
+    // handle exception
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [\formance\formance\Models\Operations\ListLogsRequest](../../Models/Operations/ListLogsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+
+### Response
+
+**[?\formance\formance\Models\Operations\ListLogsResponse](../../Models/Operations/ListLogsResponse.md)**
+

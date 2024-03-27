@@ -1,9 +1,26 @@
-configVersion: 1.0.0
+configVersion: 2.0.0
 generation:
   sdkClassName: SDK
-  singleTagPerOp: false
+  usageSnippets:
+    optionalPropertyRendering: withExample
+  fixes:
+    nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
+    requestResponseComponentNamesFeb2024: false
+  auth:
+    oAuth2ClientCredentialsEnabled: false
 php:
-  version: 0.0.1
+  version: 0.3.6
+  imports:
+    option: openapi
+    paths:
+      callbacks: Models/Callbacks
+      errors: Models/Errors
+      operations: Models/Operations
+      shared: Models/Shared
+      webhooks: Models/Webhooks
+  inputModelSuffix: input
   maxMethodParams: 0
   namespace: formance\formance
+  outputModelSuffix: output
   packageName: formance/formance
